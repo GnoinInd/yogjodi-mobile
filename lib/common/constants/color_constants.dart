@@ -2,9 +2,24 @@ import 'package:flutter/material.dart';
 
 class ColorConstants {
   static Color textWhite = Colors.white;
+
+  /// Marron
   static Color color1 = hexToColor('#A70855');
+
+  /// Light Sky Blue BG
   static Color color2 = hexToColor('#ECF8FF');
+
+  /// Grey
   static Color color3 = hexToColor('#444444');
+
+  /// Light Grey BG
+  static Color color4 = hexToColor('#e7e7e6');
+
+  /// Grey BG
+  static Color color5 = hexToColor('#C2BFBF');
+
+  /// Blue Black BG
+  static Color color6 = hexToColor('#34495E');
 }
 
 Color hexToColor(String hex) {
