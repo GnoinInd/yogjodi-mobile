@@ -34,7 +34,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 fit: BoxFit.fill,
               ),
             ),
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -43,7 +43,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     fontFamily: "Ikaros",
                     fontWeight: FontWeight.w400,
                     fontSize: 24.0,
-                    color: Colors.white,
+                    color: ColorConstants.textWhite,
                   ),
                 ),
                 Text(
@@ -52,7 +52,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     fontFamily: "Ikaros",
                     fontWeight: FontWeight.w400,
                     fontSize: 14.0,
-                    color: Colors.white,
+                    color: ColorConstants.textWhite,
                   ),
                 ),
               ],

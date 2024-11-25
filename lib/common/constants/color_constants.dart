@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColorConstants {
   static Color textWhite = Colors.white;
+  static Color textRed = Colors.red;
 
   /// Marron
   static Color color1 = hexToColor('#A70855');

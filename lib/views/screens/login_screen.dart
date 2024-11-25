@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:yog_jodi/views/screens/register_screen_1.dart';
 import '../../common/constants/string_constants.dart';
 import '../../common/utils/utility_methods.dart';
 import '../widgets/border_button.dart';
@@ -87,13 +88,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       bgColor: ColorConstants.color1,
                       color: ColorConstants.color1,
                       onPressed: () async {
-                        // Get.to(() => const SignUpScreen());
+                        Get.to(
+                          () => const RegisterScreen1(),
+                        );
                       },
-                      child: const Text(
+                      child: Text(
                         StringConstants.register,
                         style: TextStyle(
                           fontSize: 12,
-                          color: Colors.white,
+                          color: ColorConstants.textWhite,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -177,9 +180,9 @@ class _LoginFormState extends State<LoginForm> {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
       return 'Password is required';
     }
-    if (value.length < 6) {
-      return 'Password must have at least 8 characters';
-    }
+    // if (value.length < 6) {
+    //   return 'Password must have at least 8 characters';
+    // }
     return null;
   }
 
@@ -218,9 +221,16 @@ class _LoginFormState extends State<LoginForm> {
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5), // Same corners
+                borderSide: BorderSide(
+                  color: ColorConstants.color1, // Color when focused
+                  width: 1, // Border width
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5), // Same corners
                 borderSide: const BorderSide(
-                  color: Colors.white, // Color when focused
-                  width: 2, // Border width
+                  color: Colors.red, // Color when error
+                  width: 1, // Border width
                 ),
               ),
             ),
@@ -233,7 +243,7 @@ class _LoginFormState extends State<LoginForm> {
           TextFormField(
             style: TextStyle(color: ColorConstants.color3),
             obscureText: !_showPassword,
-            // validator: _validatePassword,
+            validator: _validatePassword,
             decoration: InputDecoration(
               hintText: StringConstants.password,
               hintStyle: TextStyle(color: ColorConstants.color3),
@@ -254,21 +264,26 @@ class _LoginFormState extends State<LoginForm> {
                   });
                 },
               ),
-              // filled: true, // Enables the background fill
-              // fillColor: ColorConstants.color5, // Sets the background color
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5), // Rounded corners
+                borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5, // Border color
-                  width: 1, // Border width
+                  color: ColorConstants.color5,
+                  width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5), // Same corners
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
                 borderSide: const BorderSide(
-                  color: Colors.white, // Color when focused
-                  width: 1, // Border width
+                  color: Colors.red,
+                  width: 1,
                 ),
               ),
             ),

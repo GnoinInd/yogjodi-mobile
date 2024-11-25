@@ -11,8 +11,24 @@ class StringConstants {
   static const String forgotPassword = "Forgot Password";
   static const String login = "Login";
   static const String register = "Register";
+  static const String accountDetails = "Account Details";
   static const String doNotHaveAnAccount = "Don't have an account?";
-  static const String fullName = "Full Name";
+  static const String firstName = "First Name";
+  static const String middleName = "Middle Name";
+  static const String lastName = "Last Name";
+  static const String gender = "Gender:";
+  static const String genderError = "Gender is required.";
+  static const String male = "Male";
+  static const String female = "Female";
+  static const String mobileNumber = "Mobile Number";
+  static const String contactPrivacySetting = "Contact Privacy Setting:";
+  static const String contactPrivacySettingError =
+      "Contact Privacy Setting is required.";
+  static const String showToAll = "Show to all";
+  static const String hideFromAll = "Hide from all";
+  static const String showToMyInterests =
+      "Show to members I express interest in";
+  static const String creatingProfileFor = "Creating Profile For:";
   static const String confirmPassword = "Confirm Password";
   static const String alreadyHaveAnAccount = "Already have an account?";
   static const String home = "Home";
@@ -45,4 +61,6 @@ class StringConstants {
   static const String nowChatForFree = "Now Chat For Free !";
   static const String findingYourPerfectMatchJustBecameEasier =
       "Finding Your Perfect \nMatch Just Became Easier";
+  static const String skip = "Skip";
+  static const String next = "Next";
 }
