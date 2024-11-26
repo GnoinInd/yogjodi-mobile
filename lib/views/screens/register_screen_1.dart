@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:yog_jodi/views/screens/otp_verification_screen.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
 import '../../common/utils/utility_methods.dart';
 import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
+import 'package:get/get.dart';
 
 class RegisterScreen1 extends StatefulWidget {
   const RegisterScreen1({super.key});
@@ -874,6 +876,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
+                Get.to(() => OTPVerificationScreen());
                 if (!validateGender() || !validateContactPrivacySetting()) {
                   return;
                 }

@@ -21,6 +21,11 @@ class StringConstants {
   static const String male = "Male";
   static const String female = "Female";
   static const String mobileNumber = "Mobile Number";
+  static const String verifyYourMobileNo = "Verify Your Mobile No.";
+  static const String enterOTP = "Enter OTP here:";
+  static const String submit = "Submit";
+  static const String didNotGetOTP = "Didn't get OTP";
+  static const String resendNow = "Resend Now";
   static const String contactPrivacySetting = "Contact Privacy Setting:";
   static const String contactPrivacySettingError =
       "Contact Privacy Setting is required.";
