@@ -51,8 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+            child: ListView(
               children: [
                 Text(
                   StringConstants.appName,
@@ -103,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ],
                 ),
+                const SizedBox(height: 50.0),
               ],
             ),
           ),
@@ -167,22 +167,24 @@ class _LoginFormState extends State<LoginForm> {
 
   String? _validateEmail(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Email is required';
+      return StringConstants.emailIsRequired;
     }
     if (!RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$')
         .hasMatch(value)) {
-      return 'Enter a valid email address';
+      return StringConstants.enterAValidEmailAddress;
     }
     return null;
   }
 
   String? _validatePassword(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Password is required';
+      return StringConstants.passwordIsRequired;
     }
-    // if (value.length < 6) {
-    //   return 'Password must have at least 8 characters';
+
+    // if (value.length < 8) {
+    //   return StringConstants.passwordMustHaveAtLeast8Characters;
     // }
+
     return null;
   }
 
@@ -233,6 +235,13 @@ class _LoginFormState extends State<LoginForm> {
                   width: 1, // Border width
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
             keyboardType: TextInputType.emailAddress,
             onChanged: (val) {
@@ -280,6 +289,13 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
               errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: const BorderSide(
                   color: Colors.red,

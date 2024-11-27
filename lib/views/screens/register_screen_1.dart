@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yog_jodi/views/screens/otp_verification_screen.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+import 'package:yog_jodi/views/screens/register_screen_2.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -27,7 +28,9 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
         foregroundColor: ColorConstants.textWhite,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const RegisterScreen2());
+            },
             child: Text(
               StringConstants.skip,
               style: TextStyle(
@@ -79,6 +82,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
   String contactPrivacySetting = '';
   String profilePerson = '';
   final List<String> profilePersons = [
+    'Select',
     'Self',
     'Son',
     'Daughter',
@@ -99,14 +103,14 @@ class _RegisterForm1State extends State<RegisterForm1> {
 
   String? _validateFirstName(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'First name is required';
+      return StringConstants.firstNameIsRequired;
     }
     return null;
   }
 
   String? _validateLastName(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Last name is required';
+      return StringConstants.lastNameIsRequired;
     }
     return null;
   }
@@ -127,11 +131,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
 
   String? _validateMobileNumber(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Mobile number is required';
+      return StringConstants.mobileNumberIsRequired;
     }
-    if (!RegExp(r'^\d{10}$').hasMatch(value)) {
-      return 'Enter a valid 10-digit mobile number';
-    }
+
+    // if (!RegExp(r'^\d{10}$').hasMatch(value)) {
+    //   return StringConstants.enterAValid10DigitMobileNumber;
+    // }
+
     return null;
   }
 
@@ -165,30 +171,38 @@ class _RegisterForm1State extends State<RegisterForm1> {
     }
   }
 
+  String? _validateProfilePerson(String? value) {
+    if (value == profilePersons.first) {
+      return StringConstants.fieldIsRequired;
+    }
+
+    return null;
+  }
+
   String? _validateEmail(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Email is required';
+      return StringConstants.emailIsRequired;
     }
     if (!RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$')
         .hasMatch(value)) {
-      return 'Enter a valid email address';
+      return StringConstants.enterAValidEmailAddress;
     }
     return null;
   }
 
   String? _validatePassword(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return 'Password is required';
+      return StringConstants.passwordIsRequired;
     }
     if (value.length < 8) {
-      return 'Password must have at least 8 characters';
+      return StringConstants.passwordMustHaveAtLeast8Characters;
     }
     // Password must contain at least 8 characters, one uppercase letter, one lowercase letter, and one number
     final RegExp passwordRegExp = RegExp(
       r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$',
     );
     if (!passwordRegExp.hasMatch(value)) {
-      return "The password must contain at least one uppercase \nletter, one lowercase letter and one number.";
+      return StringConstants.thePasswordMustContainAtLeast;
     }
     return null;
   }
@@ -201,6 +215,8 @@ class _RegisterForm1State extends State<RegisterForm1> {
 
     return passwordRegExp.hasMatch(password);
   }
+
+  PhoneNumber number = PhoneNumber(isoCode: 'IN');
 
   @override
   void initState() {
@@ -271,6 +287,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                   width: 1,
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
             keyboardType: TextInputType.name,
             onChanged: (val) {
@@ -330,6 +353,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 ),
               ),
               errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: const BorderSide(
                   color: Colors.red,
@@ -402,6 +432,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                   width: 1,
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
             keyboardType: TextInputType.name,
             onChanged: (val) {
@@ -411,128 +448,181 @@ class _RegisterForm1State extends State<RegisterForm1> {
             },
           ),
           const SizedBox(height: 16),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      StringConstants.gender,
-                      style: TextStyle(
-                        color: ColorConstants.color3,
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    BorderButton(
-                      width: 70,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 0.0,
-                      ),
-                      bgColor: ColorConstants.textWhite,
-                      color: gender == StringConstants.male
-                          ? ColorConstants.color1
-                          : ColorConstants.color5,
-                      onPressed: () async {
-                        setState(() {
-                          gender = StringConstants.male;
-                        });
-                      },
-                      child: Text(
-                        StringConstants.male,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: gender == StringConstants.male
-                              ? ColorConstants.color1
-                              : ColorConstants.color3,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    BorderButton(
-                      width: 70,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 0.0,
-                      ),
-                      bgColor: ColorConstants.textWhite,
-                      color: gender == StringConstants.female
-                          ? ColorConstants.color1
-                          : ColorConstants.color5,
-                      onPressed: () async {
-                        setState(() {
-                          gender = StringConstants.female;
-                        });
-                      },
-                      child: Text(
-                        StringConstants.female,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: gender == StringConstants.female
-                              ? ColorConstants.color1
-                              : ColorConstants.color3,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 5),
-                if (genderError.isNotEmpty)
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
                   Text(
-                    genderError,
+                    StringConstants.gender,
                     style: TextStyle(
-                      color: ColorConstants.textRed,
-                      fontSize: 12.0,
+                      color: ColorConstants.color3,
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
-              ],
-            ),
+                  const SizedBox(width: 10),
+                  BorderButton(
+                    width: 70,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5.0,
+                      horizontal: 0.0,
+                    ),
+                    bgColor: ColorConstants.textWhite,
+                    color: gender == StringConstants.male
+                        ? ColorConstants.color1
+                        : ColorConstants.color5,
+                    onPressed: () async {
+                      setState(() {
+                        gender = StringConstants.male;
+                      });
+                    },
+                    child: Text(
+                      StringConstants.male,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: gender == StringConstants.male
+                            ? ColorConstants.color1
+                            : ColorConstants.color3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  BorderButton(
+                    width: 70,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5.0,
+                      horizontal: 0.0,
+                    ),
+                    bgColor: ColorConstants.textWhite,
+                    color: gender == StringConstants.female
+                        ? ColorConstants.color1
+                        : ColorConstants.color5,
+                    onPressed: () async {
+                      setState(() {
+                        gender = StringConstants.female;
+                      });
+                    },
+                    child: Text(
+                      StringConstants.female,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: gender == StringConstants.female
+                            ? ColorConstants.color1
+                            : ColorConstants.color3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              if (genderError.isNotEmpty)
+                Text(
+                  genderError,
+                  style: TextStyle(
+                    color: ColorConstants.textRed,
+                    fontSize: 12.0,
+                  ),
+                ),
+            ],
           ),
           const SizedBox(height: 16),
-          TextFormField(
-            style: TextStyle(
-              color: ColorConstants.color3,
-              fontSize: 17.0,
-            ),
+          // TextFormField(
+          //   style: TextStyle(
+          //     color: ColorConstants.color3,
+          //     fontSize: 17.0,
+          //   ),
+          //   validator: _validateMobileNumber,
+          //   inputFormatters: [
+          //     FilteringTextInputFormatter.allow(
+          //       RegExp(r'[0-9+]'), // Add characters to allow
+          //     ),
+          //   ],
+          //   decoration: InputDecoration(
+          //     hintText: StringConstants.mobileNumber,
+          //     prefixIcon: SizedBox(
+          //       width: 95.0,
+          //       child: Row(
+          //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //         children: [
+          //           Padding(
+          //             padding: const EdgeInsets.only(left: 10.0),
+          //             child: Icon(
+          //               Icons.phone_in_talk_outlined,
+          //               color: ColorConstants.color3,
+          //             ),
+          //           ),
+          //           const Padding(
+          //             padding: EdgeInsets.only(left: 10.0, bottom: 3.0),
+          //             child: Text(
+          //               "+91 - ",
+          //               style: TextStyle(
+          //                 fontSize: 17.0,
+          //                 fontWeight: FontWeight.w600,
+          //               ),
+          //             ),
+          //           )
+          //         ],
+          //       ),
+          //     ),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.phone,
+          //   onChanged: (val) {
+          //     mobile = val;
+          //   },
+          // ),
+          // const SizedBox(height: 16),
+          InternationalPhoneNumberInput(
+            onInputChanged: (PhoneNumber number) {
+              mobile = number.phoneNumber!;
+            },
             validator: _validateMobileNumber,
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                RegExp(r'[0-9+]'), // Add characters to allow
-              ),
-            ],
-            decoration: InputDecoration(
+            selectorConfig: const SelectorConfig(
+              selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
+            ),
+            ignoreBlank: false,
+            autoValidateMode: AutovalidateMode.disabled,
+            selectorTextStyle: const TextStyle(color: Colors.black),
+            initialValue: number,
+            // textFieldController: mobileTEC,
+            formatInput: false,
+            keyboardType: const TextInputType.numberWithOptions(
+              signed: true,
+              decimal: true,
+            ),
+            inputDecoration: InputDecoration(
               hintText: StringConstants.mobileNumber,
-              prefixIcon: SizedBox(
-                width: 95.0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Icon(
-                        Icons.phone_in_talk_outlined,
-                        color: ColorConstants.color3,
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 10.0, bottom: 3.0),
-                      child: Text(
-                        "+91 - ",
-                        style: TextStyle(
-                          fontSize: 17.0,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
@@ -555,15 +645,18 @@ class _RegisterForm1State extends State<RegisterForm1> {
                   width: 1,
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
-            keyboardType: TextInputType.phone,
-            onChanged: (val) {
-              mobile = val;
-            },
           ),
           const SizedBox(height: 16),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
+          Align(
+            alignment: Alignment.centerLeft,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -678,22 +771,22 @@ class _RegisterForm1State extends State<RegisterForm1> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  StringConstants.creatingProfileFor,
-                  style: TextStyle(
-                    color: ColorConstants.color3,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.w600,
-                  ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.creatingProfileFor,
+                style: TextStyle(
+                  color: ColorConstants.color3,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
                 ),
-                const SizedBox(width: 30),
-                DropdownButton<String>(
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.40,
+                child: DropdownButtonFormField<String>(
+                  validator: _validateProfilePerson,
                   value: profilePerson,
                   hint: Text(profilePersons.first),
                   onChanged: (String? newValue) {
@@ -707,9 +800,40 @@ class _RegisterForm1State extends State<RegisterForm1> {
                       child: Text(profilePerson_),
                     );
                   }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color5,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color1,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           const SizedBox(height: 16),
           TextFormField(
@@ -743,6 +867,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 ),
               ),
               errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: const BorderSide(
                   color: Colors.red,
@@ -802,6 +933,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                   width: 1,
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
             onChanged: (val) {
               password = val;
@@ -813,7 +951,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
             obscureText: !_showConfirmPassword,
             validator: (value) {
               if (value != password) {
-                return 'Passwords do not match';
+                return StringConstants.passwordsDoNotMatch;
               }
               return null;
             },
@@ -859,6 +997,13 @@ class _RegisterForm1State extends State<RegisterForm1> {
                   width: 1,
                 ),
               ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
             ),
             onChanged: (val) {
               confirmPassword = val;
@@ -876,7 +1021,8 @@ class _RegisterForm1State extends State<RegisterForm1> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
-                Get.to(() => OTPVerificationScreen());
+                // Get.to(() => const OTPVerificationScreen());
+
                 if (!validateGender() || !validateContactPrivacySetting()) {
                   return;
                 }

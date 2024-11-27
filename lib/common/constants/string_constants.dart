@@ -36,6 +36,38 @@ class StringConstants {
   static const String creatingProfileFor = "Creating Profile For:";
   static const String confirmPassword = "Confirm Password";
   static const String alreadyHaveAnAccount = "Already have an account?";
+  static const String nowChatForFree = "Now Chat For Free !";
+  static const String findingYourPerfectMatchJustBecameEasier =
+      "Finding Your Perfect \nMatch Just Became Easier";
+  static const String skip = "Skip";
+  static const String next = "Next";
+  static const String profileDetails = "Profile Details";
+  static const String profileManagedBy = "Profile Managed By";
+  static const String dateOfBirth = "Date of Birth";
+
+  /// Validation
+  static const String emailIsRequired = "Email is required.";
+  static const String enterAValidEmailAddress = "Enter a valid email address.";
+  static const String passwordIsRequired = "Password is required.";
+  static const String passwordMustHaveAtLeast8Characters =
+      "Password must have at least 8 characters.";
+  static const String firstNameIsRequired = "First name is required.";
+  static const String lastNameIsRequired = "Last name is required.";
+  static const String mobileNumberIsRequired = "Mobile number is required.";
+  static const String enterAValid10DigitMobileNumber =
+      "Enter a valid 10-digit mobile number.";
+  static const String fieldIsRequired = "Field is required.";
+  static const String thePasswordMustContainAtLeast =
+      "The password must contain at least one uppercase \nletter, one lowercase letter and one number.";
+  static const String passwordsDoNotMatch = "Passwords do not match.";
+  static const String nameIsRequired = "Name is required.";
+  static const String dateOfBirthIsRequired = "Date of birth is required.";
+  static const String enterAValidDateIn =
+      "Enter a valid date in DD/MM/YYYY format.";
+
+  ///
+
+  ///
   static const String home = "Home";
   static const String profile = "Profile";
   static const String logout = "Logout";
@@ -63,9 +95,4 @@ class StringConstants {
   static const String typing = "Typing...";
 
   ///
-  static const String nowChatForFree = "Now Chat For Free !";
-  static const String findingYourPerfectMatchJustBecameEasier =
-      "Finding Your Perfect \nMatch Just Became Easier";
-  static const String skip = "Skip";
-  static const String next = "Next";
 }
