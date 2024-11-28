@@ -253,10 +253,10 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 },
               ),
             ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
+            maxLength: 30,
+            maxLengthEnforcement: firstName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
               counterText: firstName.isNotEmpty ? null : "",
               hintText: StringConstants.firstName,
@@ -325,10 +325,10 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 },
               ),
             ],
-            // maxLength: 30,
-            // maxLengthEnforcement: middleName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
+            maxLength: 30,
+            maxLengthEnforcement: middleName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
               counterText: middleName.isNotEmpty ? null : "",
               hintText: StringConstants.middleName,
@@ -398,10 +398,10 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 },
               ),
             ],
-            // maxLength: 30,
-            // maxLengthEnforcement: lastName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
+            maxLength: 30,
+            maxLengthEnforcement: lastName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
               counterText: lastName.isNotEmpty ? null : "",
               hintText: StringConstants.lastName,

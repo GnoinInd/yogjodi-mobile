@@ -44,6 +44,23 @@ class StringConstants {
   static const String profileDetails = "Profile Details";
   static const String profileManagedBy = "Profile Managed By";
   static const String dateOfBirth = "Date of Birth";
+  static const String motherTongue = "Mother Tongue";
+  static const String religion = "Religion";
+  static const String caste = "Caste";
+  static const String maritalStatus = "Marital Status:";
+  static const String haveChildren = "Do you have children?";
+  static const String currentAddress = "Current Address";
+  static const String height = "Height:";
+  static const String expressYourself = "Express Yourself";
+  static const String smoking = "Smoking:";
+  static const String drinking = "Drinking:";
+  static const String diet = "Diet:";
+  static const String goutra = "Goutra";
+  static const String hobbies = "Hobbies";
+  static const String interests = "Interests";
+  static const String sports = "Sports";
+  static const String aboutMe = "About me";
+  static const String handicap = "Handicap";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -64,6 +81,12 @@ class StringConstants {
   static const String dateOfBirthIsRequired = "Date of birth is required.";
   static const String enterAValidDateIn =
       "Enter a valid date in DD/MM/YYYY format.";
+  static const String motherTongueIsRequired = "Mother Tongue is required.";
+  static const String religionIsRequired = "Religion is required.";
+  static const String casteIsRequired = "Caste is required.";
+  static const String maritalStatusIsRequired = "Marital Status is required.";
+  static const String heightIsRequired = "Height is required.";
+  static const String dietIsRequired = "Diet is required.";
 
   ///
 
