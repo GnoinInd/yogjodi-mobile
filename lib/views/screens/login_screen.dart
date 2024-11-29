@@ -53,17 +53,18 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Center(
             child: ListView(
               children: [
+                const SizedBox(height: 80.0),
                 Text(
                   StringConstants.appName,
                   style: TextStyle(
                     fontFamily: "Ikaros",
-                    fontSize: 40,
+                    fontSize: 45,
                     fontWeight: FontWeight.w700,
                     color: ColorConstants.color1,
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 80.0),
+                const SizedBox(height: 60.0),
                 const LoginForm(),
                 const SizedBox(height: 55.0),
                 Row(

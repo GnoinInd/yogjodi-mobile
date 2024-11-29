@@ -26,21 +26,6 @@ class _RegisterScreen1State extends State<RegisterScreen1> {
         title: const Text(StringConstants.register),
         backgroundColor: ColorConstants.color1,
         foregroundColor: ColorConstants.textWhite,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.to(() => const RegisterScreen2());
-            },
-            child: Text(
-              StringConstants.skip,
-              style: TextStyle(
-                fontSize: 20,
-                color: ColorConstants.textWhite,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -1022,6 +1007,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
               color: ColorConstants.color6,
               onPressed: () async {
                 // Get.to(() => const OTPVerificationScreen());
+                Get.to(() => const RegisterScreen2());
 
                 if (!validateGender() || !validateContactPrivacySetting()) {
                   return;

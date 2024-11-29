@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:yog_jodi/views/screens/register_screen_3.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -27,7 +28,9 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
         foregroundColor: ColorConstants.textWhite,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const RegisterScreen3());
+            },
             child: Text(
               StringConstants.skip,
               style: TextStyle(
@@ -958,6 +961,9 @@ class _RegisterForm2State extends State<RegisterForm2> {
                   onChanged: (String? newValue) {
                     setState(() {
                       smoking = newValue!;
+                      if (smoking == badHabitsList.first) {
+                        smoking = "";
+                      }
                     });
                   },
                   items: badHabitsList.map((String badHabit_) {
@@ -1021,6 +1027,9 @@ class _RegisterForm2State extends State<RegisterForm2> {
                   onChanged: (String? newValue) {
                     setState(() {
                       drinking = newValue!;
+                      if (drinking == badHabitsList.first) {
+                        drinking = "";
+                      }
                     });
                   },
                   items: badHabitsList.map((String badHabit_) {
@@ -1412,6 +1421,8 @@ class _RegisterForm2State extends State<RegisterForm2> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
+                Get.to(() => const RegisterScreen3());
+
                 if ((maritalStatus != maritalStatusList[0] &&
                         maritalStatus != maritalStatusList[1]) &&
                     !validateHaveChildren()) {

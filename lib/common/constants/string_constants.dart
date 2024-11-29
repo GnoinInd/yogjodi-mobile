@@ -61,6 +61,28 @@ class StringConstants {
   static const String sports = "Sports";
   static const String aboutMe = "About me";
   static const String handicap = "Handicap";
+  static const String careerDetails = "Career Details";
+  static const String highestDegree = "Highest Degree";
+  static const String occupation = "Occupation";
+  static const String employeeIn = "Employee In:";
+  static const String organization = "Organization";
+  static const String designation = "Designation";
+  static const String yearsOfExperience = "Years of Experience:";
+  static const String monthlyIncome = "Monthly Income";
+  static const String annualIncome = "Annual Income";
+  static const String aboutJob = "About Job";
+  static const String aboutJobLocation = "About Job Location";
+  static const String familyAndLifestyle = "Family & Lifestyle";
+  static const String fatherName = "Father's Name";
+  static const String motherName = "Mother's Name";
+  static const String brothers = "Brothers";
+  static const String sisters = "Sisters";
+  static const String fatherOccupation = "Father's Occupation";
+  static const String motherOccupation = "Mother's Occupation";
+  static const String familyAnnualIncome = "Family Annual Income";
+  static const String familyStatus = "Family Status";
+  static const String familyType = "Family Type";
+  static const String aboutMyFamily = "About My Family";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -87,6 +109,12 @@ class StringConstants {
   static const String maritalStatusIsRequired = "Marital Status is required.";
   static const String heightIsRequired = "Height is required.";
   static const String dietIsRequired = "Diet is required.";
+  static const String highestDegreeIsRequired = "Highest Degree is required.";
+  static const String occupationIsRequired = "Occupation is required.";
+  static const String employeeInIsRequired = "Employee In is required.";
+  static const String fatherNameIsRequired = "Father's name is required.";
+  static const String motherNameIsRequired = "Mother's name is required.";
+  static const String familyTypeIsRequired = "Family Type is required.";
 
   ///
 
