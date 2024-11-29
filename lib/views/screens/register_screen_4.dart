@@ -109,20 +109,20 @@ class _RegisterForm4State extends State<RegisterForm4> {
     return titleCaseWords.join(' ');
   }
 
-  String? _validateMotherName(String? value) {
-    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return StringConstants.motherNameIsRequired;
-    }
-    return null;
-  }
+  // String? _validateMotherName(String? value) {
+  //   if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
+  //     return StringConstants.motherNameIsRequired;
+  //   }
+  //   return null;
+  // }
 
-  String? _validateFamilyType(String? value) {
-    if (value == familyTypeList.first) {
-      return StringConstants.employeeInIsRequired;
-    }
-
-    return null;
-  }
+  // String? _validateFamilyType(String? value) {
+  //   if (value == familyTypeList.first) {
+  //     return StringConstants.employeeInIsRequired;
+  //   }
+  //
+  //   return null;
+  // }
 
   @override
   void dispose() {
@@ -215,7 +215,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           const SizedBox(height: 16.0),
           TextFormField(
             style: TextStyle(color: ColorConstants.color3),
-            validator: _validateMotherName,
+            // validator: _validateMotherName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -285,10 +285,13 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16),
           TextFormField(
-            minLines: 2,
-            maxLines: 5,
             style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                RegExp(r'[1-9]'), // Add characters to allow
+              ),
+            ],
+            maxLength: 1,
             maxLengthEnforcement: brothers.isNotEmpty
                 ? MaxLengthEnforcement.none
                 : MaxLengthEnforcement.enforced,
@@ -328,7 +331,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 ),
               ),
             ),
-            keyboardType: TextInputType.multiline,
+            keyboardType: TextInputType.number,
             onChanged: (val) {
               setState(() {
                 brothers = val;
@@ -337,10 +340,13 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16),
           TextFormField(
-            minLines: 2,
-            maxLines: 5,
             style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                RegExp(r'[1-9]'), // Add characters to allow
+              ),
+            ],
+            maxLength: 1,
             maxLengthEnforcement: sisters.isNotEmpty
                 ? MaxLengthEnforcement.none
                 : MaxLengthEnforcement.enforced,
@@ -380,7 +386,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 ),
               ),
             ),
-            keyboardType: TextInputType.multiline,
+            keyboardType: TextInputType.number,
             onChanged: (val) {
               setState(() {
                 sisters = val;
@@ -634,7 +640,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.55,
                 child: DropdownButtonFormField<String>(
-                  validator: _validateFamilyType,
+                  // validator: _validateFamilyType,
                   value: familyType,
                   hint: Text(familyTypeList.first),
                   onChanged: (String? newValue) {

@@ -10,6 +10,8 @@ import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
 import 'package:get/get.dart';
 
+import 'otp_verification_screen.dart';
+
 class RegisterScreen1 extends StatefulWidget {
   const RegisterScreen1({super.key});
 
@@ -64,7 +66,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
   String lastName = '';
   String gender = '';
   String mobile = '';
-  String contactPrivacySetting = '';
+  // String contactPrivacySetting = '';
   String profilePerson = '';
   final List<String> profilePersons = [
     'Select',
@@ -141,20 +143,20 @@ class _RegisterForm1State extends State<RegisterForm1> {
     }
   }
 
-  String contactPrivacySettingError = '';
-  bool validateContactPrivacySetting() {
-    if (contactPrivacySetting.isEmpty) {
-      setState(() {
-        contactPrivacySettingError = StringConstants.contactPrivacySettingError;
-      });
-      return false;
-    } else {
-      setState(() {
-        contactPrivacySettingError = '';
-      });
-      return true;
-    }
-  }
+  // String contactPrivacySettingError = '';
+  // bool validateContactPrivacySetting() {
+  //   if (contactPrivacySetting.isEmpty) {
+  //     setState(() {
+  //       contactPrivacySettingError = StringConstants.contactPrivacySettingError;
+  //     });
+  //     return false;
+  //   } else {
+  //     setState(() {
+  //       contactPrivacySettingError = '';
+  //     });
+  //     return true;
+  //   }
+  // }
 
   String? _validateProfilePerson(String? value) {
     if (value == profilePersons.first) {
@@ -640,122 +642,122 @@ class _RegisterForm1State extends State<RegisterForm1> {
             ),
           ),
           const SizedBox(height: 16),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  StringConstants.contactPrivacySetting,
-                  style: TextStyle(
-                    color: ColorConstants.color3,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Wrap(
-                  spacing: 10.0,
-                  runSpacing: 10.0,
-                  children: [
-                    BorderButton(
-                      width: 90,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 0.0,
-                      ),
-                      bgColor: ColorConstants.textWhite,
-                      color: contactPrivacySetting == StringConstants.showToAll
-                          ? ColorConstants.color1
-                          : ColorConstants.color5,
-                      onPressed: () async {
-                        setState(() {
-                          contactPrivacySetting = StringConstants.showToAll;
-                        });
-                      },
-                      child: Text(
-                        StringConstants.showToAll,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color:
-                              contactPrivacySetting == StringConstants.showToAll
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color3,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    BorderButton(
-                      width: 100,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 0.0,
-                      ),
-                      bgColor: ColorConstants.textWhite,
-                      color:
-                          contactPrivacySetting == StringConstants.hideFromAll
-                              ? ColorConstants.color1
-                              : ColorConstants.color5,
-                      onPressed: () async {
-                        setState(() {
-                          contactPrivacySetting = StringConstants.hideFromAll;
-                        });
-                      },
-                      child: Text(
-                        StringConstants.hideFromAll,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: contactPrivacySetting ==
-                                  StringConstants.hideFromAll
-                              ? ColorConstants.color1
-                              : ColorConstants.color3,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    BorderButton(
-                      width: 240,
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 0.0,
-                      ),
-                      bgColor: ColorConstants.textWhite,
-                      color: contactPrivacySetting ==
-                              StringConstants.showToMyInterests
-                          ? ColorConstants.color1
-                          : ColorConstants.color5,
-                      onPressed: () async {
-                        setState(() {
-                          contactPrivacySetting =
-                              StringConstants.showToMyInterests;
-                        });
-                      },
-                      child: Text(
-                        StringConstants.showToMyInterests,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: contactPrivacySetting ==
-                                  StringConstants.showToMyInterests
-                              ? ColorConstants.color1
-                              : ColorConstants.color3,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 5),
-                if (contactPrivacySettingError.isNotEmpty)
-                  Text(
-                    contactPrivacySettingError,
-                    style: TextStyle(
-                      color: ColorConstants.textRed,
-                      fontSize: 12.0,
-                    ),
-                  ),
-              ],
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.centerLeft,
+          //   child: Column(
+          //     crossAxisAlignment: CrossAxisAlignment.start,
+          //     children: [
+          //       Text(
+          //         StringConstants.contactPrivacySetting,
+          //         style: TextStyle(
+          //           color: ColorConstants.color3,
+          //           fontSize: 17.0,
+          //           fontWeight: FontWeight.w600,
+          //         ),
+          //       ),
+          //       const SizedBox(height: 10),
+          //       Wrap(
+          //         spacing: 10.0,
+          //         runSpacing: 10.0,
+          //         children: [
+          //           BorderButton(
+          //             width: 90,
+          //             padding: const EdgeInsets.symmetric(
+          //               vertical: 5.0,
+          //               horizontal: 0.0,
+          //             ),
+          //             bgColor: ColorConstants.textWhite,
+          //             color: contactPrivacySetting == StringConstants.showToAll
+          //                 ? ColorConstants.color1
+          //                 : ColorConstants.color5,
+          //             onPressed: () async {
+          //               setState(() {
+          //                 contactPrivacySetting = StringConstants.showToAll;
+          //               });
+          //             },
+          //             child: Text(
+          //               StringConstants.showToAll,
+          //               style: TextStyle(
+          //                 fontSize: 12,
+          //                 color:
+          //                     contactPrivacySetting == StringConstants.showToAll
+          //                         ? ColorConstants.color1
+          //                         : ColorConstants.color3,
+          //               ),
+          //               textAlign: TextAlign.center,
+          //             ),
+          //           ),
+          //           BorderButton(
+          //             width: 100,
+          //             padding: const EdgeInsets.symmetric(
+          //               vertical: 5.0,
+          //               horizontal: 0.0,
+          //             ),
+          //             bgColor: ColorConstants.textWhite,
+          //             color:
+          //                 contactPrivacySetting == StringConstants.hideFromAll
+          //                     ? ColorConstants.color1
+          //                     : ColorConstants.color5,
+          //             onPressed: () async {
+          //               setState(() {
+          //                 contactPrivacySetting = StringConstants.hideFromAll;
+          //               });
+          //             },
+          //             child: Text(
+          //               StringConstants.hideFromAll,
+          //               style: TextStyle(
+          //                 fontSize: 12,
+          //                 color: contactPrivacySetting ==
+          //                         StringConstants.hideFromAll
+          //                     ? ColorConstants.color1
+          //                     : ColorConstants.color3,
+          //               ),
+          //               textAlign: TextAlign.center,
+          //             ),
+          //           ),
+          //           BorderButton(
+          //             width: 240,
+          //             padding: const EdgeInsets.symmetric(
+          //               vertical: 5.0,
+          //               horizontal: 0.0,
+          //             ),
+          //             bgColor: ColorConstants.textWhite,
+          //             color: contactPrivacySetting ==
+          //                     StringConstants.showToMyInterests
+          //                 ? ColorConstants.color1
+          //                 : ColorConstants.color5,
+          //             onPressed: () async {
+          //               setState(() {
+          //                 contactPrivacySetting =
+          //                     StringConstants.showToMyInterests;
+          //               });
+          //             },
+          //             child: Text(
+          //               StringConstants.showToMyInterests,
+          //               style: TextStyle(
+          //                 fontSize: 12,
+          //                 color: contactPrivacySetting ==
+          //                         StringConstants.showToMyInterests
+          //                     ? ColorConstants.color1
+          //                     : ColorConstants.color3,
+          //               ),
+          //               textAlign: TextAlign.center,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //       const SizedBox(height: 5),
+          //       if (contactPrivacySettingError.isNotEmpty)
+          //         Text(
+          //           contactPrivacySettingError,
+          //           style: TextStyle(
+          //             color: ColorConstants.textRed,
+          //             fontSize: 12.0,
+          //           ),
+          //         ),
+          //     ],
+          //   ),
+          // ),
           const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1009,7 +1011,11 @@ class _RegisterForm1State extends State<RegisterForm1> {
                 // Get.to(() => const OTPVerificationScreen());
                 Get.to(() => const RegisterScreen2());
 
-                if (!validateGender() || !validateContactPrivacySetting()) {
+                // if (!validateGender() || !validateContactPrivacySetting()) {
+                //   return;
+                // }
+
+                if (!validateGender()) {
                   return;
                 }
                 if (_formKey.currentState!.validate()) {

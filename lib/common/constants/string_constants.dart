@@ -42,7 +42,7 @@ class StringConstants {
   static const String skip = "Skip";
   static const String next = "Next";
   static const String profileDetails = "Profile Details";
-  static const String profileManagedBy = "Profile Managed By";
+  static const String profileManagedBy = "Profile Managed By:";
   static const String dateOfBirth = "Date of Birth";
   static const String motherTongue = "Mother Tongue";
   static const String religion = "Religion";

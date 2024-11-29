@@ -18,19 +18,23 @@ class ColoredButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onPressed,
-      child: Container(
-        width: width,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(5.0),
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: onPressed,
+          child: Container(
+            width: width,
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+            padding: padding,
+            child: Center(
+              child: child,
+            ),
+          ),
         ),
-        padding: padding,
-        child: Center(
-          child: child,
-        ),
-      ),
+      ],
     );
   }
 }

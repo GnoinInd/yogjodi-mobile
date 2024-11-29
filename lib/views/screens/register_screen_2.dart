@@ -75,6 +75,17 @@ class RegisterForm2 extends StatefulWidget {
 
 class _RegisterForm2State extends State<RegisterForm2> {
   String profileManagedBy = '';
+  final List<String> profileManagedByList = [
+    'Select',
+    'Self',
+    'Son',
+    'Daughter',
+    'Brother',
+    'Sister',
+    'Relative',
+    'Friend',
+    'Other',
+  ];
   String dob = '';
   String height = '';
   final List<String> heightList = ['Select'];
@@ -226,13 +237,13 @@ class _RegisterForm2State extends State<RegisterForm2> {
     return null;
   }
 
-  String? _validateDiet(String? value) {
-    if (value == dietList.first) {
-      return StringConstants.dietIsRequired;
-    }
-
-    return null;
-  }
+  // String? _validateDiet(String? value) {
+  //   if (value == dietList.first) {
+  //     return StringConstants.dietIsRequired;
+  //   }
+  //
+  //   return null;
+  // }
 
   @override
   void dispose() {
@@ -242,6 +253,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
 
   @override
   void initState() {
+    profileManagedBy = profileManagedByList.first;
     maritalStatus = maritalStatusList.first;
     height = heightList.first;
     smoking = badHabitsList.first;
@@ -264,79 +276,70 @@ class _RegisterForm2State extends State<RegisterForm2> {
       key: _formKey,
       child: Column(
         children: [
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            validator: _validateName,
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.profileManagedBy,
+                style: TextStyle(
+                  color: ColorConstants.color3,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.40,
+                child: DropdownButtonFormField<String>(
+                  value: profileManagedBy,
+                  hint: Text(profileManagedByList.first),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      profileManagedBy = newValue!;
+                      if (profileManagedBy == profileManagedByList.first) {
+                        profileManagedBy = "";
+                      }
+                    });
+                  },
+                  items: profileManagedByList.map((String profileManagedBy_) {
+                    return DropdownMenuItem<String>(
+                      value: profileManagedBy_,
+                      child: Text(profileManagedBy_),
                     );
-                  }
-                  return newValue;
-                },
+                  }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color5,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color1,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: profileManagedBy.isNotEmpty ? null : "",
-              hintText: StringConstants.profileManagedBy,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.profileManagedBy,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              // prefixIcon: Icon(
-              //   Icons.person_outline,
-              //   color: ColorConstants.color3,
-              // ),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                profileManagedBy = val;
-              });
-            },
           ),
           const SizedBox(height: 16.0),
           TextFormField(
@@ -394,7 +397,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
           const SizedBox(height: 16.0),
           TextFormField(
             style: TextStyle(color: ColorConstants.color3),
-            validator: _validateMotherTongue,
+            // validator: _validateMotherTongue,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -1088,12 +1091,15 @@ class _RegisterForm2State extends State<RegisterForm2> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
                 child: DropdownButtonFormField<String>(
-                  validator: _validateDiet,
+                  // validator: _validateDiet,
                   value: diet,
                   hint: Text(dietList.first),
                   onChanged: (String? newValue) {
                     setState(() {
                       diet = newValue!;
+                      if (diet == dietList.first) {
+                        diet = "";
+                      }
                     });
                   },
                   items: dietList.map((String diet_) {
