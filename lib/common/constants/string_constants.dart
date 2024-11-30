@@ -83,6 +83,19 @@ class StringConstants {
   static const String familyStatus = "Family Status";
   static const String familyType = "Family Type";
   static const String aboutMyFamily = "About My Family";
+  static const String partnerDetails = "Partner Details";
+  static const String minAge = "Min. Age:";
+  static const String maxAge = "Max. Age:";
+  static const String minHeight = "Min. Height:";
+  static const String maxHeight = "Max. Height:";
+  static const String country = "Country";
+  static const String state = "State";
+  static const String skills = "Skills";
+  static const String minAnnualIncome = "Min. Annual Income";
+  static const String maxAnnualIncome = "Max. Annual Income";
+  static const String aboutPartner = "About Partner";
+  static const String residentialStatus = "Residential Status";
+  static const String uploadPhoto = "Upload Photo";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

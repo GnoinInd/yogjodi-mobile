@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:yog_jodi/views/screens/register_screen_5.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -25,7 +26,9 @@ class _RegisterScreen4State extends State<RegisterScreen4> {
         foregroundColor: ColorConstants.textWhite,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => const RegisterScreen5());
+            },
             child: Text(
               StringConstants.skip,
               style: TextStyle(
@@ -753,6 +756,8 @@ class _RegisterForm4State extends State<RegisterForm4> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
+                Get.to(() => const RegisterForm5());
+
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   FocusScope.of(context).unfocus();
