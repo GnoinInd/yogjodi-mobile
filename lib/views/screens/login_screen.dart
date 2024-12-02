@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:yog_jodi/views/screens/dashboard_screen.dart';
 import 'package:yog_jodi/views/screens/register_screen_1.dart';
 import '../../common/constants/string_constants.dart';
 import '../../common/utils/utility_methods.dart';
@@ -342,6 +343,7 @@ class _LoginFormState extends State<LoginForm> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
+                Get.offAll(() => const DashboardScreen());
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   FocusScope.of(context).unfocus();

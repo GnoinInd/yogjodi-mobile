@@ -5,6 +5,7 @@ class ColoredButton extends StatelessWidget {
   final EdgeInsetsGeometry padding;
   final Color color;
   final Widget child;
+  final double radius;
   final VoidCallback onPressed;
 
   const ColoredButton({
@@ -13,6 +14,7 @@ class ColoredButton extends StatelessWidget {
     this.padding = const EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
     required this.color,
     required this.child,
+    this.radius = 5.0,
     required this.onPressed,
   });
 
@@ -26,7 +28,7 @@ class ColoredButton extends StatelessWidget {
             width: width,
             decoration: BoxDecoration(
               color: color,
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(radius),
             ),
             padding: padding,
             child: Center(

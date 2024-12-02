@@ -96,6 +96,23 @@ class StringConstants {
   static const String aboutPartner = "About Partner";
   static const String residentialStatus = "Residential Status";
   static const String uploadPhoto = "Upload Photo";
+  static const String doYouWantToLogout = "Do you want to logout?";
+  static const String appVersion = "App Version";
+  static const String partnerPreferences = "Partner Preferences";
+  static const String blockedIgnoredProfile = "Blocked/Ignored Profile";
+  static const String astrologyServices = "Astrology Services";
+  static const String phonebook = "Phonebook";
+  static const String accountAndSettings = "Account & Settings";
+  static const String helpAndSupport = "Help & Support";
+  static const String successStories = "Success Stories";
+  static const String videoTour = "Video Tour";
+  static const String matches = "Matches";
+  static const String activity = "Activity";
+  static const String search = "Search";
+  static const String messenger = "Messenger";
+  static const String upgradeMembership = "Upgrade Membership";
+  static const String percentProfile = "% Profile";
+  static const String editProfile = "Edit Profile";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
