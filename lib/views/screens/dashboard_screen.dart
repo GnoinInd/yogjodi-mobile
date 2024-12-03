@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
+import 'package:yog_jodi/views/screens/matches_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
 import '../../common/constants/color_constants.dart';
@@ -18,6 +19,26 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   PackageInfo? packageInfo;
+
+  @override
+  void initState() {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual,
+      overlays: [
+        SystemUiOverlay.top,
+        SystemUiOverlay.bottom,
+      ],
+    );
+
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: ColorConstants.color1,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -459,7 +480,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   // List of screens for each tab
   final List<Widget> _screens = const [
-    Center(child: Text("Matches", style: TextStyle(fontSize: 24))),
+    // Center(child: Text("Matches", style: TextStyle(fontSize: 24))),
+    MatchesScreen(),
     Center(child: Text("Activities", style: TextStyle(fontSize: 24))),
     Center(child: Text("Search", style: TextStyle(fontSize: 24))),
     Center(child: Text("Messenger ", style: TextStyle(fontSize: 24))),

@@ -715,7 +715,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
                             horizontal: 0.0,
                           ),
                           bgColor: ColorConstants.textWhite,
-                          color: haveChildren == true
+                          borderColor: haveChildren == true
                               ? ColorConstants.color1
                               : ColorConstants.color5,
                           onPressed: () async {
@@ -742,7 +742,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
                             horizontal: 0.0,
                           ),
                           bgColor: ColorConstants.textWhite,
-                          color: haveChildren == false
+                          borderColor: haveChildren == false
                               ? ColorConstants.color1
                               : ColorConstants.color5,
                           onPressed: () async {

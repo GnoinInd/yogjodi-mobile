@@ -87,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         horizontal: 0.0,
                       ),
                       bgColor: ColorConstants.color1,
-                      color: ColorConstants.color1,
+                      borderColor: ColorConstants.color1,
                       onPressed: () async {
                         Get.to(
                           () => const RegisterScreen1(),

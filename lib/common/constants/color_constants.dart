@@ -5,6 +5,7 @@ class ColorConstants {
   static Color textRed = Colors.red;
   static Color textBlack = Colors.black87;
   static Color textBlue = Colors.blue;
+  static Color textGrey = hexToColor('#808080');
 
   /// Marron
   static Color color1 = hexToColor('#A70855');

@@ -23,4 +23,14 @@ class AssetConstants {
   static const String helpAndSupport = "assets/icons/help-support.svg";
   static const String successStories = "assets/icons/success-stories.svg";
   static const String videoTour = "assets/icons/video-tour.svg";
+  static const String shortlisted = "assets/icons/shortlisted.svg";
+  static const String notification = "assets/icons/notification.svg";
+  static const String filter = "assets/icons/filter.svg";
+  static const String shortlist = "assets/icons/shortlist.svg";
+  static const String chat = "assets/icons/chat.svg";
+  static const String profession = "assets/icons/profession.svg";
+  static const String income = "assets/icons/income.svg";
+  static const String education = "assets/icons/education.svg";
+  static const String maritalStatus = "assets/icons/marital-status.svg";
+  static const String dot = "assets/icons/dot.svg";
 }

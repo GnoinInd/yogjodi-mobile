@@ -119,7 +119,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 horizontal: 0.0,
               ),
               bgColor: ColorConstants.textRed,
-              color: ColorConstants.textRed,
+              borderColor: ColorConstants.textRed,
               onPressed: () {
                 if (_isLoading) {
                   return;

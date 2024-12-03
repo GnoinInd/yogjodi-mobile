@@ -113,6 +113,15 @@ class StringConstants {
   static const String upgradeMembership = "Upgrade Membership";
   static const String percentProfile = "% Profile";
   static const String editProfile = "Edit Profile";
+  static const String filter = "Filter";
+  static const String sendInterest = "Send Interest";
+  static const String shortlist = "Shortlist";
+  static const String chat = "Chat";
+  static const String verified = "Verified";
+  static const String justJoined = "Just Joined";
+  static const String neverMarried = "Never Married";
+  static const String married = "Married";
+  static const String lastSeenAt = "Last seen at ";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

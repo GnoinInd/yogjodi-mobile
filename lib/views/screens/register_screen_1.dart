@@ -456,7 +456,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
                       horizontal: 0.0,
                     ),
                     bgColor: ColorConstants.textWhite,
-                    color: gender == StringConstants.male
+                    borderColor: gender == StringConstants.male
                         ? ColorConstants.color1
                         : ColorConstants.color5,
                     onPressed: () async {
@@ -483,7 +483,7 @@ class _RegisterForm1State extends State<RegisterForm1> {
                       horizontal: 0.0,
                     ),
                     bgColor: ColorConstants.textWhite,
-                    color: gender == StringConstants.female
+                    borderColor: gender == StringConstants.female
                         ? ColorConstants.color1
                         : ColorConstants.color5,
                     onPressed: () async {

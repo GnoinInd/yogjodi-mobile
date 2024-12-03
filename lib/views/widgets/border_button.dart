@@ -4,7 +4,8 @@ class BorderButton extends StatelessWidget {
   final double width;
   final EdgeInsetsGeometry padding;
   final Color bgColor;
-  final Color color;
+  final Color borderColor;
+  final BoxShadow boxShadow;
   final Widget child;
   final VoidCallback onPressed;
 
@@ -13,7 +14,8 @@ class BorderButton extends StatelessWidget {
     this.width = double.infinity,
     this.padding = const EdgeInsets.symmetric(vertical: 12.0, horizontal: 20.0),
     this.bgColor = Colors.transparent,
-    required this.color,
+    this.boxShadow = const BoxShadow(color: Colors.transparent),
+    required this.borderColor,
     required this.child,
     required this.onPressed,
   });
@@ -26,8 +28,11 @@ class BorderButton extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           color: bgColor,
-          border: Border.all(color: color),
+          border: Border.all(color: borderColor),
           borderRadius: BorderRadius.circular(30.0),
+          boxShadow: [
+            boxShadow,
+          ],
         ),
         padding: padding,
         child: Center(
