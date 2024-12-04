@@ -9,6 +9,7 @@ import 'package:yog_jodi/views/widgets/colored_button.dart';
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
 import '../widgets/circular_profile.dart';
+import 'messanger_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -480,11 +481,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   // List of screens for each tab
   final List<Widget> _screens = const [
-    // Center(child: Text("Matches", style: TextStyle(fontSize: 24))),
     MatchesScreen(),
     Center(child: Text("Activities", style: TextStyle(fontSize: 24))),
     Center(child: Text("Search", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Messenger ", style: TextStyle(fontSize: 24))),
+    MessengerScreen(),
   ];
 
   // Function to handle navigation

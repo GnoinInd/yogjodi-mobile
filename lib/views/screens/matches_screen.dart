@@ -6,6 +6,7 @@ import 'package:yog_jodi/views/widgets/border_button.dart';
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/string_constants.dart';
+import '../widgets/custom_appbar.dart';
 import '../widgets/match_item.dart';
 
 class MatchesScreen extends StatefulWidget {
@@ -19,49 +20,15 @@ class _MatchesScreenState extends State<MatchesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: ColorConstants.textWhite,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const CircleAvatar(
-              radius: 20,
-              backgroundImage: CachedNetworkImageProvider(
-                'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45', // Replace with actual image URL
-              ),
-            ),
-            const SizedBox(width: 20.0),
-            Expanded(
-              child: Text(
-                StringConstants.matches,
-                style: TextStyle(
-                  fontFamily: "Inter",
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w600,
-                  color: ColorConstants.color1,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60.0),
+        child: CustomAppbar(
+          imageUrl:
+              'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
+          title: StringConstants.matches,
+          onNotificationPressed: () {},
+          onShortlistedPressed: () {},
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(
-              AssetConstants.notification,
-              fit: BoxFit.scaleDown,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(
-              AssetConstants.shortlisted,
-              fit: BoxFit.scaleDown,
-            ),
-          ),
-          const SizedBox(width: 25.0),
-        ],
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -206,25 +173,22 @@ class _MatchesScreenState extends State<MatchesScreen> {
                   vertical: 10.0,
                 ),
                 itemBuilder: (_, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 20.0),
-                    child: MatchItem(
-                      imageUrl:
-                          'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
-                      lastSeen: '6:24 AM',
-                      name: 'Sagar Thakur',
-                      age: '24',
-                      height: '5ft 10in',
-                      state: 'Gujrat',
-                      religion: 'Hindu',
-                      profession: 'Software Developer',
-                      annualIncome: '5-6 LPA',
-                      education: 'MCA',
-                      maritalStatus: 'Never Married',
-                      onSendInterestPressed: () {},
-                      onShortlistPressed: () {},
-                      onChatPressed: () {},
-                    ),
+                  return MatchItem(
+                    imageUrl:
+                        'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
+                    lastSeen: '6:24 AM',
+                    name: 'Sagar Thakur',
+                    age: '24',
+                    height: '5ft 10in',
+                    state: 'Gujrat',
+                    religion: 'Hindu',
+                    profession: 'Software Developer',
+                    annualIncome: '5-6 LPA',
+                    education: 'MCA',
+                    maritalStatus: 'Never Married',
+                    onSendInterestPressed: () {},
+                    onShortlistPressed: () {},
+                    onChatPressed: () {},
                   );
                 },
               ),

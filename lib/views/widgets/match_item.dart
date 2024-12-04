@@ -45,6 +45,7 @@ class MatchItem extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 270,
+      margin: const EdgeInsets.only(bottom: 20.0),
       decoration: BoxDecoration(
         color: ColorConstants.textWhite,
         borderRadius: BorderRadius.circular(6.0),
@@ -296,7 +297,7 @@ class MatchItem extends StatelessWidget {
                     IconButton(
                       onPressed: onSendInterestPressed,
                       icon: SizedBox(
-                        width: 100.0,
+                        width: 90.0,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -322,7 +323,7 @@ class MatchItem extends StatelessWidget {
                     IconButton(
                       onPressed: onShortlistPressed,
                       icon: SizedBox(
-                        width: 100.0,
+                        width: 90.0,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -348,7 +349,7 @@ class MatchItem extends StatelessWidget {
                     IconButton(
                       onPressed: onChatPressed,
                       icon: SizedBox(
-                        width: 100.0,
+                        width: 90.0,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
