@@ -304,6 +304,10 @@ class MatchItem extends StatelessWidget {
                             SvgPicture.asset(
                               AssetConstants.messenger,
                               fit: BoxFit.scaleDown,
+                              colorFilter: ColorFilter.mode(
+                                ColorConstants.textBlack,
+                                BlendMode.srcIn,
+                              ),
                             ),
                             const SizedBox(height: 6.0),
                             Text(

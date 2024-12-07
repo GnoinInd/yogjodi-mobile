@@ -122,6 +122,19 @@ class StringConstants {
   static const String neverMarried = "Never Married";
   static const String married = "Married";
   static const String lastSeenAt = "Last seen at ";
+  static const String acceptedInterests = "Accepted Interests";
+  static const String declinedInterests = "Declined Interests";
+  static const String filteredInterests = "Filtered Interests";
+  static const String interestsReceived = "Interests Received";
+  static const String interestsSent = "Interests Sent";
+  static const String shortlistedProfiles = "Shortlisted Profiles";
+  static const String thisMightInterestYou = "This might interest you";
+  static const String profilesVisitedByYou = "profiles visited by you";
+  static const String tryPremium = "Try premium";
+  static const String seeWhoViewedYourProfile = "See who’s viewed your profile";
+  static const String tryPremiumFor = "Try premium for ";
+  static const String dayFreeTrial = "-day free trial. Cancel anytime.";
+  static const String seeAll = "See all";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -158,7 +171,6 @@ class StringConstants {
   ///
 
   ///
-  static const String home = "Home";
   static const String profile = "Profile";
   static const String logout = "Logout";
   static const String noSearchResultTitle = "Sorry, no results found";

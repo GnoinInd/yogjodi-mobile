@@ -1,9 +1,11 @@
 class AssetConstants {
-  static const String backgroundImage1 = "assets/images/background1.jpg";
-  static const String backgroundImage2 = "assets/images/background2.jpg";
-  static const String backgroundImage3 = "assets/images/background3.jpg";
-  static const String backgroundImage4 = "assets/images/background4.jpg";
-  static const String backgroundImage5 = "assets/images/background5.jpg";
+  static const String backgroundImage1 = "assets/images/image1.png";
+  static const String backgroundImage2 = "assets/images/image2.png";
+  static const String backgroundImage3 = "assets/images/image3.png";
+  static const String backgroundImage4 = "assets/images/image4.png";
+  static const String backgroundImage5 = "assets/images/image5.png";
+  static const String backgroundImage6 = "assets/images/image6.png";
+  static const String backgroundImage7 = "assets/images/image7.png";
   //Image Assets
   static const String searchImage = "assets/images/search.png";
   static const String loadingImage = "assets/images/loading.png";
@@ -33,4 +35,11 @@ class AssetConstants {
   static const String education = "assets/icons/education.svg";
   static const String maritalStatus = "assets/icons/marital-status.svg";
   static const String dot = "assets/icons/dot.svg";
+  static const String acceptedInterests = "assets/icons/accepted-interests.svg";
+  static const String declinedInterests = "assets/icons/declined-interests.svg";
+  static const String filteredInterests = "assets/icons/filtered-interests.svg";
+  static const String interestsReceived = "assets/icons/interests-received.svg";
+  static const String interestsSent = "assets/icons/interests-sent.svg";
+  static const String shortlistedProfiles =
+      "assets/icons/shortlisted-profiles.svg";
 }

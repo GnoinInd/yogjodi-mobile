@@ -41,7 +41,9 @@ class _MessengerScreenState extends State<MessengerScreen> {
                 'https://plus.unsplash.com/premium_photo-1682089869602-2ec199cc501a',
             name: 'Vishvaip Thakur',
             message: 'You: Okay',
-            date: 'Mar 12',
+            totalUnreadMessage:
+                (index > 1 && index % 3 == 0) ? index.toString() : '',
+            date: '16-Sept-24',
             onTap: () {
               setState(() {
                 selectedIndex = index;
@@ -60,6 +62,7 @@ class MessengerItem extends StatefulWidget {
   final String name;
   final String message;
   final String date;
+  final String totalUnreadMessage;
   final void Function() onTap;
 
   const MessengerItem({
@@ -68,6 +71,7 @@ class MessengerItem extends StatefulWidget {
     required this.imageUrl,
     required this.name,
     required this.message,
+    required this.totalUnreadMessage,
     required this.date,
     required this.onTap,
   });
@@ -140,15 +144,35 @@ class _MessengerItemState extends State<MessengerItem> {
                 Expanded(
                   child: SizedBox(
                     height: 60.0,
-                    child: Text(
-                      widget.date,
-                      style: TextStyle(
-                        fontFamily: "Inter",
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.w400,
-                        color: ColorConstants.color3,
-                      ),
-                      textAlign: TextAlign.center,
+                    child: Column(
+                      children: [
+                        Text(
+                          widget.date,
+                          style: TextStyle(
+                            fontFamily: "Inter",
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.color3,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 15.0),
+                        if (widget.totalUnreadMessage.isNotEmpty)
+                          CircleAvatar(
+                            radius:
+                                widget.totalUnreadMessage.length > 2 ? 13 : 9,
+                            backgroundColor: ColorConstants.color1,
+                            child: Text(
+                              widget.totalUnreadMessage,
+                              style: TextStyle(
+                                fontFamily: "Inter",
+                                fontSize: 12.0,
+                                color: ColorConstants.textWhite,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                      ],
                     ),
                   ),
                 ),

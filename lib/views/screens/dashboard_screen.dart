@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
+import 'package:yog_jodi/views/screens/activity_screen.dart';
 import 'package:yog_jodi/views/screens/matches_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
@@ -20,6 +21,23 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   PackageInfo? packageInfo;
+
+  int _currentIndex = 0;
+
+  // List of screens for each tab
+  final List<Widget> _screens = const [
+    MatchesScreen(),
+    ActivityScreen(),
+    Center(child: Text("Search", style: TextStyle(fontSize: 24))),
+    MessengerScreen(),
+  ];
+
+  // Function to handle navigation
+  void _onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   void initState() {
@@ -475,23 +493,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
         ),
       ),
     );
-  }
-
-  int _currentIndex = 0;
-
-  // List of screens for each tab
-  final List<Widget> _screens = const [
-    MatchesScreen(),
-    Center(child: Text("Activities", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Search", style: TextStyle(fontSize: 24))),
-    MessengerScreen(),
-  ];
-
-  // Function to handle navigation
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
   }
 
   Widget customBottomNavigation() {

@@ -33,6 +33,9 @@ class ColorConstants {
 
   /// Lightest Marron
   static Color color9 = hexToColor('#FEF6FA');
+
+  /// Yellow BG
+  static Color color10 = hexToColor('#E7B724');
 }
 
 Color hexToColor(String hex) {
