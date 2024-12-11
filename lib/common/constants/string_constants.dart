@@ -135,6 +135,29 @@ class StringConstants {
   static const String tryPremiumFor = "Try premium for ";
   static const String dayFreeTrial = "-day free trial. Cancel anytime.";
   static const String seeAll = "See all";
+  static const String searchByCriteria = "Search By Criteria";
+  static const String searchByProfileId = "Search By Profile ID";
+  static const String age = "Age";
+  static const String doesNotMatter = "Doesn't matter";
+  static const String divorced = "Divorced";
+  static const String widowed = "Widowed";
+  static const String awaitingMarried = "Awaiting Married";
+  static const String awaitingDivorce = "Awaiting Divorce";
+  static const String hindu = "Hindu";
+  static const String muslim = "Muslim";
+  static const String sikh = "Sikh";
+  static const String christian = "Christian";
+  static const String buddhist = "Buddhist";
+  static const String jain = "Jain";
+  static const String parsi = "Parsi";
+  static const String jewish = "Jewish";
+  static const String bahai = "Bahai";
+  static const String citizen = "Citizen";
+  static const String workPermit = "Work Permit";
+  static const String studentVisa = "Student Visa";
+  static const String permanentResident = "Permanent Resident";
+  static const String education = "Education";
+  static const String showMeProfiles = "Show me Profiles";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

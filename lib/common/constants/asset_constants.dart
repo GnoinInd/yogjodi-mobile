@@ -42,4 +42,5 @@ class AssetConstants {
   static const String interestsSent = "assets/icons/interests-sent.svg";
   static const String shortlistedProfiles =
       "assets/icons/shortlisted-profiles.svg";
+  static const String search1 = "assets/icons/search1.svg";
 }

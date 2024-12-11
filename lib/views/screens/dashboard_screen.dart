@@ -5,6 +5,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
 import 'package:yog_jodi/views/screens/activity_screen.dart';
 import 'package:yog_jodi/views/screens/matches_screen.dart';
+import 'package:yog_jodi/views/screens/search_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
 import '../../common/constants/color_constants.dart';
@@ -28,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   final List<Widget> _screens = const [
     MatchesScreen(),
     ActivityScreen(),
-    Center(child: Text("Search", style: TextStyle(fontSize: 24))),
+    SearchScreen(),
     MessengerScreen(),
   ];
 
