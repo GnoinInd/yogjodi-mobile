@@ -521,7 +521,9 @@ class _RegisterForm3State extends State<RegisterForm3> {
                 width: MediaQuery.of(context).size.width * 0.40,
                 child: DropdownButtonFormField<String>(
                   menuMaxHeight: 200,
-                  value: yearsOfExperience,
+                  value: yearsOfExperience.isNotEmpty
+                      ? yearsOfExperience
+                      : yearsOfExperienceList.first,
                   hint: Text(yearsOfExperienceList.first),
                   onChanged: (String? newValue) {
                     setState(() {

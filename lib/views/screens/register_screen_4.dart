@@ -644,11 +644,15 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 width: MediaQuery.of(context).size.width * 0.55,
                 child: DropdownButtonFormField<String>(
                   // validator: _validateFamilyType,
-                  value: familyType,
+                  value:
+                      familyType.isNotEmpty ? familyType : familyTypeList.first,
                   hint: Text(familyTypeList.first),
                   onChanged: (String? newValue) {
                     setState(() {
                       familyType = newValue!;
+                      if (familyType == familyTypeList.first) {
+                        familyType = "";
+                      }
                     });
                   },
                   items: familyTypeList.map((String familyType_) {

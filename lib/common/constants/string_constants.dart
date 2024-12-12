@@ -158,6 +158,11 @@ class StringConstants {
   static const String permanentResident = "Permanent Resident";
   static const String education = "Education";
   static const String showMeProfiles = "Show me Profiles";
+  static const String inbox = "Inbox";
+  static const String offline = "Offline";
+  static const String online = "Online";
+  static const String about = "About";
+  static const String location = "Location";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

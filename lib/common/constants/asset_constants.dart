@@ -43,4 +43,8 @@ class AssetConstants {
   static const String shortlistedProfiles =
       "assets/icons/shortlisted-profiles.svg";
   static const String search1 = "assets/icons/search1.svg";
+  static const String pickImage = "assets/icons/pick_image.svg";
+  static const String pickGif = "assets/icons/pick_gif.svg";
+  static const String pickEmoji = "assets/icons/pick_emoji.svg";
+  static const String sendMessage = "assets/icons/send_message.svg";
 }

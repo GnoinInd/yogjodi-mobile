@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/string_constants.dart';
+import 'package:yog_jodi/views/screens/inbox_screen.dart';
 import 'package:yog_jodi/views/widgets/custom_appbar.dart';
 
 import '../../common/constants/color_constants.dart';
@@ -45,6 +47,7 @@ class _MessengerScreenState extends State<MessengerScreen> {
                 (index > 1 && index % 3 == 0) ? index.toString() : '',
             date: '16-Sept-24',
             onTap: () {
+              Get.to(() => const InboxScreen());
               setState(() {
                 selectedIndex = index;
               });

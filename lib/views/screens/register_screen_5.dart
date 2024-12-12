@@ -183,7 +183,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
                   menuMaxHeight: 200,
-                  value: minAge,
+                  value: minAge.isNotEmpty ? minAge : ageList.first,
                   hint: Text(ageList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -250,7 +250,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
                   menuMaxHeight: 200,
-                  value: maxAge,
+                  value: maxAge.isNotEmpty ? maxAge : ageList.first,
                   hint: Text(ageList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -317,7 +317,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 width: MediaQuery.of(context).size.width * 0.55,
                 child: DropdownButtonFormField<String>(
                   menuMaxHeight: 200,
-                  value: minHeight,
+                  value: minHeight.isNotEmpty ? minHeight : heightList.first,
                   hint: Text(heightList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -384,7 +384,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 width: MediaQuery.of(context).size.width * 0.55,
                 child: DropdownButtonFormField<String>(
                   menuMaxHeight: 200,
-                  value: maxHeight,
+                  value: maxHeight.isNotEmpty ? maxHeight : heightList.first,
                   hint: Text(heightList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -874,7 +874,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
-                  value: smoking,
+                  value: smoking.isNotEmpty ? smoking : badHabitsList.first,
                   hint: Text(badHabitsList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -940,7 +940,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
-                  value: drinking,
+                  value: drinking.isNotEmpty ? drinking : badHabitsList.first,
                   hint: Text(badHabitsList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -1007,7 +1007,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 width: MediaQuery.of(context).size.width * 0.7,
                 child: DropdownButtonFormField<String>(
                   // validator: _validateDiet,
-                  value: diet,
+                  value: diet.isNotEmpty ? diet : dietList.first,
                   hint: Text(dietList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -1073,7 +1073,9 @@ class _RegisterForm5State extends State<RegisterForm5> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.50,
                 child: DropdownButtonFormField<String>(
-                  value: maritalStatus,
+                  value: maritalStatus.isNotEmpty
+                      ? maritalStatus
+                      : maritalStatusList.first,
                   hint: Text(maritalStatusList.first),
                   onChanged: (String? newValue) {
                     setState(() {

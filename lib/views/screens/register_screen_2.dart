@@ -292,7 +292,9 @@ class _RegisterForm2State extends State<RegisterForm2> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.40,
                 child: DropdownButtonFormField<String>(
-                  value: profileManagedBy,
+                  value: profileManagedBy.isNotEmpty
+                      ? profileManagedBy
+                      : profileManagedByList.first,
                   hint: Text(profileManagedByList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -961,7 +963,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
-                  value: smoking,
+                  value: smoking.isNotEmpty ? smoking : badHabitsList.first,
                   hint: Text(badHabitsList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -1027,7 +1029,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: DropdownButtonFormField<String>(
-                  value: drinking,
+                  value: drinking.isNotEmpty ? drinking : badHabitsList.first,
                   hint: Text(badHabitsList.first),
                   onChanged: (String? newValue) {
                     setState(() {
@@ -1094,7 +1096,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
                 width: MediaQuery.of(context).size.width * 0.7,
                 child: DropdownButtonFormField<String>(
                   // validator: _validateDiet,
-                  value: diet,
+                  value: diet.isNotEmpty ? diet : dietList.first,
                   hint: Text(dietList.first),
                   onChanged: (String? newValue) {
                     setState(() {

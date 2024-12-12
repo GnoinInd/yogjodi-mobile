@@ -16,9 +16,15 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  //Tab-1
-  String height = '';
-  String age = '';
+  ///Tab-1
+  // String height = '';
+  // String age = '';
+  String minAge = '';
+  String maxAge = '';
+  final List<String> ageList = ['Select'];
+  String minHeight = '';
+  String maxHeight = '';
+  final List<String> heightList = ['Select'];
   List<String> maritalStatusList = [];
   List<String> religionList = [];
   String caste = '';
@@ -28,8 +34,32 @@ class _SearchScreenState extends State<SearchScreen> {
   List<String> residentialStatusList = [];
   String education = '';
   String occupation = '';
-  //Tab-2
+
+  ///Tab-2
   String searchByID = '';
+
+  @override
+  void initState() {
+    minAge = ageList.first;
+    maxAge = ageList.first;
+    minHeight = heightList.first;
+    maxHeight = heightList.first;
+
+    ///Add age to list
+    for (int age = 18; age <= 60; age++) {
+      String newAge = '$age years';
+      ageList.add(newAge);
+    }
+
+    ///Add height to list
+    for (int ft = 3; ft <= 7; ft++) {
+      for (int inch = 0; inch <= 11; inch++) {
+        String newHeight = (inch == 0) ? '${ft}ft' : '${ft}ft ${inch}in';
+        heightList.add(newHeight);
+      }
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,108 +120,382 @@ class _SearchScreenState extends State<SearchScreen> {
                     //Tab-1
                     ListView(
                       children: [
-                        const SizedBox(height: 10.0),
-                        TextField(
-                          style: TextStyle(
-                            color: ColorConstants.color3,
-                          ),
-                          decoration: InputDecoration(
-                            // hintText: StringConstants.height.substring(
-                            //     0, StringConstants.height.length - 1),
-                            // hintStyle: TextStyle(color: ColorConstants.color11),
-                            labelText: StringConstants.height.substring(
-                                0, StringConstants.height.length - 1),
-                            labelStyle:
-                                TextStyle(color: ColorConstants.color11),
-                            contentPadding: const EdgeInsets.all(15.0),
-                            enabledBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Rounded corners
-                              borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
-                                width: 1, // Border width
+                        const SizedBox(height: 20.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              StringConstants.minAge,
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Same corners
-                              borderSide: BorderSide(
-                                color: ColorConstants
-                                    .color10, // Color when focused
-                                width: 1, // Border width
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.6,
+                              child: DropdownButtonFormField<String>(
+                                menuMaxHeight: 200,
+                                value:
+                                    minAge.isNotEmpty ? minAge : ageList.first,
+                                hint: Text(ageList.first),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    minAge = newValue!;
+                                    if (minAge == ageList.first) {
+                                      minAge = "";
+                                    }
+                                  });
+                                },
+                                items: ageList.map((String age_) {
+                                  return DropdownMenuItem<String>(
+                                    value: age_,
+                                    child: Text(age_),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(15.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color5,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color10,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                            errorBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Same corners
-                              borderSide: const BorderSide(
-                                color: Colors.red, // Color when error
-                                width: 1, // Border width
-                              ),
-                            ),
-                            focusedErrorBorder: UnderlineInputBorder(
-                              borderRadius: BorderRadius.circular(5),
-                              borderSide: const BorderSide(
-                                color: Colors.red,
-                                width: 1,
-                              ),
-                            ),
-                          ),
-                          keyboardType: TextInputType.text,
-                          onChanged: (val) {
-                            height = val;
-                          },
+                          ],
                         ),
-                        const SizedBox(height: 10.0),
-                        TextField(
-                          style: TextStyle(
-                            color: ColorConstants.color3,
-                          ),
-                          decoration: InputDecoration(
-                            // hintText: StringConstants.age,
-                            // hintStyle: TextStyle(color: ColorConstants.color11),
-                            labelText: StringConstants.age,
-                            labelStyle:
-                                TextStyle(color: ColorConstants.color11),
-                            contentPadding: const EdgeInsets.all(15.0),
-                            enabledBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Rounded corners
-                              borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
-                                width: 1, // Border width
+                        const SizedBox(height: 16.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              StringConstants.maxAge,
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Same corners
-                              borderSide: BorderSide(
-                                color: ColorConstants
-                                    .color10, // Color when focused
-                                width: 1, // Border width
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.6,
+                              child: DropdownButtonFormField<String>(
+                                menuMaxHeight: 200,
+                                value:
+                                    maxAge.isNotEmpty ? maxAge : ageList.first,
+                                hint: Text(ageList.first),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    maxAge = newValue!;
+                                    if (maxAge == ageList.first) {
+                                      maxAge = "";
+                                    }
+                                  });
+                                },
+                                items: ageList.map((String age_) {
+                                  return DropdownMenuItem<String>(
+                                    value: age_,
+                                    child: Text(age_),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(15.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color5,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color10,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                            errorBorder: UnderlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.circular(5), // Same corners
-                              borderSide: const BorderSide(
-                                color: Colors.red, // Color when error
-                                width: 1, // Border width
-                              ),
-                            ),
-                            focusedErrorBorder: UnderlineInputBorder(
-                              borderRadius: BorderRadius.circular(5),
-                              borderSide: const BorderSide(
-                                color: Colors.red,
-                                width: 1,
-                              ),
-                            ),
-                          ),
-                          keyboardType: TextInputType.text,
-                          onChanged: (val) {
-                            age = val;
-                          },
+                          ],
                         ),
+                        const SizedBox(height: 16.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              StringConstants.minHeight,
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.55,
+                              child: DropdownButtonFormField<String>(
+                                menuMaxHeight: 200,
+                                value: minHeight.isNotEmpty
+                                    ? minHeight
+                                    : heightList.first,
+                                hint: Text(heightList.first),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    minHeight = newValue!;
+                                    if (minHeight == heightList.first) {
+                                      minHeight = "";
+                                    }
+                                  });
+                                },
+                                items: heightList.map((String height_) {
+                                  return DropdownMenuItem<String>(
+                                    value: height_,
+                                    child: Text(height_),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(15.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color5,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color10,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 16.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              StringConstants.maxHeight,
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.55,
+                              child: DropdownButtonFormField<String>(
+                                menuMaxHeight: 200,
+                                value: maxHeight.isNotEmpty
+                                    ? maxHeight
+                                    : heightList.first,
+                                hint: Text(heightList.first),
+                                onChanged: (String? newValue) {
+                                  setState(() {
+                                    maxHeight = newValue!;
+                                    if (maxHeight == heightList.first) {
+                                      maxHeight = "";
+                                    }
+                                  });
+                                },
+                                items: heightList.map((String height_) {
+                                  return DropdownMenuItem<String>(
+                                    value: height_,
+                                    child: Text(height_),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  contentPadding: const EdgeInsets.all(15.0),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color5,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: BorderSide(
+                                      color: ColorConstants.color10,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                  focusedErrorBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                    borderSide: const BorderSide(
+                                      color: Colors.red,
+                                      width: 1,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        // const SizedBox(height: 16.0),
+                        // TextField(
+                        //   style: TextStyle(
+                        //     color: ColorConstants.color3,
+                        //   ),
+                        //   decoration: InputDecoration(
+                        //     // hintText: StringConstants.height.substring(
+                        //     //     0, StringConstants.height.length - 1),
+                        //     // hintStyle: TextStyle(color: ColorConstants.color11),
+                        //     labelText: StringConstants.height.substring(
+                        //         0, StringConstants.height.length - 1),
+                        //     labelStyle:
+                        //         TextStyle(color: ColorConstants.color11),
+                        //     contentPadding: const EdgeInsets.all(15.0),
+                        //     enabledBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Rounded corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants.color5, // Border color
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants
+                        //             .color10, // Color when focused
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     errorBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red, // Color when error
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedErrorBorder: UnderlineInputBorder(
+                        //       borderRadius: BorderRadius.circular(5),
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red,
+                        //         width: 1,
+                        //       ),
+                        //     ),
+                        //   ),
+                        //   keyboardType: TextInputType.text,
+                        //   onChanged: (val) {
+                        //     height = val;
+                        //   },
+                        // ),
+                        // const SizedBox(height: 10.0),
+                        // TextField(
+                        //   style: TextStyle(
+                        //     color: ColorConstants.color3,
+                        //   ),
+                        //   decoration: InputDecoration(
+                        //     // hintText: StringConstants.age,
+                        //     // hintStyle: TextStyle(color: ColorConstants.color11),
+                        //     labelText: StringConstants.age,
+                        //     labelStyle:
+                        //         TextStyle(color: ColorConstants.color11),
+                        //     contentPadding: const EdgeInsets.all(15.0),
+                        //     enabledBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Rounded corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants.color5, // Border color
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants
+                        //             .color10, // Color when focused
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     errorBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red, // Color when error
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedErrorBorder: UnderlineInputBorder(
+                        //       borderRadius: BorderRadius.circular(5),
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red,
+                        //         width: 1,
+                        //       ),
+                        //     ),
+                        //   ),
+                        //   keyboardType: TextInputType.text,
+                        //   onChanged: (val) {
+                        //     age = val;
+                        //   },
+                        // ),
                         const SizedBox(height: 20.0),
                         Align(
                           alignment: Alignment.centerLeft,

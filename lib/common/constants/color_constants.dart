@@ -39,6 +39,9 @@ class ColorConstants {
 
   /// Light Grey
   static Color color11 = hexToColor('#787878');
+
+  /// Lighter Grey
+  static Color color12 = hexToColor('#DADADA');
 }
 
 Color hexToColor(String hex) {
