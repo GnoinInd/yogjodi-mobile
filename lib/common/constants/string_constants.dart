@@ -163,6 +163,10 @@ class StringConstants {
   static const String online = "Online";
   static const String about = "About";
   static const String location = "Location";
+  static const String myConversations = "My Conversations";
+  static const String accepted = "ACCEPTED";
+  static const String interests_ = "INTERESTS";
+  static const String calls = "CALLS";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

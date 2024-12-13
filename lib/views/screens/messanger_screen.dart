@@ -19,41 +19,129 @@ class _MessengerScreenState extends State<MessengerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60.0),
-        child: CustomAppbar(
-          imageUrl:
-              'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
-          title: StringConstants.messenger,
-          onNotificationPressed: () {},
-          onShortlistedPressed: () {},
-        ),
-      ),
-      body: ListView.builder(
-        itemCount: 15,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15.0,
-          vertical: 10.0,
-        ),
-        itemBuilder: (_, index) {
-          return MessengerItem(
-            selected: selectedIndex == index,
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(60.0),
+          child: CustomAppbar(
             imageUrl:
-                'https://plus.unsplash.com/premium_photo-1682089869602-2ec199cc501a',
-            name: 'Vishvaip Thakur',
-            message: 'You: Okay',
-            totalUnreadMessage:
-                (index > 1 && index % 3 == 0) ? index.toString() : '',
-            date: '16-Sept-24',
-            onTap: () {
-              Get.to(() => const InboxScreen());
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-          );
-        },
+                'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
+            title: StringConstants.myConversations,
+            onNotificationPressed: () {},
+            onShortlistedPressed: () {},
+          ),
+        ),
+        body: Column(
+          children: [
+            TabBar(
+              padding: const EdgeInsets.only(top: 20.0),
+              labelPadding: const EdgeInsets.all(0.0),
+              // tabAlignment: TabAlignment.center,
+              indicator: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    width: 3.0,
+                    color: ColorConstants.color1,
+                  ),
+                ),
+              ),
+              labelColor: ColorConstants.color3,
+              unselectedLabelColor: ColorConstants.color3,
+              labelStyle: const TextStyle(
+                fontFamily: "Poppins",
+                fontSize: 14.0,
+                fontWeight: FontWeight.w500,
+              ),
+              unselectedLabelStyle: const TextStyle(
+                fontFamily: "Poppins",
+                fontSize: 14.0,
+                fontWeight: FontWeight.w400,
+              ),
+              dividerHeight: 0.5,
+              tabs: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: const Tab(text: "${StringConstants.accepted} (10)"),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: const Tab(text: "${StringConstants.interests_} (5)"),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: const Tab(text: "${StringConstants.calls} (3)"),
+                ),
+              ],
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  ///Tab-1
+                  ListView.builder(
+                    itemCount: 15,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                      vertical: 10.0,
+                    ),
+                    itemBuilder: (_, index) {
+                      return MessengerItem(
+                        selected: selectedIndex == index,
+                        imageUrl:
+                            'https://plus.unsplash.com/premium_photo-1682089869602-2ec199cc501a',
+                        name: 'Vishvaip Thakur',
+                        message: 'You: Okay',
+                        totalUnreadMessage: (index > 1 && index % 3 == 0)
+                            ? index.toString()
+                            : '',
+                        date: '16-Sept-24',
+                        onTap: () {
+                          Get.to(() => const InboxScreen());
+                          setState(() {
+                            selectedIndex = index;
+                          });
+                        },
+                      );
+                    },
+                  ),
+
+                  ///Tab-2
+                  ListView.builder(
+                    itemCount: 15,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0,
+                      vertical: 10.0,
+                    ),
+                    itemBuilder: (_, index) {
+                      return MessengerItem(
+                        selected: selectedIndex == index,
+                        imageUrl:
+                            'https://plus.unsplash.com/premium_photo-1682089869602-2ec199cc501a',
+                        name: 'Vishvaip Thakur',
+                        message: 'You: Okay',
+                        totalUnreadMessage: (index > 1 && index % 3 == 0)
+                            ? index.toString()
+                            : '',
+                        date: '16-Sept-24',
+                        onTap: () {
+                          Get.to(() => const InboxScreen());
+                          setState(() {
+                            selectedIndex = index;
+                          });
+                        },
+                      );
+                    },
+                  ),
+
+                  ///Tab-3
+                  const Center(
+                    child: Text("Calls"),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

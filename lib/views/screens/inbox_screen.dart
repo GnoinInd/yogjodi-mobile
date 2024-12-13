@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:flutter/foundation.dart' as foundation;
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -17,6 +19,7 @@ class InboxScreen extends StatefulWidget {
 class _InboxScreenState extends State<InboxScreen> {
   String textToSend = '';
   TextEditingController textEditingController = TextEditingController();
+  bool showEmojiPicker = false;
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +117,11 @@ class _InboxScreenState extends State<InboxScreen> {
                         AssetConstants.pickEmoji,
                         fit: BoxFit.scaleDown,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          showEmojiPicker = !showEmojiPicker;
+                        });
+                      },
                     ),
                     suffixIcon: IconButton(
                       icon: SvgPicture.asset(
@@ -135,10 +142,47 @@ class _InboxScreenState extends State<InboxScreen> {
                     textToSend = val;
                   },
                 ),
+                if (showEmojiPicker)
+                  EmojiPicker(
+                    onEmojiSelected: (category, emoji) {
+                      // Do something when emoji is tapped (optional)
+                    },
+                    onBackspacePressed: () {
+                      // Do something when the user taps the backspace button (optional)
+                      // Set it to null to hide the Backspace-Button
+                    },
+                    textEditingController:
+                        textEditingController, // pass here the same [TextEditingController] that is connected to your input field, usually a [TextFormField]
+                    config: Config(
+                      height: 256,
+                      checkPlatformCompatibility: true,
+                      emojiViewConfig: EmojiViewConfig(
+                        // Issue: https://github.com/flutter/flutter/issues/28894
+                        emojiSizeMax: 28 *
+                            (foundation.defaultTargetPlatform ==
+                                    TargetPlatform.iOS
+                                ? 1.20
+                                : 1.0),
+                      ),
+                      viewOrderConfig: const ViewOrderConfig(
+                        top: EmojiPickerItem.categoryBar,
+                        middle: EmojiPickerItem.emojiView,
+                        bottom: EmojiPickerItem.searchBar,
+                      ),
+                      skinToneConfig: const SkinToneConfig(),
+                      categoryViewConfig: const CategoryViewConfig(),
+                      bottomActionBarConfig: BottomActionBarConfig(
+                        backgroundColor: Colors.transparent,
+                        buttonColor: Colors.transparent,
+                        buttonIconColor: ColorConstants.color11,
+                      ),
+                      searchViewConfig: const SearchViewConfig(),
+                    ),
+                  ),
                 const SizedBox(height: 10.0),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
