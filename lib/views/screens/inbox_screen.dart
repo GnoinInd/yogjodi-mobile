@@ -20,9 +20,14 @@ class _InboxScreenState extends State<InboxScreen> {
   String textToSend = '';
   TextEditingController textEditingController = TextEditingController();
   bool showEmojiPicker = false;
+  bool profileExpansionOpened = false;
 
   @override
   Widget build(BuildContext context) {
+    ///Detect if keyboard is open or not.
+    final bottomInsets = MediaQuery.of(context).viewInsets.bottom;
+    bool isKeyboardOpen = bottomInsets != 0;
+
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60.0),
@@ -36,7 +41,7 @@ class _InboxScreenState extends State<InboxScreen> {
       ),
       body: Column(
         children: [
-          const InboxProfile(
+          InboxProfile(
             profileImageUrl:
                 'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
             name: 'Vishvadip Thakur',
@@ -47,6 +52,12 @@ class _InboxScreenState extends State<InboxScreen> {
             religion: "Hindu",
             motherTongue: "Hindi",
             maritalStatus: "Never Married",
+            onExpansionChanged: (open) {
+              setState(() {
+                profileExpansionOpened = open;
+                showEmojiPicker = false;
+              });
+            },
           ),
           Expanded(
             child: ListView.builder(
@@ -142,7 +153,7 @@ class _InboxScreenState extends State<InboxScreen> {
                     textToSend = val;
                   },
                 ),
-                if (showEmojiPicker)
+                if (showEmojiPicker && !profileExpansionOpened)
                   EmojiPicker(
                     onEmojiSelected: (category, emoji) {
                       // Do something when emoji is tapped (optional)
@@ -154,7 +165,7 @@ class _InboxScreenState extends State<InboxScreen> {
                     textEditingController:
                         textEditingController, // pass here the same [TextEditingController] that is connected to your input field, usually a [TextFormField]
                     config: Config(
-                      height: 256,
+                      height: isKeyboardOpen ? 175 : 256,
                       checkPlatformCompatibility: true,
                       emojiViewConfig: EmojiViewConfig(
                         // Issue: https://github.com/flutter/flutter/issues/28894
@@ -179,7 +190,7 @@ class _InboxScreenState extends State<InboxScreen> {
                       searchViewConfig: const SearchViewConfig(),
                     ),
                   ),
-                const SizedBox(height: 10.0),
+                SizedBox(height: isKeyboardOpen ? 0 : 10.0),
               ],
             ),
           ),
@@ -199,6 +210,7 @@ class InboxProfile extends StatelessWidget {
   final String religion;
   final String motherTongue;
   final String maritalStatus;
+  final void Function(bool open)? onExpansionChanged;
   const InboxProfile({
     super.key,
     required this.profileImageUrl,
@@ -210,6 +222,7 @@ class InboxProfile extends StatelessWidget {
     required this.religion,
     required this.motherTongue,
     required this.maritalStatus,
+    this.onExpansionChanged,
   });
 
   @override
@@ -286,6 +299,7 @@ class InboxProfile extends StatelessWidget {
             tilePadding: const EdgeInsets.all(0),
             dense: true,
             shape: const Border(),
+            onExpansionChanged: onExpansionChanged,
             title: Text(
               StringConstants.about,
               style: TextStyle(
