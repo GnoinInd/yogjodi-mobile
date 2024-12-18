@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
 import 'package:yog_jodi/views/screens/activity_screen.dart';
 import 'package:yog_jodi/views/screens/matches_screen.dart';
+import 'package:yog_jodi/views/screens/profile_screen.dart';
 import 'package:yog_jodi/views/screens/search_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
@@ -194,7 +196,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               ),
                               const SizedBox(width: 10.0),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Get.to(() => const ProfileScreen());
+                                },
                                 child: Text(
                                   StringConstants.editProfile,
                                   style: TextStyle(

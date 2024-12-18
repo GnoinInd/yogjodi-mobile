@@ -59,18 +59,18 @@ class _MessengerScreenState extends State<MessengerScreen> {
                 fontWeight: FontWeight.w400,
               ),
               dividerHeight: 0.5,
-              tabs: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                  child: const Tab(text: "${StringConstants.accepted} (10)"),
+              tabs: const [
+                SizedBox(
+                  width: double.infinity,
+                  child: Tab(text: "${StringConstants.accepted} (10)"),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                  child: const Tab(text: "${StringConstants.interests_} (5)"),
+                SizedBox(
+                  width: double.infinity,
+                  child: Tab(text: "${StringConstants.interests_} (5)"),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                  child: const Tab(text: "${StringConstants.calls} (3)"),
+                SizedBox(
+                  width: double.infinity,
+                  child: Tab(text: "${StringConstants.calls} (3)"),
                 ),
               ],
             ),

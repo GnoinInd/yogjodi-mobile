@@ -85,7 +85,6 @@ class _SearchScreenState extends State<SearchScreen> {
               TabBar(
                 padding: const EdgeInsets.only(top: 20.0),
                 labelPadding: const EdgeInsets.all(0.0),
-                tabAlignment: TabAlignment.center,
                 indicator: BoxDecoration(
                   color: ColorConstants.color1,
                   borderRadius: BorderRadius.circular(5.0),
@@ -103,14 +102,14 @@ class _SearchScreenState extends State<SearchScreen> {
                   fontWeight: FontWeight.w500,
                 ),
                 dividerHeight: 0.5,
-                tabs: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: const Tab(text: StringConstants.searchByCriteria),
+                tabs: const [
+                  SizedBox(
+                    width: double.infinity,
+                    child: Tab(text: StringConstants.searchByCriteria),
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: const Tab(text: StringConstants.searchByProfileId),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Tab(text: StringConstants.searchByProfileId),
                   ),
                 ],
               ),

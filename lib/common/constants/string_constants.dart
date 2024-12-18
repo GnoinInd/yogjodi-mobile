@@ -167,6 +167,28 @@ class StringConstants {
   static const String accepted = "ACCEPTED";
   static const String interests_ = "INTERESTS";
   static const String calls = "CALLS";
+  static const String aboutFamily = "About Family";
+  static const String basicDetails = "Basic Details";
+  static const String name = "Name";
+  static const String briefOutlineOfPersonalInfo =
+      "Brief Outline of personal information";
+  static const String educationAndOccupation = "Education & Occupation";
+  static const String aboutMe_ = "About Me";
+  static const String updateThisDetail =
+      "Update this detail to get suitable matches";
+  static const String updateTheseDetails =
+      "Update these details to get suitable matches";
+  static const String lifeStyle = "Life Style";
+  static const String drinkingHabits = "Drinking Habits";
+  static const String smokingHabits = "Smoking Habits";
+  static const String dietaryHabits = "Dietary Habits";
+  static const String specialCase = "Special Case";
+  static const String educationAndCareer = "Education & Career";
+  static const String contact = "Contact";
+  static const String family = "Family";
+  static const String numberOfBrothers = "No. of Brother(s)";
+  static const String numberOfSisters = "No. of Sister(s)";
+  static const String familyLivingIn = "Family Living In";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
