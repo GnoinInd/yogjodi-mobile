@@ -10,6 +10,8 @@ import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
 import 'package:get/get.dart';
 
+import '../widgets/my_country_state_city_picker.dart';
+
 class RegisterScreen2 extends StatefulWidget {
   const RegisterScreen2({super.key});
 
@@ -97,7 +99,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
   String maritalStatus = '';
   final List<String> maritalStatusList = [
     'Select',
-    'Single',
+    'Never Married',
     'Married',
     'Divorced',
     'Widower',
@@ -105,6 +107,9 @@ class _RegisterForm2State extends State<RegisterForm2> {
   ];
   bool? haveChildren;
   String currentAddress = '';
+  TextEditingController country = TextEditingController();
+  TextEditingController state = TextEditingController();
+  TextEditingController city = TextEditingController();
   String expressYourself = '';
   String smoking = '';
   String drinking = '';
@@ -830,6 +835,119 @@ class _RegisterForm2State extends State<RegisterForm2> {
                 currentAddress = val;
               });
             },
+          ),
+          const SizedBox(height: 16.0),
+          CountryStateCityPicker(
+            country: country,
+            countryInputDecoration: InputDecoration(
+              hintText: StringConstants.country,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              labelText: StringConstants.country,
+              labelStyle: TextStyle(color: ColorConstants.color3),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            state: state,
+            stateInputDecoration: InputDecoration(
+              hintText: StringConstants.state,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              labelText: StringConstants.state,
+              labelStyle: TextStyle(color: ColorConstants.color3),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            city: city,
+            cityInputDecoration: InputDecoration(
+              hintText: StringConstants.city,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              labelText: StringConstants.city,
+              labelStyle: TextStyle(color: ColorConstants.color3),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            inputTextStyle: TextStyle(color: ColorConstants.color3),
+            dialogBGColor: ColorConstants.color4,
           ),
           const SizedBox(height: 16.0),
           Row(

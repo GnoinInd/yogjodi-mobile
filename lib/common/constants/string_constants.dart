@@ -90,6 +90,7 @@ class StringConstants {
   static const String maxHeight = "Max. Height:";
   static const String country = "Country";
   static const String state = "State";
+  static const String city = "City";
   static const String skills = "Skills";
   static const String minAnnualIncome = "Min. Annual Income";
   static const String maxAnnualIncome = "Max. Annual Income";
