@@ -222,6 +222,9 @@ class StringConstants {
   static const String fatherNameIsRequired = "Father's name is required.";
   static const String motherNameIsRequired = "Mother's name is required.";
   static const String familyTypeIsRequired = "Family Type is required.";
+  static const String countryIsRequired = "Country is required.";
+  static const String stateIsRequired = "State Type is required.";
+  static const String cityIsRequired = "City Type is required.";
 
   ///
 

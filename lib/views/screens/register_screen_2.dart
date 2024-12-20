@@ -142,6 +142,27 @@ class _RegisterForm2State extends State<RegisterForm2> {
     return null;
   }
 
+  String? _validateCountry(String? value) {
+    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
+      return StringConstants.countryIsRequired;
+    }
+    return null;
+  }
+
+  String? _validateState(String? value) {
+    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
+      return StringConstants.countryIsRequired;
+    }
+    return null;
+  }
+
+  String? _validateCity(String? value) {
+    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
+      return StringConstants.countryIsRequired;
+    }
+    return null;
+  }
+
   String? _validateDOB(String? value) {
     if (value == null || value.isEmpty) {
       return StringConstants.dateOfBirthIsRequired;
@@ -839,6 +860,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
           const SizedBox(height: 16.0),
           CountryStateCityPicker(
             country: country,
+            countryValidator: _validateCountry,
             countryInputDecoration: InputDecoration(
               hintText: StringConstants.country,
               hintStyle: TextStyle(color: ColorConstants.color3),
@@ -875,6 +897,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
               ),
             ),
             state: state,
+            stateValidator: _validateState,
             stateInputDecoration: InputDecoration(
               hintText: StringConstants.state,
               hintStyle: TextStyle(color: ColorConstants.color3),
@@ -911,6 +934,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
               ),
             ),
             city: city,
+            cityValidator: _validateCity,
             cityInputDecoration: InputDecoration(
               hintText: StringConstants.city,
               hintStyle: TextStyle(color: ColorConstants.color3),
@@ -1549,7 +1573,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
-                Get.to(() => const RegisterScreen3());
+                // Get.to(() => const RegisterScreen3());
 
                 if ((maritalStatus != maritalStatusList[0] &&
                         maritalStatus != maritalStatusList[1]) &&

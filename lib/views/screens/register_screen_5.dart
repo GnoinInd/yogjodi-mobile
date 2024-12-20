@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:yog_jodi/views/screens/register_screen_3.dart';
 import 'package:yog_jodi/views/screens/register_screen_6.dart';
+import 'package:yog_jodi/views/widgets/my_countries_states_picker.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -10,6 +11,8 @@ import '../../common/utils/utility_methods.dart';
 import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
 import 'package:get/get.dart';
+
+import '../widgets/my_country_state_city_picker.dart';
 
 class RegisterScreen5 extends StatefulWidget {
   const RegisterScreen5({super.key});
@@ -81,8 +84,10 @@ class _RegisterForm5State extends State<RegisterForm5> {
   String minHeight = '';
   String maxHeight = '';
   final List<String> heightList = ['Select'];
-  String country = '';
-  String state = '';
+  List<String> countries = [];
+  List<String> states = [];
+  TextEditingController countriesController = TextEditingController();
+  TextEditingController statesController = TextEditingController();
   String skills = '';
   String highestDegree = '';
   String occupation = '';
@@ -435,35 +440,151 @@ class _RegisterForm5State extends State<RegisterForm5> {
               ),
             ],
           ),
+          // const SizedBox(height: 16.0),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   inputFormatters: [
+          //     FilteringTextInputFormatter.allow(
+          //         RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+          //         ),
+          //     TextInputFormatter.withFunction(
+          //       (oldValue, newValue) {
+          //         // Convert the new input to title case
+          //         if (newValue.text.isNotEmpty) {
+          //           final convertedValue = toTitleCase(newValue.text);
+          //           return TextEditingValue(
+          //             text: convertedValue,
+          //             selection: TextSelection.fromPosition(
+          //               TextPosition(offset: convertedValue.length),
+          //             ),
+          //           );
+          //         }
+          //         return newValue;
+          //       },
+          //     ),
+          //   ],
+          //   // maxLength: 30,
+          //   // maxLengthEnforcement: firstName.isNotEmpty
+          //   //     ? MaxLengthEnforcement.none
+          //   //     : MaxLengthEnforcement.enforced,
+          //   decoration: InputDecoration(
+          //     counterText: country.isNotEmpty ? null : "",
+          //     hintText: StringConstants.country,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.country,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.name,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       country = val;
+          //     });
+          //   },
+          // ),
+          // const SizedBox(height: 16.0),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   inputFormatters: [
+          //     FilteringTextInputFormatter.allow(
+          //         RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+          //         ),
+          //     TextInputFormatter.withFunction(
+          //       (oldValue, newValue) {
+          //         // Convert the new input to title case
+          //         if (newValue.text.isNotEmpty) {
+          //           final convertedValue = toTitleCase(newValue.text);
+          //           return TextEditingValue(
+          //             text: convertedValue,
+          //             selection: TextSelection.fromPosition(
+          //               TextPosition(offset: convertedValue.length),
+          //             ),
+          //           );
+          //         }
+          //         return newValue;
+          //       },
+          //     ),
+          //   ],
+          //   // maxLength: 30,
+          //   // maxLengthEnforcement: firstName.isNotEmpty
+          //   //     ? MaxLengthEnforcement.none
+          //   //     : MaxLengthEnforcement.enforced,
+          //   decoration: InputDecoration(
+          //     counterText: state.isNotEmpty ? null : "",
+          //     hintText: StringConstants.state,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.state,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.name,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       state = val;
+          //     });
+          //   },
+          // ),
           const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: country.isNotEmpty ? null : "",
+          CountriesStatesPicker(
+            countriesController: countriesController,
+            countries: countries,
+            countriesInputDecoration: InputDecoration(
               hintText: StringConstants.country,
               hintStyle: TextStyle(color: ColorConstants.color3),
               labelText: StringConstants.country,
@@ -498,42 +619,9 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 ),
               ),
             ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                country = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: state.isNotEmpty ? null : "",
+            statesController: statesController,
+            states: states,
+            statesInputDecoration: InputDecoration(
               hintText: StringConstants.state,
               hintStyle: TextStyle(color: ColorConstants.color3),
               labelText: StringConstants.state,
@@ -568,12 +656,8 @@ class _RegisterForm5State extends State<RegisterForm5> {
                 ),
               ),
             ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                state = val;
-              });
-            },
+            inputTextStyle: TextStyle(color: ColorConstants.color3),
+            dialogBGColor: ColorConstants.color4,
           ),
           const SizedBox(height: 16.0),
           TextFormField(
