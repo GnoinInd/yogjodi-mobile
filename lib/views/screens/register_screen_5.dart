@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
-import 'package:yog_jodi/views/screens/register_screen_3.dart';
 import 'package:yog_jodi/views/screens/register_screen_6.dart';
 import 'package:yog_jodi/views/widgets/my_countries_states_picker.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
-import '../../common/utils/utility_methods.dart';
-import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
 import 'package:get/get.dart';
-
-import '../widgets/my_country_state_city_picker.dart';
 
 class RegisterScreen5 extends StatefulWidget {
   const RegisterScreen5({super.key});

@@ -328,13 +328,18 @@ class _CountriesStatesPickerState extends State<CountriesStatesPicker> {
                                         });
                                       },
                                     ),
-                                    Text(
-                                      _title == 'Country'
-                                          ? _countrySubList[index].name
-                                          : _stateSubList[index].name,
-                                      style: TextStyle(
-                                        color: Colors.grey.shade800,
-                                        fontSize: 16.0,
+                                    SizedBox(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.65,
+                                      child: Text(
+                                        _title == 'Country'
+                                            ? _countrySubList[index].name
+                                            : _stateSubList[index].name,
+                                        style: TextStyle(
+                                          color: Colors.grey.shade800,
+                                          fontSize: 16.0,
+                                        ),
+                                        overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
                                   ],
