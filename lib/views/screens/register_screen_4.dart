@@ -79,7 +79,43 @@ class _RegisterForm4State extends State<RegisterForm4> {
   String fatherOccupation = '';
   String motherOccupation = '';
   String familyAnnualIncome = '';
+  final List<String> annualIncomeList = [
+    'Select',
+    '1.0 - 2.0 Lakh p.a.',
+    '2.0 - 3.0 Lakh p.a.',
+    '3.0 - 4.0 Lakh p.a.',
+    '4.0 - 5.0 Lakh p.a.',
+    '5.0 - 6.0 Lakh p.a.',
+    '6.0 - 8.0 Lakh p.a.',
+    '8.0 - 10.0 Lakh p.a.',
+    '10.0 - 12.0 Lakh p.a.',
+    '12.0 - 14.0 Lakh p.a.',
+    '14.0 - 16.0 Lakh p.a.',
+    '16.0 - 20.0 Lakh p.a.',
+    '20.0 - 24.0 Lakh p.a.',
+    '24.0 - 28.0 Lakh p.a.',
+    '28.0 - 32.0 Lakh p.a.',
+    '32.0 - 36.0 Lakh p.a.',
+    '36.0 - 40.0 Lakh p.a.',
+    '40.0 - 50.0 Lakh p.a.',
+    '50.0 - 60.0 Lakh p.a.',
+    '60.0 - 70.0 Lakh p.a.',
+    '70.0 - 80.0 Lakh p.a.',
+    '1.0 - 1.5 Crore p.a.',
+    '1.5 - 2.0 Crore p.a.',
+    '2.0 - 2.5 Crore p.a.',
+    '2.5 - 3.0 Crore p.a.',
+    '3.0 - 5.0 Crore p.a.',
+  ];
   String familyStatus = '';
+  final List<String> familyStatusList = [
+    'Select',
+    "Lower Class",
+    "Middle Class",
+    "Upper Class",
+    "Elite Class",
+    "Super Rich",
+  ];
   String familyType = '';
   final List<String> familyTypeList = [
     'Select',
@@ -300,9 +336,9 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
               counterText: brothers.isNotEmpty ? null : "",
-              hintText: StringConstants.brothers,
+              hintText: StringConstants.numberOfBrothers,
               hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.brothers,
+              labelText: StringConstants.numberOfBrothers,
               labelStyle: TextStyle(color: ColorConstants.color3),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
@@ -355,9 +391,9 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
               counterText: sisters.isNotEmpty ? null : "",
-              hintText: StringConstants.sisters,
+              hintText: StringConstants.numberOfSisters,
               hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.sisters,
+              labelText: StringConstants.numberOfSisters,
               labelStyle: TextStyle(color: ColorConstants.color3),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
@@ -537,96 +573,231 @@ class _RegisterForm4State extends State<RegisterForm4> {
             },
           ),
           const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            decoration: InputDecoration(
-              counterText: familyAnnualIncome.isNotEmpty ? null : "",
-              hintText: StringConstants.familyAnnualIncome,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.familyAnnualIncome,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   decoration: InputDecoration(
+          //     counterText: familyAnnualIncome.isNotEmpty ? null : "",
+          //     hintText: StringConstants.familyAnnualIncome,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.familyAnnualIncome,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.name,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       familyAnnualIncome = val;
+          //     });
+          //   },
+          // ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              StringConstants.familyAnnualIncome,
+              style: TextStyle(
+                color: ColorConstants.color3,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+            ),
+          ),
+          const SizedBox(height: 10.0),
+          Align(
+            alignment: Alignment.topLeft,
+            child: DropdownButtonFormField<String>(
+              menuMaxHeight: 200,
+              value: familyAnnualIncome.isNotEmpty
+                  ? familyAnnualIncome
+                  : annualIncomeList.first,
+              hint: Text(annualIncomeList.first),
+              onChanged: (String? newValue) {
+                setState(() {
+                  familyAnnualIncome = newValue!;
+                  if (familyAnnualIncome == annualIncomeList.first) {
+                    familyAnnualIncome = "";
+                  }
+                });
+              },
+              items: annualIncomeList.map((String annualIncome_) {
+                return DropdownMenuItem<String>(
+                  value: annualIncome_,
+                  child: Text(annualIncome_),
+                );
+              }).toList(),
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(15.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color5,
+                    width: 1,
+                  ),
                 ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color1,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
               ),
             ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                familyAnnualIncome = val;
-              });
-            },
           ),
           const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            decoration: InputDecoration(
-              counterText: familyStatus.isNotEmpty ? null : "",
-              hintText: StringConstants.familyStatus,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.familyStatus,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   decoration: InputDecoration(
+          //     counterText: familyStatus.isNotEmpty ? null : "",
+          //     hintText: StringConstants.familyStatus,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.familyStatus,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.name,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       familyStatus = val;
+          //     });
+          //   },
+          // ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.familyStatus,
+                style: TextStyle(
+                  color: ColorConstants.color3,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.55,
+                child: DropdownButtonFormField<String>(
+                  // validator: _validateFamilyType,
+                  value: familyStatus.isNotEmpty
+                      ? familyStatus
+                      : familyStatusList.first,
+                  hint: Text(familyStatusList.first),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      familyStatus = newValue!;
+                      if (familyStatus == familyStatusList.first) {
+                        familyStatus = "";
+                      }
+                    });
+                  },
+                  items: familyStatusList.map((String familyStatus_) {
+                    return DropdownMenuItem<String>(
+                      value: familyStatus_,
+                      child: Text(familyStatus_),
+                    );
+                  }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color5,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color1,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                familyStatus = val;
-              });
-            },
+            ],
           ),
           const SizedBox(height: 16.0),
           Row(

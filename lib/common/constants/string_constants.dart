@@ -69,7 +69,7 @@ class StringConstants {
   static const String designation = "Designation";
   static const String yearsOfExperience = "Years of Experience:";
   static const String monthlyIncome = "Monthly Income";
-  static const String annualIncome = "Annual Income";
+  static const String annualIncome = "Annual Income:";
   static const String aboutJob = "About Job";
   static const String aboutJobLocation = "About Job Location";
   static const String familyAndLifestyle = "Family & Lifestyle";
@@ -79,9 +79,9 @@ class StringConstants {
   static const String sisters = "Sisters";
   static const String fatherOccupation = "Father's Occupation";
   static const String motherOccupation = "Mother's Occupation";
-  static const String familyAnnualIncome = "Family Annual Income";
-  static const String familyStatus = "Family Status";
-  static const String familyType = "Family Type";
+  static const String familyAnnualIncome = "Family Annual Income:";
+  static const String familyStatus = "Family Status:";
+  static const String familyType = "Family Type:";
   static const String aboutMyFamily = "About My Family";
   static const String partnerDetails = "Partner Details";
   static const String minAge = "Min. Age:";
@@ -95,7 +95,7 @@ class StringConstants {
   static const String minAnnualIncome = "Min. Annual Income";
   static const String maxAnnualIncome = "Max. Annual Income";
   static const String aboutPartner = "About Partner";
-  static const String residentialStatus = "Residential Status";
+  static const String residentialStatus = "Residential Status:";
   static const String uploadPhoto = "Upload Photo";
   static const String doYouWantToLogout = "Do you want to logout?";
   static const String appVersion = "App Version";
@@ -190,6 +190,7 @@ class StringConstants {
   static const String numberOfBrothers = "No. of Brother(s)";
   static const String numberOfSisters = "No. of Sister(s)";
   static const String familyLivingIn = "Family Living In";
+  static const String goutraToExclude = "Goutra (to exclude)";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

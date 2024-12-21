@@ -87,12 +87,40 @@ class _RegisterForm5State extends State<RegisterForm5> {
   String occupation = '';
   String minAnnualIncome = '';
   String maxAnnualIncome = '';
+  final List<String> annualIncomeList = [
+    'Select',
+    '1.0 - 2.0 Lakh p.a.',
+    '2.0 - 3.0 Lakh p.a.',
+    '3.0 - 4.0 Lakh p.a.',
+    '4.0 - 5.0 Lakh p.a.',
+    '5.0 - 6.0 Lakh p.a.',
+    '6.0 - 8.0 Lakh p.a.',
+    '8.0 - 10.0 Lakh p.a.',
+    '10.0 - 12.0 Lakh p.a.',
+    '12.0 - 14.0 Lakh p.a.',
+    '14.0 - 16.0 Lakh p.a.',
+    '16.0 - 20.0 Lakh p.a.',
+    '20.0 - 24.0 Lakh p.a.',
+    '24.0 - 28.0 Lakh p.a.',
+    '28.0 - 32.0 Lakh p.a.',
+    '32.0 - 36.0 Lakh p.a.',
+    '36.0 - 40.0 Lakh p.a.',
+    '40.0 - 50.0 Lakh p.a.',
+    '50.0 - 60.0 Lakh p.a.',
+    '60.0 - 70.0 Lakh p.a.',
+    '70.0 - 80.0 Lakh p.a.',
+    '1.0 - 1.5 Crore p.a.',
+    '1.5 - 2.0 Crore p.a.',
+    '2.0 - 2.5 Crore p.a.',
+    '2.5 - 3.0 Crore p.a.',
+    '3.0 - 5.0 Crore p.a.',
+  ];
   String religion = '';
   String caste = '';
   String maritalStatus = '';
   final List<String> maritalStatusList = [
     'Select',
-    'Single',
+    'Never Married',
     'Married',
     'Divorced',
     'Widower',
@@ -114,9 +142,16 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Non-Vegetarian',
     'Vegan',
   ];
-  String goutra = '';
+  String goutraToExclude = '';
   String aboutPartner = '';
   String residentialStatus = '';
+  final List<String> residentialStatusList = [
+    'Select',
+    'Citizen',
+    'Work Permit',
+    'Student Visa',
+    'Permanent Resident',
+  ];
 
   final _formKey = GlobalKey<FormState>();
 
@@ -846,96 +881,230 @@ class _RegisterForm5State extends State<RegisterForm5> {
             },
           ),
           const SizedBox(height: 16),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            decoration: InputDecoration(
-              counterText: minAnnualIncome.isNotEmpty ? null : "",
-              hintText: StringConstants.minAnnualIncome,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.minAnnualIncome,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   decoration: InputDecoration(
+          //     counterText: minAnnualIncome.isNotEmpty ? null : "",
+          //     hintText: StringConstants.minAnnualIncome,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.minAnnualIncome,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.text,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       minAnnualIncome = val;
+          //     });
+          //   },
+          // ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              StringConstants.minAnnualIncome,
+              style: TextStyle(
+                color: ColorConstants.color3,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+            ),
+          ),
+          const SizedBox(height: 10.0),
+          Align(
+            alignment: Alignment.topLeft,
+            child: DropdownButtonFormField<String>(
+              menuMaxHeight: 200,
+              value: minAnnualIncome.isNotEmpty
+                  ? minAnnualIncome
+                  : annualIncomeList.first,
+              hint: Text(annualIncomeList.first),
+              onChanged: (String? newValue) {
+                setState(() {
+                  minAnnualIncome = newValue!;
+                  if (minAnnualIncome == annualIncomeList.first) {
+                    minAnnualIncome = "";
+                  }
+                });
+              },
+              items: annualIncomeList.map((String annualIncome_) {
+                return DropdownMenuItem<String>(
+                  value: annualIncome_,
+                  child: Text(annualIncome_),
+                );
+              }).toList(),
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(15.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color5,
+                    width: 1,
+                  ),
                 ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color1,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
               ),
             ),
-            keyboardType: TextInputType.text,
-            onChanged: (val) {
-              setState(() {
-                minAnnualIncome = val;
-              });
-            },
           ),
           const SizedBox(height: 16),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            decoration: InputDecoration(
-              counterText: maxAnnualIncome.isNotEmpty ? null : "",
-              hintText: StringConstants.maxAnnualIncome,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.maxAnnualIncome,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   decoration: InputDecoration(
+          //     counterText: maxAnnualIncome.isNotEmpty ? null : "",
+          //     hintText: StringConstants.maxAnnualIncome,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.maxAnnualIncome,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.text,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       maxAnnualIncome = val;
+          //     });
+          //   },
+          // ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              StringConstants.maxAnnualIncome,
+              style: TextStyle(
+                color: ColorConstants.color3,
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+            ),
+          ),
+          const SizedBox(height: 10.0),
+          Align(
+            alignment: Alignment.topLeft,
+            child: DropdownButtonFormField<String>(
+              menuMaxHeight: 200,
+              value: maxAnnualIncome.isNotEmpty
+                  ? maxAnnualIncome
+                  : annualIncomeList.first,
+              hint: Text(annualIncomeList.first),
+              onChanged: (String? newValue) {
+                setState(() {
+                  maxAnnualIncome = newValue!;
+                  if (maxAnnualIncome == annualIncomeList.first) {
+                    maxAnnualIncome = "";
+                  }
+                });
+              },
+              items: annualIncomeList.map((String annualIncome_) {
+                return DropdownMenuItem<String>(
+                  value: annualIncome_,
+                  child: Text(annualIncome_),
+                );
+              }).toList(),
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(15.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color5,
+                    width: 1,
+                  ),
                 ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color1,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
               ),
             ),
-            keyboardType: TextInputType.text,
-            onChanged: (val) {
-              setState(() {
-                maxAnnualIncome = val;
-              });
-            },
           ),
           const SizedBox(height: 16.0),
           Row(
@@ -1376,14 +1545,14 @@ class _RegisterForm5State extends State<RegisterForm5> {
               ),
             ],
             // maxLength: 30,
-            // maxLengthEnforcement: goutra.isNotEmpty
+            // maxLengthEnforcement: goutraToExclude.isNotEmpty
             //     ? MaxLengthEnforcement.none
             //     : MaxLengthEnforcement.enforced,
             decoration: InputDecoration(
-              counterText: goutra.isNotEmpty ? null : "",
-              hintText: StringConstants.goutra,
+              counterText: goutraToExclude.isNotEmpty ? null : "",
+              hintText: StringConstants.goutraToExclude,
               hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.goutra,
+              labelText: StringConstants.goutraToExclude,
               labelStyle: TextStyle(color: ColorConstants.color3),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
@@ -1418,7 +1587,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
             keyboardType: TextInputType.name,
             onChanged: (val) {
               setState(() {
-                goutra = val;
+                goutraToExclude = val;
               });
             },
           ),
@@ -1475,74 +1644,140 @@ class _RegisterForm5State extends State<RegisterForm5> {
             },
           ),
           const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   inputFormatters: [
+          //     FilteringTextInputFormatter.allow(
+          //         RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+          //         ),
+          //     TextInputFormatter.withFunction(
+          //       (oldValue, newValue) {
+          //         // Convert the new input to title case
+          //         if (newValue.text.isNotEmpty) {
+          //           final convertedValue = toTitleCase(newValue.text);
+          //           return TextEditingValue(
+          //             text: convertedValue,
+          //             selection: TextSelection.fromPosition(
+          //               TextPosition(offset: convertedValue.length),
+          //             ),
+          //           );
+          //         }
+          //         return newValue;
+          //       },
+          //     ),
+          //   ],
+          //   // maxLength: 30,
+          //   // maxLengthEnforcement: goutra.isNotEmpty
+          //   //     ? MaxLengthEnforcement.none
+          //   //     : MaxLengthEnforcement.enforced,
+          //   decoration: InputDecoration(
+          //     counterText: residentialStatus.isNotEmpty ? null : "",
+          //     hintText: StringConstants.residentialStatus,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.residentialStatus,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.name,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       residentialStatus = val;
+          //     });
+          //   },
+          // ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              StringConstants.residentialStatus,
+              style: TextStyle(
+                color: ColorConstants.color3,
+                fontSize: 17.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          const SizedBox(height: 10.0),
+          Align(
+            alignment: Alignment.topLeft,
+            child: DropdownButtonFormField<String>(
+              value: residentialStatus.isNotEmpty
+                  ? residentialStatus
+                  : residentialStatusList.first,
+              hint: Text(residentialStatusList.first),
+              onChanged: (String? newValue) {
+                setState(() {
+                  residentialStatus = newValue!;
+                  if (residentialStatus == residentialStatusList.first) {
+                    residentialStatus = '';
                   }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: goutra.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: residentialStatus.isNotEmpty ? null : "",
-              hintText: StringConstants.residentialStatus,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.residentialStatus,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
+                });
+              },
+              items: residentialStatusList.map((String residentialStatus_) {
+                return DropdownMenuItem<String>(
+                  value: residentialStatus_,
+                  child: Text(residentialStatus_),
+                );
+              }).toList(),
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(15.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color5,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color1,
+                    width: 1,
+                  ),
                 ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
               ),
             ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                residentialStatus = val;
-              });
-            },
           ),
           const SizedBox(height: 40.0),
           Visibility(

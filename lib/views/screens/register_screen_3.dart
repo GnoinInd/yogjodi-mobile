@@ -90,6 +90,34 @@ class _RegisterForm3State extends State<RegisterForm3> {
   ];
   String monthlyIncome = '';
   String annualIncome = '';
+  final List<String> annualIncomeList = [
+    'Select',
+    '1.0 - 2.0 Lakh p.a.',
+    '2.0 - 3.0 Lakh p.a.',
+    '3.0 - 4.0 Lakh p.a.',
+    '4.0 - 5.0 Lakh p.a.',
+    '5.0 - 6.0 Lakh p.a.',
+    '6.0 - 8.0 Lakh p.a.',
+    '8.0 - 10.0 Lakh p.a.',
+    '10.0 - 12.0 Lakh p.a.',
+    '12.0 - 14.0 Lakh p.a.',
+    '14.0 - 16.0 Lakh p.a.',
+    '16.0 - 20.0 Lakh p.a.',
+    '20.0 - 24.0 Lakh p.a.',
+    '24.0 - 28.0 Lakh p.a.',
+    '28.0 - 32.0 Lakh p.a.',
+    '32.0 - 36.0 Lakh p.a.',
+    '36.0 - 40.0 Lakh p.a.',
+    '40.0 - 50.0 Lakh p.a.',
+    '50.0 - 60.0 Lakh p.a.',
+    '60.0 - 70.0 Lakh p.a.',
+    '70.0 - 80.0 Lakh p.a.',
+    '1.0 - 1.5 Crore p.a.',
+    '1.5 - 2.0 Crore p.a.',
+    '2.0 - 2.5 Crore p.a.',
+    '2.5 - 3.0 Crore p.a.',
+    '3.0 - 5.0 Crore p.a.',
+  ];
   String aboutJob = '';
   String aboutJobLocation = '';
 
@@ -621,50 +649,117 @@ class _RegisterForm3State extends State<RegisterForm3> {
             },
           ),
           const SizedBox(height: 16),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            decoration: InputDecoration(
-              counterText: annualIncome.isNotEmpty ? null : "",
-              hintText: StringConstants.annualIncome,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.annualIncome,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
+          // TextFormField(
+          //   style: TextStyle(color: ColorConstants.color3),
+          //   decoration: InputDecoration(
+          //     counterText: annualIncome.isNotEmpty ? null : "",
+          //     hintText: StringConstants.annualIncome,
+          //     hintStyle: TextStyle(color: ColorConstants.color3),
+          //     labelText: StringConstants.annualIncome,
+          //     labelStyle: TextStyle(color: ColorConstants.color3),
+          //     contentPadding: const EdgeInsets.all(15.0),
+          //     enabledBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color5,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: BorderSide(
+          //         color: ColorConstants.color1,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     errorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //     focusedErrorBorder: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5),
+          //       borderSide: const BorderSide(
+          //         color: Colors.red,
+          //         width: 1,
+          //       ),
+          //     ),
+          //   ),
+          //   keyboardType: TextInputType.text,
+          //   onChanged: (val) {
+          //     setState(() {
+          //       annualIncome = val;
+          //     });
+          //   },
+          // ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              StringConstants.annualIncome,
+              style: TextStyle(
+                color: ColorConstants.color3,
+                fontSize: 17.0,
+                fontWeight: FontWeight.w600,
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Align(
+            alignment: Alignment.topLeft,
+            child: DropdownButtonFormField<String>(
+              menuMaxHeight: 200,
+              value: annualIncome.isNotEmpty
+                  ? annualIncome
+                  : annualIncomeList.first,
+              hint: Text(annualIncomeList.first),
+              onChanged: (String? newValue) {
+                setState(() {
+                  annualIncome = newValue!;
+                  if (annualIncome == annualIncomeList.first) {
+                    annualIncome = "";
+                  }
+                });
+              },
+              items: annualIncomeList.map((String annualIncome_) {
+                return DropdownMenuItem<String>(
+                  value: annualIncome_,
+                  child: Text(annualIncome_),
+                );
+              }).toList(),
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.all(15.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color5,
+                    width: 1,
+                  ),
                 ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: ColorConstants.color1,
+                    width: 1,
+                  ),
                 ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
+                errorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: const BorderSide(
+                    color: Colors.red,
+                    width: 1,
+                  ),
                 ),
               ),
             ),
-            keyboardType: TextInputType.text,
-            onChanged: (val) {
-              setState(() {
-                annualIncome = val;
-              });
-            },
           ),
           const SizedBox(height: 16),
           TextFormField(
@@ -783,7 +878,6 @@ class _RegisterForm3State extends State<RegisterForm3> {
               color: ColorConstants.color6,
               onPressed: () async {
                 Get.to(() => const RegisterScreen4());
-
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   FocusScope.of(context).unfocus();

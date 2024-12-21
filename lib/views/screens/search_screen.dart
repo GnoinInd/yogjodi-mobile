@@ -7,6 +7,7 @@ import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
 import '../widgets/border_button.dart';
 import '../widgets/custom_appbar.dart';
+import '../widgets/my_countries_states_picker.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -29,8 +30,39 @@ class _SearchScreenState extends State<SearchScreen> {
   List<String> religionList = [];
   String caste = '';
   String motherTongue = '';
-  String country = '';
+  List<String> countries = [];
+  List<String> states = [];
+  TextEditingController countriesController = TextEditingController();
+  TextEditingController statesController = TextEditingController();
   String annualIncome = '';
+  final List<String> annualIncomeList = [
+    'Select',
+    '1.0 - 2.0 Lakh p.a.',
+    '2.0 - 3.0 Lakh p.a.',
+    '3.0 - 4.0 Lakh p.a.',
+    '4.0 - 5.0 Lakh p.a.',
+    '5.0 - 6.0 Lakh p.a.',
+    '6.0 - 8.0 Lakh p.a.',
+    '8.0 - 10.0 Lakh p.a.',
+    '10.0 - 12.0 Lakh p.a.',
+    '12.0 - 14.0 Lakh p.a.',
+    '14.0 - 16.0 Lakh p.a.',
+    '16.0 - 20.0 Lakh p.a.',
+    '20.0 - 24.0 Lakh p.a.',
+    '24.0 - 28.0 Lakh p.a.',
+    '28.0 - 32.0 Lakh p.a.',
+    '32.0 - 36.0 Lakh p.a.',
+    '36.0 - 40.0 Lakh p.a.',
+    '40.0 - 50.0 Lakh p.a.',
+    '50.0 - 60.0 Lakh p.a.',
+    '60.0 - 70.0 Lakh p.a.',
+    '70.0 - 80.0 Lakh p.a.',
+    '1.0 - 1.5 Crore p.a.',
+    '1.5 - 2.0 Crore p.a.',
+    '2.0 - 2.5 Crore p.a.',
+    '2.5 - 3.0 Crore p.a.',
+    '3.0 - 5.0 Crore p.a.',
+  ];
   List<String> residentialStatusList = [];
   String education = '';
   String occupation = '';
@@ -1360,11 +1392,10 @@ class _SearchScreenState extends State<SearchScreen> {
                           },
                         ),
                         const SizedBox(height: 10.0),
-                        TextField(
-                          style: TextStyle(
-                            color: ColorConstants.color3,
-                          ),
-                          decoration: InputDecoration(
+                        CountriesStatesPicker(
+                          countriesController: countriesController,
+                          countries: countries,
+                          countriesInputDecoration: InputDecoration(
                             // hintText: StringConstants.country,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.country,
@@ -1404,20 +1435,12 @@ class _SearchScreenState extends State<SearchScreen> {
                               ),
                             ),
                           ),
-                          keyboardType: TextInputType.text,
-                          onChanged: (val) {
-                            country = val;
-                          },
-                        ),
-                        const SizedBox(height: 10.0),
-                        TextField(
-                          style: TextStyle(
-                            color: ColorConstants.color3,
-                          ),
-                          decoration: InputDecoration(
-                            // hintText: StringConstants.annualIncome,
+                          statesController: statesController,
+                          states: states,
+                          statesInputDecoration: InputDecoration(
+                            // hintText: StringConstants.state,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
-                            labelText: StringConstants.annualIncome,
+                            labelText: StringConstants.state,
                             labelStyle:
                                 TextStyle(color: ColorConstants.color11),
                             contentPadding: const EdgeInsets.all(15.0),
@@ -1454,10 +1477,122 @@ class _SearchScreenState extends State<SearchScreen> {
                               ),
                             ),
                           ),
-                          keyboardType: TextInputType.text,
-                          onChanged: (val) {
-                            annualIncome = val;
-                          },
+                          inputTextStyle:
+                              TextStyle(color: ColorConstants.color3),
+                          dialogBGColor: ColorConstants.color4,
+                        ),
+                        const SizedBox(height: 10.0),
+                        // TextField(
+                        //   style: TextStyle(
+                        //     color: ColorConstants.color3,
+                        //   ),
+                        //   decoration: InputDecoration(
+                        //     // hintText: StringConstants.annualIncome,
+                        //     // hintStyle: TextStyle(color: ColorConstants.color11),
+                        //     labelText: StringConstants.annualIncome,
+                        //     labelStyle:
+                        //         TextStyle(color: ColorConstants.color11),
+                        //     contentPadding: const EdgeInsets.all(15.0),
+                        //     enabledBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Rounded corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants.color5, // Border color
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: BorderSide(
+                        //         color: ColorConstants
+                        //             .color10, // Color when focused
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     errorBorder: UnderlineInputBorder(
+                        //       borderRadius:
+                        //           BorderRadius.circular(5), // Same corners
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red, // Color when error
+                        //         width: 1, // Border width
+                        //       ),
+                        //     ),
+                        //     focusedErrorBorder: UnderlineInputBorder(
+                        //       borderRadius: BorderRadius.circular(5),
+                        //       borderSide: const BorderSide(
+                        //         color: Colors.red,
+                        //         width: 1,
+                        //       ),
+                        //     ),
+                        //   ),
+                        //   keyboardType: TextInputType.text,
+                        //   onChanged: (val) {
+                        //     annualIncome = val;
+                        //   },
+                        // ),
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: DropdownButtonFormField<String>(
+                            menuMaxHeight: 200,
+                            value: annualIncome.isNotEmpty
+                                ? annualIncome
+                                : annualIncomeList.first,
+                            hint: Text(annualIncomeList.first),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                annualIncome = newValue!;
+                                if (annualIncome == annualIncomeList.first) {
+                                  annualIncome = "";
+                                }
+                              });
+                            },
+                            items: annualIncomeList.map((String annualIncome_) {
+                              return DropdownMenuItem<String>(
+                                value: annualIncome_,
+                                child: Text(annualIncome_),
+                              );
+                            }).toList(),
+                            decoration: InputDecoration(
+                              labelText: StringConstants.annualIncome.substring(
+                                  0, StringConstants.annualIncome.length - 1),
+                              labelStyle:
+                                  TextStyle(color: ColorConstants.color11),
+                              contentPadding: const EdgeInsets.all(15.0),
+                              enabledBorder: UnderlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(5), // Rounded corners
+                                borderSide: BorderSide(
+                                  color: ColorConstants.color5, // Border color
+                                  width: 1, // Border width
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(5), // Same corners
+                                borderSide: BorderSide(
+                                  color: ColorConstants
+                                      .color10, // Color when focused
+                                  width: 1, // Border width
+                                ),
+                              ),
+                              errorBorder: UnderlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.circular(5), // Same corners
+                                borderSide: const BorderSide(
+                                  color: Colors.red, // Color when error
+                                  width: 1, // Border width
+                                ),
+                              ),
+                              focusedErrorBorder: UnderlineInputBorder(
+                                borderRadius: BorderRadius.circular(5),
+                                borderSide: const BorderSide(
+                                  color: Colors.red,
+                                  width: 1,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                         const SizedBox(height: 20.0),
                         Align(
