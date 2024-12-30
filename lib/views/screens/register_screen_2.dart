@@ -96,6 +96,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
   String motherTongue = '';
   String religion = '';
   String caste = '';
+  String goutra = '';
   String maritalStatus = '';
   final List<String> maritalStatusList = [
     'Select',
@@ -127,7 +128,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
     'Non-Vegetarian',
     'Vegan',
   ];
-  String goutra = '';
   String hobbies = '';
   String interests = '';
   String sports = '';
@@ -646,6 +646,76 @@ class _RegisterForm2State extends State<RegisterForm2> {
             onChanged: (val) {
               setState(() {
                 caste = val;
+              });
+            },
+          ),
+          const SizedBox(height: 16.0),
+          TextFormField(
+            style: TextStyle(color: ColorConstants.color3),
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+              ),
+              TextInputFormatter.withFunction(
+                    (oldValue, newValue) {
+                  // Convert the new input to title case
+                  if (newValue.text.isNotEmpty) {
+                    final convertedValue = toTitleCase(newValue.text);
+                    return TextEditingValue(
+                      text: convertedValue,
+                      selection: TextSelection.fromPosition(
+                        TextPosition(offset: convertedValue.length),
+                      ),
+                    );
+                  }
+                  return newValue;
+                },
+              ),
+            ],
+            // maxLength: 30,
+            // maxLengthEnforcement: goutra.isNotEmpty
+            //     ? MaxLengthEnforcement.none
+            //     : MaxLengthEnforcement.enforced,
+            decoration: InputDecoration(
+              counterText: goutra.isNotEmpty ? null : "",
+              hintText: StringConstants.goutra,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              labelText: StringConstants.goutra,
+              labelStyle: TextStyle(color: ColorConstants.color3),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            keyboardType: TextInputType.name,
+            onChanged: (val) {
+              setState(() {
+                goutra = val;
               });
             },
           ),
@@ -1288,76 +1358,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
                 ),
               ),
             ],
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: goutra.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: goutra.isNotEmpty ? null : "",
-              hintText: StringConstants.goutra,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.goutra,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                goutra = val;
-              });
-            },
           ),
           const SizedBox(height: 16.0),
           TextFormField(
