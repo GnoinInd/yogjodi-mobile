@@ -191,6 +191,9 @@ class StringConstants {
   static const String numberOfSisters = "No. of Sister(s)";
   static const String familyLivingIn = "Family Living In";
   static const String goutraToExclude = "Goutra (to exclude)";
+  static const String save = "Save";
+  static const String update = "Update";
+  static const String familyDetails = "Family Details";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -247,7 +250,6 @@ class StringConstants {
   static const String audio = "Audio";
   static const String pdf = "PDF";
   static const String changePassword = "Change Password";
-  static const String update = "Update";
   static const String currentPassword = "Current Password";
   static const String newPassword = "New Password";
   static const String confirmNewPassword = "Confirm New Password";

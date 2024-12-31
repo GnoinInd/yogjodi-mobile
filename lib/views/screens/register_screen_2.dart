@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:yog_jodi/views/screens/register_screen_3.dart';
 
@@ -8,8 +9,6 @@ import '../../common/constants/string_constants.dart';
 import '../../common/utils/utility_methods.dart';
 import '../widgets/border_button.dart';
 import '../widgets/colored_button.dart';
-import 'package:get/get.dart';
-
 import '../widgets/my_country_state_city_picker.dart';
 
 class RegisterScreen2 extends StatefulWidget {
@@ -655,9 +654,9 @@ class _RegisterForm2State extends State<RegisterForm2> {
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-              ),
+                  ),
               TextInputFormatter.withFunction(
-                    (oldValue, newValue) {
+                (oldValue, newValue) {
                   // Convert the new input to title case
                   if (newValue.text.isNotEmpty) {
                     final convertedValue = toTitleCase(newValue.text);

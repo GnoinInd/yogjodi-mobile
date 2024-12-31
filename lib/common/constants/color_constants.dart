@@ -7,7 +7,7 @@ class ColorConstants {
   static Color textBlue = Colors.blue;
   static Color textGrey = hexToColor('#808080');
 
-  /// MarronColor
+  /// Marron Color
   static Color color1 = hexToColor('#A70855');
 
   /// Light Sky Blue BG
@@ -42,6 +42,9 @@ class ColorConstants {
 
   /// Lighter Grey
   static Color color12 = hexToColor('#DADADA');
+
+  /// Light Marron
+  static Color color13 = hexToColor('#CB3055');
 }
 
 Color hexToColor(String hex) {

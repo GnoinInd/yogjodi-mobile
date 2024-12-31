@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:yog_jodi/views/screens/update_family_details_screen.dart';
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/color_constants.dart';
@@ -1227,7 +1229,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdateFamilyDetailsScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -1438,7 +1443,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
-                                          fontSize: 13.0,
+                                          fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
