@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:yog_jodi/views/screens/update_family_details_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_family_details_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_about_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_basic_details_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_contact_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_edu_career_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_lifestyle_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_my_religion_screen.dart';
 
-import '../../common/constants/asset_constants.dart';
-import '../../common/constants/color_constants.dart';
-import '../../common/constants/string_constants.dart';
+import '../../../common/constants/asset_constants.dart';
+import '../../../common/constants/color_constants.dart';
+import '../../../common/constants/string_constants.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -108,7 +114,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdateMyBasicDetailsScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -475,7 +484,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() => const UpdateMyAboutScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -538,7 +549,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(
+                                        () => const UpdateMyEduCareerScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -721,7 +735,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(
+                                        () => const UpdateMyReligionScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -904,7 +921,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() => const UpdateMyContactScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -995,7 +1014,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(
+                                        () => const UpdateMyLifestyleScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,

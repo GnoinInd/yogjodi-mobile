@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../common/constants/color_constants.dart';
-import '../../common/constants/string_constants.dart';
-import '../../common/utils/utility_methods.dart';
-import '../widgets/colored_button.dart';
+import '../../../common/constants/color_constants.dart';
+import '../../../common/constants/string_constants.dart';
+import '../../../common/utils/utility_methods.dart';
+import '../../widgets/colored_button.dart';
 
 class UpdateFamilyDetailsScreen extends StatefulWidget {
   const UpdateFamilyDetailsScreen({super.key});
@@ -18,7 +18,6 @@ class _UpdateFamilyDetailsScreenState extends State<UpdateFamilyDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: ColorConstants.color4,
       appBar: AppBar(
         title: const Text(StringConstants.update),
         backgroundColor: ColorConstants.color1,

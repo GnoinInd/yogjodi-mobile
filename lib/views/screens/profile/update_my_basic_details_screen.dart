@@ -1,47 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:yog_jodi/views/screens/register_screen_3.dart';
 
-import '../../common/constants/color_constants.dart';
-import '../../common/constants/string_constants.dart';
-import '../../common/utils/utility_methods.dart';
-import '../widgets/border_button.dart';
-import '../widgets/colored_button.dart';
-import '../widgets/my_country_state_city_picker.dart';
+import '../../../common/constants/color_constants.dart';
+import '../../../common/constants/string_constants.dart';
+import '../../../common/utils/utility_methods.dart';
+import '../../widgets/border_button.dart';
+import '../../widgets/colored_button.dart';
+import '../../widgets/my_country_state_city_picker.dart';
 
-class RegisterScreen2 extends StatefulWidget {
-  const RegisterScreen2({super.key});
+class UpdateMyBasicDetailsScreen extends StatefulWidget {
+  const UpdateMyBasicDetailsScreen({super.key});
 
   @override
-  State<RegisterScreen2> createState() => _RegisterScreen2State();
+  State<UpdateMyBasicDetailsScreen> createState() =>
+      _UpdateMyBasicDetailsScreenState();
 }
 
-class _RegisterScreen2State extends State<RegisterScreen2> {
+class _UpdateMyBasicDetailsScreenState
+    extends State<UpdateMyBasicDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.color4,
       appBar: AppBar(
-        title: const Text(StringConstants.register),
+        title: const Text(StringConstants.update),
         backgroundColor: ColorConstants.color1,
         foregroundColor: ColorConstants.textWhite,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.to(() => const RegisterScreen3());
-            },
-            child: Text(
-              StringConstants.skip,
-              style: TextStyle(
-                fontSize: 20,
-                color: ColorConstants.textWhite,
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -49,7 +33,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
           children: [
             const SizedBox(height: 20.0),
             Text(
-              StringConstants.profileDetails,
+              StringConstants.basicDetails,
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
@@ -58,7 +42,7 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40.0),
-            const RegisterForm2(),
+            const UpdateMyBasicDetailsForm(),
             const SizedBox(height: 50.0),
           ],
         ),
@@ -67,14 +51,34 @@ class _RegisterScreen2State extends State<RegisterScreen2> {
   }
 }
 
-class RegisterForm2 extends StatefulWidget {
-  const RegisterForm2({super.key});
+class UpdateMyBasicDetailsForm extends StatefulWidget {
+  const UpdateMyBasicDetailsForm({super.key});
 
   @override
-  State<RegisterForm2> createState() => _RegisterForm2State();
+  State<UpdateMyBasicDetailsForm> createState() =>
+      _UpdateMyBasicDetailsFormState();
 }
 
-class _RegisterForm2State extends State<RegisterForm2> {
+class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
+  String firstName = '';
+  TextEditingController firstNameTEC = TextEditingController();
+  String middleName = '';
+  TextEditingController middleNameTEC = TextEditingController();
+  String lastName = '';
+  TextEditingController lastNameTEC = TextEditingController();
+  String gender = '';
+  String profilePerson = '';
+  final List<String> profilePersons = [
+    'Select',
+    'Self',
+    'Son',
+    'Daughter',
+    'Brother',
+    'Sister',
+    'Relative',
+    'Friend',
+    'Other',
+  ];
   String profileManagedBy = '';
   final List<String> profileManagedByList = [
     'Select',
@@ -90,12 +94,11 @@ class _RegisterForm2State extends State<RegisterForm2> {
     'Other',
   ];
   String dob = '';
+  TextEditingController dobTEC = TextEditingController();
   String height = '';
   final List<String> heightList = ['Select'];
   String motherTongue = '';
-  String religion = '';
-  String caste = '';
-  String goutra = '';
+  TextEditingController motherTongueTEC = TextEditingController();
   String maritalStatus = '';
   final List<String> maritalStatusList = [
     'Select',
@@ -107,37 +110,63 @@ class _RegisterForm2State extends State<RegisterForm2> {
   ];
   bool? haveChildren;
   String currentAddress = '';
+  TextEditingController currentAddressTEC = TextEditingController();
   TextEditingController country = TextEditingController();
   TextEditingController state = TextEditingController();
   TextEditingController city = TextEditingController();
   String expressYourself = '';
-  String smoking = '';
-  String drinking = '';
-  final List<String> badHabitsList = [
-    'Select',
-    'Never',
-    'Sometimes',
-    'Occasionally',
-    'Regular',
-  ];
-  String diet = '';
-  final List<String> dietList = [
-    'Select',
-    'Vegetarian',
-    'Non-Vegetarian',
-    'Vegan',
-  ];
-  String hobbies = '';
-  String interests = '';
-  String sports = '';
-  String aboutMe = '';
+  TextEditingController expressYourselfTEC = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
-  String? _validateName(String? value) {
+  String? _validateFirstName(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return StringConstants.nameIsRequired;
+      return StringConstants.firstNameIsRequired;
     }
+    return null;
+  }
+
+  String? _validateLastName(String? value) {
+    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
+      return StringConstants.lastNameIsRequired;
+    }
+    return null;
+  }
+
+  String toTitleCase(String text) {
+    if (text.isEmpty) return '';
+
+    final words = text.split(' ');
+    final titleCaseWords = words.map((word) {
+      if (word.isNotEmpty) {
+        return word[0].toUpperCase() + word.substring(1).toLowerCase();
+      }
+      return '';
+    });
+
+    return titleCaseWords.join(' ');
+  }
+
+  String genderError = '';
+  bool validateGender() {
+    if (gender.isEmpty) {
+      setState(() {
+        genderError = StringConstants.genderError;
+      });
+      return false;
+    } else {
+      setState(() {
+        genderError = '';
+      });
+      return true;
+    }
+  }
+
+  String? _validateProfilePerson(String? value) {
+    if (value == profilePersons.first) {
+      return StringConstants.fieldIsRequired;
+    }
+
     return null;
   }
 
@@ -181,22 +210,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
     }
   }
 
-  String toTitleCase(String text) {
-    if (text.isEmpty) return '';
-
-    final words = text.split(' ');
-    final titleCaseWords = words.map((word) {
-      if (word.isNotEmpty) {
-        return word[0].toUpperCase() + word.substring(1).toLowerCase();
-      }
-      return '';
-    });
-
-    return titleCaseWords.join(' ');
-  }
-
-  final TextEditingController dobTEC = TextEditingController();
-
   DateTime selectedDate = DateTime.now();
   Future<void> selectDOB(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -215,20 +228,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
   String? _validateMotherTongue(String? value) {
     if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
       return StringConstants.motherTongueIsRequired;
-    }
-    return null;
-  }
-
-  String? _validateReligion(String? value) {
-    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return StringConstants.religionIsRequired;
-    }
-    return null;
-  }
-
-  String? _validateCaste(String? value) {
-    if (value == null || value.isEmpty || UtilityMethods.isBlank(value)) {
-      return StringConstants.casteIsRequired;
     }
     return null;
   }
@@ -264,14 +263,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
     return null;
   }
 
-  // String? _validateDiet(String? value) {
-  //   if (value == dietList.first) {
-  //     return StringConstants.dietIsRequired;
-  //   }
-  //
-  //   return null;
-  // }
-
   @override
   void dispose() {
     dobTEC.dispose();
@@ -280,12 +271,10 @@ class _RegisterForm2State extends State<RegisterForm2> {
 
   @override
   void initState() {
+    profilePerson = profilePersons.first;
     profileManagedBy = profileManagedByList.first;
     maritalStatus = maritalStatusList.first;
     height = heightList.first;
-    smoking = badHabitsList.first;
-    drinking = badHabitsList.first;
-    diet = dietList.first;
 
     ///Add height to list
     for (int ft = 3; ft <= 7; ft++) {
@@ -303,6 +292,372 @@ class _RegisterForm2State extends State<RegisterForm2> {
       key: _formKey,
       child: Column(
         children: [
+          TextFormField(
+            controller: firstNameTEC,
+            style: TextStyle(color: ColorConstants.color3),
+            validator: _validateFirstName,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+                  ),
+              TextInputFormatter.withFunction(
+                (oldValue, newValue) {
+                  // Convert the new input to title case
+                  if (newValue.text.isNotEmpty) {
+                    final convertedValue = toTitleCase(newValue.text);
+                    return TextEditingValue(
+                      text: convertedValue,
+                      selection: TextSelection.fromPosition(
+                        TextPosition(offset: convertedValue.length),
+                      ),
+                    );
+                  }
+                  return newValue;
+                },
+              ),
+            ],
+            maxLength: 30,
+            maxLengthEnforcement: firstName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
+            decoration: InputDecoration(
+              counterText: firstName.isNotEmpty ? null : "",
+              hintText: StringConstants.firstName,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              prefixIcon: Icon(
+                Icons.person_outline,
+                color: ColorConstants.color3,
+              ),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            keyboardType: TextInputType.name,
+            onChanged: (val) {
+              setState(() {
+                firstName = val;
+              });
+            },
+          ),
+          const SizedBox(height: 16),
+          TextFormField(
+            controller: middleNameTEC,
+            style: TextStyle(color: ColorConstants.color3),
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+                  ),
+              TextInputFormatter.withFunction(
+                (oldValue, newValue) {
+                  // Convert the new input to title case
+                  if (newValue.text.isNotEmpty) {
+                    final convertedValue = toTitleCase(newValue.text);
+                    return TextEditingValue(
+                      text: convertedValue,
+                      selection: TextSelection.fromPosition(
+                        TextPosition(offset: convertedValue.length),
+                      ),
+                    );
+                  }
+                  return newValue;
+                },
+              ),
+            ],
+            maxLength: 30,
+            maxLengthEnforcement: middleName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
+            decoration: InputDecoration(
+              counterText: middleName.isNotEmpty ? null : "",
+              hintText: StringConstants.middleName,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              prefixIcon: Icon(
+                Icons.person_outline,
+                color: ColorConstants.color3,
+              ),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            keyboardType: TextInputType.name,
+            onChanged: (val) {
+              setState(() {
+                middleName = val;
+              });
+            },
+          ),
+          const SizedBox(height: 16),
+          TextFormField(
+            controller: lastNameTEC,
+            style: TextStyle(color: ColorConstants.color3),
+            validator: _validateLastName,
+            inputFormatters: [
+              FilteringTextInputFormatter.allow(
+                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
+                  ),
+              TextInputFormatter.withFunction(
+                (oldValue, newValue) {
+                  // Convert the new input to title case
+                  if (newValue.text.isNotEmpty) {
+                    final convertedValue = toTitleCase(newValue.text);
+                    return TextEditingValue(
+                      text: convertedValue,
+                      selection: TextSelection.fromPosition(
+                        TextPosition(offset: convertedValue.length),
+                      ),
+                    );
+                  }
+                  return newValue;
+                },
+              ),
+            ],
+            maxLength: 30,
+            maxLengthEnforcement: lastName.isNotEmpty
+                ? MaxLengthEnforcement.none
+                : MaxLengthEnforcement.enforced,
+            decoration: InputDecoration(
+              counterText: lastName.isNotEmpty ? null : "",
+              hintText: StringConstants.lastName,
+              hintStyle: TextStyle(color: ColorConstants.color3),
+              prefixIcon: Icon(
+                Icons.person_outline,
+                color: ColorConstants.color3,
+              ),
+              contentPadding: const EdgeInsets.all(15.0),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color5,
+                  width: 1,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: ColorConstants.color1,
+                  width: 1,
+                ),
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: const BorderSide(
+                  color: Colors.red,
+                  width: 1,
+                ),
+              ),
+            ),
+            keyboardType: TextInputType.name,
+            onChanged: (val) {
+              setState(() {
+                lastName = val;
+              });
+            },
+          ),
+          const SizedBox(height: 16),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    StringConstants.gender,
+                    style: TextStyle(
+                      color: ColorConstants.color3,
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  BorderButton(
+                    width: 70,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5.0,
+                      horizontal: 0.0,
+                    ),
+                    bgColor: ColorConstants.textWhite,
+                    borderColor: gender == StringConstants.male
+                        ? ColorConstants.color1
+                        : ColorConstants.color5,
+                    onPressed: () async {
+                      setState(() {
+                        gender = StringConstants.male;
+                      });
+                    },
+                    child: Text(
+                      StringConstants.male,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: gender == StringConstants.male
+                            ? ColorConstants.color1
+                            : ColorConstants.color3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  BorderButton(
+                    width: 70,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5.0,
+                      horizontal: 0.0,
+                    ),
+                    bgColor: ColorConstants.textWhite,
+                    borderColor: gender == StringConstants.female
+                        ? ColorConstants.color1
+                        : ColorConstants.color5,
+                    onPressed: () async {
+                      setState(() {
+                        gender = StringConstants.female;
+                      });
+                    },
+                    child: Text(
+                      StringConstants.female,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: gender == StringConstants.female
+                            ? ColorConstants.color1
+                            : ColorConstants.color3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              if (genderError.isNotEmpty)
+                Text(
+                  genderError,
+                  style: TextStyle(
+                    color: ColorConstants.textRed,
+                    fontSize: 12.0,
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.creatingProfileFor,
+                style: TextStyle(
+                  color: ColorConstants.color3,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.40,
+                child: DropdownButtonFormField<String>(
+                  validator: _validateProfilePerson,
+                  value: profilePerson,
+                  hint: Text(profilePersons.first),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      profilePerson = newValue!;
+                    });
+                  },
+                  items: profilePersons.map((String profilePerson_) {
+                    return DropdownMenuItem<String>(
+                      value: profilePerson_,
+                      child: Text(profilePerson_),
+                    );
+                  }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color5,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.color1,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -425,6 +780,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
+            controller: motherTongueTEC,
             style: TextStyle(color: ColorConstants.color3),
             // validator: _validateMotherTongue,
             inputFormatters: [
@@ -495,226 +851,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
             onChanged: (val) {
               setState(() {
                 motherTongue = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            validator: _validateReligion,
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: religion.isNotEmpty ? null : "",
-              hintText: StringConstants.religion,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.religion,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              // prefixIcon: Icon(
-              //   Icons.person_outline,
-              //   color: ColorConstants.color3,
-              // ),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                religion = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            validator: _validateCaste,
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: firstName.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: caste.isNotEmpty ? null : "",
-              hintText: StringConstants.caste,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.caste,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              // prefixIcon: Icon(
-              //   Icons.person_outline,
-              //   color: ColorConstants.color3,
-              // ),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                caste = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            inputFormatters: [
-              FilteringTextInputFormatter.allow(
-                  RegExp(r'[a-zA-Z ]') // Allow alphabets and space
-                  ),
-              TextInputFormatter.withFunction(
-                (oldValue, newValue) {
-                  // Convert the new input to title case
-                  if (newValue.text.isNotEmpty) {
-                    final convertedValue = toTitleCase(newValue.text);
-                    return TextEditingValue(
-                      text: convertedValue,
-                      selection: TextSelection.fromPosition(
-                        TextPosition(offset: convertedValue.length),
-                      ),
-                    );
-                  }
-                  return newValue;
-                },
-              ),
-            ],
-            // maxLength: 30,
-            // maxLengthEnforcement: goutra.isNotEmpty
-            //     ? MaxLengthEnforcement.none
-            //     : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: goutra.isNotEmpty ? null : "",
-              hintText: StringConstants.goutra,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.goutra,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                goutra = val;
               });
             },
           ),
@@ -876,6 +1012,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
           },
           const SizedBox(height: 16.0),
           TextFormField(
+            controller: currentAddressTEC,
             minLines: 2,
             maxLines: 5,
             style: TextStyle(color: ColorConstants.color3),
@@ -1109,6 +1246,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
+            controller: expressYourselfTEC,
             minLines: 2,
             maxLines: 5,
             style: TextStyle(color: ColorConstants.color3),
@@ -1159,407 +1297,6 @@ class _RegisterForm2State extends State<RegisterForm2> {
               });
             },
           ),
-          const SizedBox(height: 16.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                StringConstants.smoking,
-                style: TextStyle(
-                  color: ColorConstants.color3,
-                  fontSize: 17.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
-                child: DropdownButtonFormField<String>(
-                  value: smoking.isNotEmpty ? smoking : badHabitsList.first,
-                  hint: Text(badHabitsList.first),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      smoking = newValue!;
-                      if (smoking == badHabitsList.first) {
-                        smoking = "";
-                      }
-                    });
-                  },
-                  items: badHabitsList.map((String badHabit_) {
-                    return DropdownMenuItem<String>(
-                      value: badHabit_,
-                      child: Text(badHabit_),
-                    );
-                  }).toList(),
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.all(15.0),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color5,
-                        width: 1,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color1,
-                        width: 1,
-                      ),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                StringConstants.drinking,
-                style: TextStyle(
-                  color: ColorConstants.color3,
-                  fontSize: 17.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
-                child: DropdownButtonFormField<String>(
-                  value: drinking.isNotEmpty ? drinking : badHabitsList.first,
-                  hint: Text(badHabitsList.first),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      drinking = newValue!;
-                      if (drinking == badHabitsList.first) {
-                        drinking = "";
-                      }
-                    });
-                  },
-                  items: badHabitsList.map((String badHabit_) {
-                    return DropdownMenuItem<String>(
-                      value: badHabit_,
-                      child: Text(badHabit_),
-                    );
-                  }).toList(),
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.all(15.0),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color5,
-                        width: 1,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color1,
-                        width: 1,
-                      ),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                StringConstants.diet,
-                style: TextStyle(
-                  color: ColorConstants.color3,
-                  fontSize: 17.0,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.7,
-                child: DropdownButtonFormField<String>(
-                  // validator: _validateDiet,
-                  value: diet.isNotEmpty ? diet : dietList.first,
-                  hint: Text(dietList.first),
-                  onChanged: (String? newValue) {
-                    setState(() {
-                      diet = newValue!;
-                      if (diet == dietList.first) {
-                        diet = "";
-                      }
-                    });
-                  },
-                  items: dietList.map((String diet_) {
-                    return DropdownMenuItem<String>(
-                      value: diet_,
-                      child: Text(diet_),
-                    );
-                  }).toList(),
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.all(15.0),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color5,
-                        width: 1,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide(
-                        color: ColorConstants.color1,
-                        width: 1,
-                      ),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: const BorderSide(
-                        color: Colors.red,
-                        width: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: hobbies.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: hobbies.isNotEmpty ? null : "",
-              hintText: StringConstants.hobbies,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.hobbies,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                hobbies = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: interests.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: interests.isNotEmpty ? null : "",
-              hintText: StringConstants.interests,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.interests,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                interests = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: sports.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: sports.isNotEmpty ? null : "",
-              hintText: StringConstants.sports,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.sports,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.name,
-            onChanged: (val) {
-              setState(() {
-                sports = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            minLines: 2,
-            maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: aboutMe.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: aboutMe.isNotEmpty ? null : "",
-              hintText: StringConstants.aboutMe,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.aboutMe,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.multiline,
-            onChanged: (val) {
-              setState(() {
-                aboutMe = val;
-              });
-            },
-          ),
           const SizedBox(height: 40.0),
           Visibility(
             visible: true,
@@ -1570,13 +1307,10 @@ class _RegisterForm2State extends State<RegisterForm2> {
               ),
             ),
             child: ColoredButton(
-              color: ColorConstants.color6,
+              radius: 50.0,
+              color: ColorConstants.color13,
               onPressed: () async {
-                // Get.to(() => const RegisterScreen3());
-
-                if ((maritalStatus != maritalStatusList[0] &&
-                        maritalStatus != maritalStatusList[1]) &&
-                    !validateHaveChildren()) {
+                if (!validateGender()) {
                   return;
                 }
                 if (_formKey.currentState!.validate()) {
@@ -1585,7 +1319,7 @@ class _RegisterForm2State extends State<RegisterForm2> {
                 }
               },
               child: Text(
-                StringConstants.next,
+                StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
                   color: ColorConstants.textWhite,

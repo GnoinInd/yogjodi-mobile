@@ -2,14 +2,12 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../common/constants/asset_constants.dart';
-import '../../common/constants/color_constants.dart';
-import '../../common/constants/string_constants.dart';
-import '../widgets/colored_button.dart';
-import 'package:get/get.dart';
+import '../../../common/constants/asset_constants.dart';
+import '../../../common/constants/color_constants.dart';
+import '../../../common/constants/string_constants.dart';
+import '../../widgets/colored_button.dart';
 
 class RegisterScreen6 extends StatefulWidget {
   const RegisterScreen6({super.key});

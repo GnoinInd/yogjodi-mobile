@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
 import 'package:yog_jodi/views/screens/dashboard_screen.dart';
-import 'package:yog_jodi/views/screens/register_screen_1.dart';
+import 'package:yog_jodi/views/screens/register/register_screen_1.dart';
+
 import '../../common/constants/string_constants.dart';
 import '../../common/utils/utility_methods.dart';
 import '../widgets/border_button.dart';
