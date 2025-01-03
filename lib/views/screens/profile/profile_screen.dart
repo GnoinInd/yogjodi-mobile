@@ -8,6 +8,11 @@ import 'package:yog_jodi/views/screens/profile/update_my_contact_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_my_edu_career_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_my_lifestyle_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_my_religion_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_partner_about_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_partner_basic_details_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_partner_edu_occupation_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_partner_lifestyle_screen.dart';
+import 'package:yog_jodi/views/screens/profile/update_partner_religion_screen.dart';
 
 import '../../../common/constants/asset_constants.dart';
 import '../../../common/constants/color_constants.dart';
@@ -1611,7 +1616,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdatePartnerBasicDetailsScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -1910,11 +1918,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.residentialStatus,
+                                        StringConstants.residentialStatus
+                                            .substring(
+                                                0,
+                                                StringConstants
+                                                        .residentialStatus
+                                                        .length -
+                                                    1),
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
-                                          fontSize: 14.0,
+                                          fontSize: 13.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -1978,7 +1992,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdatePartnerEduOccupationScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -2161,7 +2178,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdatePartnerReligionScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -2315,7 +2335,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ],
                         ),
 
-                        ///Life Style
+                        ///Lifestyle
                         ExpansionTile(
                           tilePadding: const EdgeInsets.all(0),
                           dense: true,
@@ -2344,7 +2364,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(() =>
+                                        const UpdatePartnerLifestyleScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
@@ -2573,7 +2596,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ),
                                 ),
                                 IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Get.to(
+                                        () => const UpdatePartnerAboutScreen());
+                                  },
                                   icon: SvgPicture.asset(
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,

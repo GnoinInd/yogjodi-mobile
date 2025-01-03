@@ -125,6 +125,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Divorced',
     'Widower',
     'Widow',
+    "Doesn't matter",
   ];
   String smoking = '';
   String drinking = '';
@@ -134,6 +135,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Sometimes',
     'Occasionally',
     'Regular',
+    "Doesn't matter",
   ];
   String diet = '';
   final List<String> dietList = [
@@ -141,6 +143,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Vegetarian',
     'Non-Vegetarian',
     'Vegan',
+    "Doesn't matter",
   ];
   String goutraToExclude = '';
   String aboutPartner = '';
@@ -151,6 +154,7 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Work Permit',
     'Student Visa',
     'Permanent Resident',
+    "Doesn't matter",
   ];
 
   final _formKey = GlobalKey<FormState>();
