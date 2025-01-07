@@ -82,7 +82,6 @@ class _RegisterForm5State extends State<RegisterForm5> {
   List<String> states = [];
   TextEditingController countriesController = TextEditingController();
   TextEditingController statesController = TextEditingController();
-  String skills = '';
   String highestDegree = '';
   String occupation = '';
   String minAnnualIncome = '';
@@ -691,58 +690,6 @@ class _RegisterForm5State extends State<RegisterForm5> {
             ),
             inputTextStyle: TextStyle(color: ColorConstants.color3),
             dialogBGColor: ColorConstants.color4,
-          ),
-          const SizedBox(height: 16.0),
-          TextFormField(
-            minLines: 2,
-            maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: skills.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: skills.isNotEmpty ? null : "",
-              hintText: StringConstants.skills,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.skills,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.multiline,
-            onChanged: (val) {
-              setState(() {
-                skills = val;
-              });
-            },
           ),
           const SizedBox(height: 16.0),
           TextFormField(

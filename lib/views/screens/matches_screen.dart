@@ -1,7 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
+import 'package:yog_jodi/views/screens/shortlisted_screen.dart';
 import 'package:yog_jodi/views/widgets/border_button.dart';
 
 import '../../common/constants/asset_constants.dart';
@@ -26,8 +28,47 @@ class _MatchesScreenState extends State<MatchesScreen> {
           imageUrl:
               'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
           title: StringConstants.matches,
+          subtitle: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                StringConstants.basedOn,
+                style: TextStyle(
+                  fontFamily: "Poppins",
+                  fontSize: 13.0,
+                  fontWeight: FontWeight.w500,
+                  color: ColorConstants.color3,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              Text(
+                StringConstants.partnerDetails,
+                style: TextStyle(
+                  fontFamily: "Poppins",
+                  fontSize: 13.0,
+                  fontWeight: FontWeight.w500,
+                  color: ColorConstants.color1,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                width: 2.0,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => const ProfileScreen(tabIndex: 2));
+                },
+                child: const Icon(
+                  Icons.edit_outlined,
+                  size: 14.0,
+                ),
+              )
+            ],
+          ),
           onNotificationPressed: () {},
-          onShortlistedPressed: () {},
+          onShortlistedPressed: () {
+            Get.to(() => const ShortlistedScreen());
+          },
         ),
       ),
       body: Container(
@@ -162,6 +203,32 @@ class _MatchesScreenState extends State<MatchesScreen> {
                     onPressed: () {},
                   ),
                   const SizedBox(width: 15.0),
+                  BorderButton(
+                    width: 130,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 5.0,
+                      horizontal: 0.0,
+                    ),
+                    borderColor: Colors.transparent,
+                    bgColor: Colors.white,
+                    boxShadow: BoxShadow(
+                      color: Colors.grey.shade200,
+                      spreadRadius: 1.0,
+                      blurRadius: 2.0,
+                    ),
+                    child: Text(
+                      StringConstants.handicap,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
+                        color: ColorConstants.textGrey,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {},
+                  ),
+                  const SizedBox(width: 15.0),
                 ],
               ),
             ),
@@ -186,9 +253,11 @@ class _MatchesScreenState extends State<MatchesScreen> {
                     annualIncome: '5-6 LPA',
                     education: 'MCA',
                     maritalStatus: 'Never Married',
+                    isVerified: true,
                     onSendInterestPressed: () {},
                     onShortlistPressed: () {},
                     onChatPressed: () {},
+                    onTap: () {},
                   );
                 },
               ),

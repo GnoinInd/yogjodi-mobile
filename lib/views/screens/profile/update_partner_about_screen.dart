@@ -56,8 +56,6 @@ class UpdatePartnerLifestyleForm extends StatefulWidget {
 
 class _UpdatePartnerLifestyleFormState
     extends State<UpdatePartnerLifestyleForm> {
-  String skills = '';
-  TextEditingController skillsTEC = TextEditingController();
   String aboutPartner = '';
   TextEditingController aboutPartnerTEC = TextEditingController();
 
@@ -79,59 +77,6 @@ class _UpdatePartnerLifestyleFormState
       key: _formKey,
       child: Column(
         children: [
-          TextFormField(
-            controller: skillsTEC,
-            minLines: 2,
-            maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
-            maxLength: 100,
-            maxLengthEnforcement: skills.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
-            decoration: InputDecoration(
-              counterText: skills.isNotEmpty ? null : "",
-              hintText: StringConstants.skills,
-              hintStyle: TextStyle(color: ColorConstants.color3),
-              labelText: StringConstants.skills,
-              labelStyle: TextStyle(color: ColorConstants.color3),
-              contentPadding: const EdgeInsets.all(15.0),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color5,
-                  width: 1,
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: ColorConstants.color1,
-                  width: 1,
-                ),
-              ),
-              errorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-              focusedErrorBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(
-                  color: Colors.red,
-                  width: 1,
-                ),
-              ),
-            ),
-            keyboardType: TextInputType.multiline,
-            onChanged: (val) {
-              setState(() {
-                skills = val;
-              });
-            },
-          ),
-          const SizedBox(height: 16.0),
           TextFormField(
             controller: aboutPartnerTEC,
             minLines: 2,

@@ -19,7 +19,11 @@ import '../../../common/constants/color_constants.dart';
 import '../../../common/constants/string_constants.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+  final int tabIndex;
+  const ProfileScreen({
+    this.tabIndex = 0,
+    super.key,
+  });
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -31,6 +35,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: widget.tabIndex,
       child: Scaffold(
         appBar: AppBar(
           title: Text(
@@ -1593,6 +1598,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           dense: true,
                           shape: const Border(),
                           onExpansionChanged: null,
+                          initiallyExpanded: widget.tabIndex == 2,
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(

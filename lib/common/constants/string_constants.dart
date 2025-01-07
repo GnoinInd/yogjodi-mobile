@@ -195,6 +195,8 @@ class StringConstants {
   static const String update = "Update";
   static const String familyDetails = "Family Details";
   static const String partner = "Partner";
+  static const String basedOn = "Based on ";
+  static const String shortlisted = "Shortlisted";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

@@ -4,17 +4,18 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/color_constants.dart';
-import '../../common/constants/string_constants.dart';
 
 class CustomAppbar extends StatelessWidget {
   final String imageUrl;
   final String title;
+  final Widget subtitle;
   final void Function() onNotificationPressed;
   final void Function() onShortlistedPressed;
   const CustomAppbar({
     super.key,
     required this.imageUrl,
     required this.title,
+    this.subtitle = const SizedBox(),
     required this.onNotificationPressed,
     required this.onShortlistedPressed,
   });
@@ -34,15 +35,20 @@ class CustomAppbar extends StatelessWidget {
           ),
           const SizedBox(width: 20.0),
           Expanded(
-            child: Text(
-              title,
-              style: TextStyle(
-                fontFamily: "Inter",
-                fontSize: 18.0,
-                fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
-              ),
-              textAlign: TextAlign.center,
+            child: Column(
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontFamily: "Inter",
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w600,
+                    color: ColorConstants.color1,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                subtitle,
+              ],
             ),
           ),
         ],
