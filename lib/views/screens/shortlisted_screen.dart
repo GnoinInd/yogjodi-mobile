@@ -21,6 +21,9 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
         foregroundColor: ColorConstants.textWhite,
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: ColorConstants.color2,
         child: ListView.builder(
           itemCount: 10,
           padding: const EdgeInsets.symmetric(

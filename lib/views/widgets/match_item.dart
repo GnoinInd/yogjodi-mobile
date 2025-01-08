@@ -20,6 +20,8 @@ class MatchItem extends StatelessWidget {
   final String maritalStatus;
   final bool isVerified;
   final bool isShortlisted;
+  final String membership;
+  final String profileMatchPercent;
   final void Function() onSendInterestPressed;
   final void Function() onShortlistPressed;
   final void Function() onChatPressed;
@@ -40,6 +42,8 @@ class MatchItem extends StatelessWidget {
     required this.maritalStatus,
     this.isVerified = false,
     this.isShortlisted = false,
+    this.membership = "",
+    this.profileMatchPercent = "",
     required this.onSendInterestPressed,
     required this.onShortlistPressed,
     required this.onChatPressed,
@@ -94,36 +98,77 @@ class MatchItem extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Center(
-                                child: Text(
-                                  "${StringConstants.lastSeenAt}$lastSeen",
-                                  style: TextStyle(
-                                    fontFamily: "Inter",
-                                    fontSize: 10.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.color3,
+                              // Center(
+                              //   child: Text(
+                              //     "${StringConstants.lastSeenAt}$lastSeen",
+                              //     style: TextStyle(
+                              //       fontFamily: "Inter",
+                              //       fontSize: 10.0,
+                              //       fontWeight: FontWeight.w400,
+                              //       color: ColorConstants.color3,
+                              //     ),
+                              //     textAlign: TextAlign.center,
+                              //   ),
+                              // ),
+                              Row(
+                                mainAxisAlignment: isVerified
+                                    ? MainAxisAlignment.spaceBetween
+                                    : MainAxisAlignment.center,
+                                children: [
+                                  if (isVerified)
+                                    GestureDetector(
+                                      onTap: () {
+                                        if (isVerified) {
+                                        } else {
+                                          onTap();
+                                        }
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 3.0,
+                                          vertical: 1.0,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: ColorConstants.color7,
+                                          borderRadius:
+                                              BorderRadius.circular(4.0),
+                                        ),
+                                        child: Text(
+                                          StringConstants.verified,
+                                          style: TextStyle(
+                                            fontFamily: "Inter",
+                                            fontSize: 10.0,
+                                            fontWeight: FontWeight.w600,
+                                            color: ColorConstants.textWhite,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                    ),
+                                  Center(
+                                    child: Text(
+                                      "${StringConstants.lastSeenAt}$lastSeen",
+                                      style: TextStyle(
+                                        fontFamily: "Inter",
+                                        fontSize: 10.0,
+                                        fontWeight: FontWeight.w400,
+                                        color: ColorConstants.color3,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
                                   ),
-                                  textAlign: TextAlign.center,
-                                ),
+                                ],
                               ),
                               Center(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if (isVerified) {
-                                    } else {
-                                      onTap();
-                                    }
-                                  },
-                                  child: Text(
-                                    "$name, $age ${isVerified ? "✅" : ""}",
-                                    style: TextStyle(
-                                      fontFamily: "Inter",
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.w600,
-                                      color: ColorConstants.textBlack,
-                                    ),
-                                    textAlign: TextAlign.center,
+                                child: Text(
+                                  "$name, $age",
+                                  style: TextStyle(
+                                    fontFamily: "Inter",
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: ColorConstants.textBlack,
                                   ),
+                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               const SizedBox(height: 5.0),
@@ -415,7 +460,63 @@ class MatchItem extends StatelessWidget {
                   imageUrl: imageUrl,
                 ),
               ),
-            )
+            ),
+            if (membership.isNotEmpty)
+              Positioned(
+                left: 0,
+                top: 0,
+                child: GestureDetector(
+                  onTap: () {
+                    if (membership.isNotEmpty) {
+                    } else {
+                      onTap();
+                    }
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 3.0,
+                      vertical: 1.0,
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(6.0),
+                      ),
+                    ),
+                    child: Text(
+                      membership,
+                      style: TextStyle(
+                        fontFamily: "Inter",
+                        fontSize: 10.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorConstants.textWhite,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            if (profileMatchPercent.isNotEmpty)
+              Positioned(
+                left: profileMatchPercent.length > 2 ? 114 : 120,
+                top: 0,
+                child: Text(
+                  "$profileMatchPercent%",
+                  style: TextStyle(
+                    fontFamily: "Inter",
+                    fontSize: 12.0,
+                    fontWeight: FontWeight.w600,
+                    color: ColorConstants.textWhite,
+                    shadows: const [
+                      Shadow(
+                        color: Colors.black,
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              )
           ],
         ),
       ),

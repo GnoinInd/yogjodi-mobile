@@ -33,7 +33,7 @@ class CustomAppbar extends StatelessWidget {
               imageUrl,
             ),
           ),
-          const SizedBox(width: 20.0),
+          const SizedBox(width: 15.0),
           Expanded(
             child: Column(
               children: [
@@ -68,7 +68,7 @@ class CustomAppbar extends StatelessWidget {
             fit: BoxFit.scaleDown,
           ),
         ),
-        const SizedBox(width: 25.0),
+        const SizedBox(width: 10.0),
       ],
     );
   }

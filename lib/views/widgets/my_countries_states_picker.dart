@@ -1,6 +1,8 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:yog_jodi/common/constants/color_constants.dart';
 
 import '../../models/country_state_city_picker_models/country_model.dart';
 import '../../models/country_state_city_picker_models/state_model.dart';
@@ -281,6 +283,7 @@ class _CountriesStatesPickerState extends State<CountriesStatesPicker> {
                                 child: Row(
                                   children: [
                                     Checkbox(
+                                      activeColor: ColorConstants.color1,
                                       value: _title == 'Country'
                                           ? countries.contains(
                                               _countrySubList[index].name)
@@ -364,8 +367,8 @@ class _CountriesStatesPickerState extends State<CountriesStatesPicker> {
                           Navigator.pop(context);
                         },
                         child: const Text(
-                          'Okay',
-                          style: TextStyle(color: Colors.green),
+                          'Close',
+                          style: TextStyle(color: Colors.red),
                         ),
                       ),
                       const SizedBox(height: 10.0),

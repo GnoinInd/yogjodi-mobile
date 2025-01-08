@@ -35,7 +35,7 @@ class _MatchesScreenState extends State<MatchesScreen> {
                 StringConstants.basedOn,
                 style: TextStyle(
                   fontFamily: "Poppins",
-                  fontSize: 13.0,
+                  fontSize: 12.0,
                   fontWeight: FontWeight.w500,
                   color: ColorConstants.color3,
                 ),
@@ -45,7 +45,7 @@ class _MatchesScreenState extends State<MatchesScreen> {
                 StringConstants.partnerDetails,
                 style: TextStyle(
                   fontFamily: "Poppins",
-                  fontSize: 13.0,
+                  fontSize: 12.0,
                   fontWeight: FontWeight.w500,
                   color: ColorConstants.color1,
                 ),
@@ -241,8 +241,9 @@ class _MatchesScreenState extends State<MatchesScreen> {
                 ),
                 itemBuilder: (_, index) {
                   return MatchItem(
-                    imageUrl:
-                        'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
+                    imageUrl: false
+                        ? 'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45'
+                        : 'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
                     lastSeen: '6:24 AM',
                     name: 'Sagar Thakur',
                     age: '24',
@@ -254,6 +255,8 @@ class _MatchesScreenState extends State<MatchesScreen> {
                     education: 'MCA',
                     maritalStatus: 'Never Married',
                     isVerified: true,
+                    membership: "Pro Max",
+                    profileMatchPercent: "55",
                     onSendInterestPressed: () {},
                     onShortlistPressed: () {},
                     onChatPressed: () {},
