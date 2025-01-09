@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:yog_jodi/views/screens/match_profile_screen.dart';
 import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 import 'package:yog_jodi/views/screens/shortlisted_screen.dart';
 import 'package:yog_jodi/views/widgets/border_button.dart';
@@ -260,7 +261,9 @@ class _MatchesScreenState extends State<MatchesScreen> {
                     onSendInterestPressed: () {},
                     onShortlistPressed: () {},
                     onChatPressed: () {},
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const MatchProfileScreen());
+                    },
                   );
                 },
               ),
