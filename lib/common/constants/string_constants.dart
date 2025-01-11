@@ -48,9 +48,11 @@ class StringConstants {
   static const String religion = "Religion";
   static const String caste = "Caste";
   static const String maritalStatus = "Marital Status:";
+  static const String maritalStatus1 = "Marital Status";
   static const String haveChildren = "Do you have children?";
   static const String currentAddress = "Current Address";
   static const String height = "Height:";
+  static const String height1 = "Height";
   static const String expressYourself = "Express Yourself";
   static const String smoking = "Smoking:";
   static const String drinking = "Drinking:";
@@ -70,6 +72,7 @@ class StringConstants {
   static const String yearsOfExperience = "Years of Experience:";
   static const String monthlyIncome = "Monthly Income";
   static const String annualIncome = "Annual Income:";
+  static const String annualIncome1 = "Annual Income";
   static const String aboutJob = "About Job";
   static const String aboutJobLocation = "About Job Location";
   static const String familyAndLifestyle = "Family & Lifestyle";
@@ -96,6 +99,7 @@ class StringConstants {
   static const String maxAnnualIncome = "Max. Annual Income";
   static const String aboutPartner = "About Partner";
   static const String residentialStatus = "Residential Status:";
+  static const String residentialStatus1 = "Residential Status";
   static const String uploadPhoto = "Upload Photo";
   static const String doYouWantToLogout = "Do you want to logout?";
   static const String appVersion = "App Version";

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
+import 'package:yog_jodi/views/screens/filter_screen.dart';
 import 'package:yog_jodi/views/screens/match_profile_screen.dart';
 import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 import 'package:yog_jodi/views/screens/shortlisted_screen.dart';
@@ -123,7 +124,9 @@ class _MatchesScreenState extends State<MatchesScreen> {
                         )
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const FilterScreen());
+                    },
                   ),
                   const SizedBox(width: 15.0),
                   BorderButton(

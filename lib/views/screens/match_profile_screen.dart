@@ -121,10 +121,61 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                 ],
               ),
               flexibleSpace: FlexibleSpaceBar(
-                background: CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  imageUrl:
-                      'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
+                background: Stack(
+                  children: [
+                    Positioned(
+                      top: 0,
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      child: CachedNetworkImage(
+                        fit: BoxFit.cover,
+                        imageUrl:
+                            'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45',
+                      ),
+                    ),
+                    Positioned(
+                      right: 30,
+                      top: 80,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: CircleAvatar(
+                                radius: 20.0,
+                                backgroundColor: Colors.black26,
+                                child: Icon(
+                                  Icons.image_outlined,
+                                  color: ColorConstants.textWhite,
+                                  size: 20.0,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              right: 2,
+                              top: 2,
+                              child: CircleAvatar(
+                                radius: 8.0,
+                                backgroundColor: Colors.red,
+                                child: Text(
+                                  "5",
+                                  style: TextStyle(
+                                    fontFamily: "Inter",
+                                    fontSize: 10.0,
+                                    fontWeight: FontWeight.w500,
+                                    color: ColorConstants.textWhite,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
