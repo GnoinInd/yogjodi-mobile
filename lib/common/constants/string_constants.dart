@@ -201,6 +201,10 @@ class StringConstants {
   static const String partner = "Partner";
   static const String basedOn = "Based on ";
   static const String shortlisted = "Shortlisted";
+  static const String unlockFullAlbumAccess = "Unlock Full Album Access";
+  static const String becomeAPaidMemberToViewAll =
+      "Become a paid member to view all photos & find your ideal match,";
+  static const String matched = "Matched";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

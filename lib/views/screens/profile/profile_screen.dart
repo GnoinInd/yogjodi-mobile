@@ -196,7 +196,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.height,
+                                        StringConstants.height1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -426,7 +426,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.maritalStatus,
+                                        StringConstants.maritalStatus1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -1648,7 +1648,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.height,
+                                        StringConstants.height1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -1832,7 +1832,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.maritalStatus,
+                                        StringConstants.maritalStatus1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -1924,13 +1924,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.residentialStatus
-                                            .substring(
-                                                0,
-                                                StringConstants
-                                                        .residentialStatus
-                                                        .length -
-                                                    1),
+                                        StringConstants.residentialStatus1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",

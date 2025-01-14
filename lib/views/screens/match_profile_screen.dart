@@ -1,9 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 
+import '../../common/constants/asset_constants.dart';
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
+import '../widgets/colored_button.dart';
 
 class MatchProfileScreen extends StatefulWidget {
   const MatchProfileScreen({super.key});
@@ -33,11 +36,236 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
     super.initState();
   }
 
+  void _showFileSelectorBottomSheet() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              padding: const EdgeInsets.only(
+                top: 10.0,
+                bottom: 20.0,
+                left: 10.0,
+                right: 10.0,
+              ),
+              width: double.infinity,
+              height: 350.0,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.close_rounded,
+                        color: ColorConstants.textRed,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  CircleAvatar(
+                    radius: 35.0,
+                    backgroundColor: ColorConstants.color8,
+                    child: Icon(
+                      Icons.lock_open_rounded,
+                      color: ColorConstants.color13,
+                      size: 35.0,
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  Text(
+                    StringConstants.unlockFullAlbumAccess,
+                    style: TextStyle(
+                      color: ColorConstants.color6,
+                      fontFamily: "Inter",
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 5.0),
+                  Text(
+                    StringConstants.becomeAPaidMemberToViewAll,
+                    style: TextStyle(
+                      color: ColorConstants.color6,
+                      fontFamily: "Inter",
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  ColoredButton(
+                    width: 180,
+                    color: ColorConstants.color1,
+                    radius: 10.0,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 10.0,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          AssetConstants.aeroTopRight,
+                          fit: BoxFit.scaleDown,
+                        ),
+                        const SizedBox(width: 10.0),
+                        Text(
+                          StringConstants.upgradeMembership,
+                          style: TextStyle(
+                            fontFamily: "Inter",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textWhite,
+                          ),
+                        )
+                      ],
+                    ),
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    "Also get more features and more perfect matches",
+                    style: TextStyle(
+                      color: ColorConstants.color6,
+                      fontFamily: "Poppins",
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        bottomSheet: Container(
+          height: 70.0,
+          decoration: BoxDecoration(
+            color: ColorConstants.textWhite,
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(5.0),
+              bottomRight: Radius.circular(5.0),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade300,
+                spreadRadius: 2.0,
+                blurRadius: 3.0,
+              ),
+            ],
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: SizedBox(
+                  width: 90.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        AssetConstants.messenger,
+                        fit: BoxFit.scaleDown,
+                        colorFilter: ColorFilter.mode(
+                          ColorConstants.textBlack,
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                      const SizedBox(height: 6.0),
+                      Text(
+                        StringConstants.sendInterest,
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w400,
+                          color: ColorConstants.textBlack,
+                        ),
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: SizedBox(
+                  width: 90.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      false
+                          ? SvgPicture.asset(
+                              AssetConstants.shortlistFilled,
+                              fit: BoxFit.scaleDown,
+                            )
+                          : SvgPicture.asset(
+                              AssetConstants.shortlist,
+                              fit: BoxFit.scaleDown,
+                            ),
+                      const SizedBox(height: 6.0),
+                      Text(
+                        StringConstants.shortlist,
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w400,
+                          color: ColorConstants.textBlack,
+                        ),
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: SizedBox(
+                  width: 90.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        AssetConstants.chat,
+                        fit: BoxFit.scaleDown,
+                      ),
+                      const SizedBox(height: 6.0),
+                      Text(
+                        StringConstants.chat,
+                        style: TextStyle(
+                          fontFamily: "Poppins",
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w400,
+                          color: ColorConstants.textBlack,
+                        ),
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
@@ -138,7 +366,9 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       right: 30,
                       top: 80,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          _showFileSelectorBottomSheet();
+                        },
                         child: Stack(
                           children: [
                             Padding(
@@ -147,7 +377,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 radius: 20.0,
                                 backgroundColor: Colors.black26,
                                 child: Icon(
-                                  Icons.image_outlined,
+                                  Icons.photo_library_outlined,
                                   color: ColorConstants.textWhite,
                                   size: 20.0,
                                 ),
@@ -175,11 +405,96 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                         ),
                       ),
                     ),
+                    if (true)
+                      Positioned(
+                        left: 0,
+                        bottom: 55.0,
+                        child: GestureDetector(
+                          onTap: () {
+                            if (true) {}
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 10.0,
+                              vertical: 5.0,
+                            ),
+                            decoration: const BoxDecoration(
+                              color: Colors.black26,
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(6.0),
+                                bottomRight: Radius.circular(6.0),
+                              ),
+                            ),
+                            child: Text(
+                              "Pro Max",
+                              style: TextStyle(
+                                fontFamily: "Inter",
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w600,
+                                color: ColorConstants.textWhite,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                    if (true)
+                      Positioned(
+                        left: (MediaQuery.of(context).size.width / 2.0) - 30.0,
+                        bottom: 56.0,
+                        child: GestureDetector(
+                          onTap: () {
+                            if (true) {}
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 3.0,
+                              vertical: 1.0,
+                            ),
+                            decoration: BoxDecoration(
+                              color: ColorConstants.color7,
+                              borderRadius: BorderRadius.circular(4.0),
+                            ),
+                            child: Text(
+                              StringConstants.verified,
+                              style: TextStyle(
+                                fontFamily: "Inter",
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w600,
+                                color: ColorConstants.textWhite,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                    if (true)
+                      Positioned(
+                        right: 10,
+                        bottom: 55.0,
+                        child: Text(
+                          "55%",
+                          style: TextStyle(
+                            fontFamily: "Inter",
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.w600,
+                            color: ColorConstants.textWhite,
+                            shadows: const [
+                              Shadow(
+                                color: Colors.black,
+                                blurRadius: 6.0,
+                              ),
+                            ],
+                          ),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
                   ],
                 ),
               ),
             ),
             SliverFillRemaining(
+              fillOverscroll: true,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: TabBarView(
@@ -277,7 +592,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.height,
+                                        StringConstants.height1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -507,7 +822,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        StringConstants.maritalStatus,
+                                        StringConstants.maritalStatus1,
                                         style: TextStyle(
                                           color: ColorConstants.color3,
                                           fontFamily: "Poppins",
@@ -1606,6 +1921,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           shape: const Border(),
                           onExpansionChanged: null,
                           initiallyExpanded: true,
+                          expandedCrossAxisAlignment: CrossAxisAlignment.start,
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(
@@ -1634,329 +1950,386 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.height,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.height1,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "5' 2\" - 5'6\"",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "5' 2\" - 5'6\"",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.age,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.age,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "18 years - 28 years",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "18 years - 28 years",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.country,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.country,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "India",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "India",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.location,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.location,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Patna (Bihar) - India ",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Patna (Bihar)",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.maritalStatus,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.maritalStatus1,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Never Married",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Never Married",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.motherTongue,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.motherTongue,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Hindi (UP)",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Hindi (UP)",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.residentialStatus
-                                            .substring(
-                                                0,
-                                                StringConstants
-                                                        .residentialStatus
-                                                        .length -
-                                                    1),
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 13.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.residentialStatus1,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (false)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 30.0),
                           ],
@@ -1969,6 +2342,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           shape: const Border(),
                           onExpansionChanged: null,
                           initiallyExpanded: true,
+                          expandedCrossAxisAlignment: CrossAxisAlignment.start,
                           title: Text(
                             StringConstants.educationAndOccupation,
                             style: TextStyle(
@@ -1997,139 +2371,166 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.highestDegree,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.highestDegree,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "MCA",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "MCA",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.annualIncome,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.annualIncome1,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "8-10 Lakh p.a.",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (false)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "8-10 Lakh p.a.",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.occupation,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.occupation,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Software Developer",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Software Developer",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 30.0),
                           ],
@@ -2142,6 +2543,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           shape: const Border(),
                           onExpansionChanged: null,
                           initiallyExpanded: true,
+                          expandedCrossAxisAlignment: CrossAxisAlignment.start,
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
@@ -2153,156 +2555,113 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           ),
                           children: [
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  StringConstants.updateTheseDetails,
+                                  StringConstants.religion,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
-                                    fontFamily: "Inter",
-                                    fontSize: 12.0,
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                                 ),
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.religion,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.caste,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
                             ),
-                            const SizedBox(height: 10.0),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.caste,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 10.0),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.motherTongue,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 30.0),
                           ],
@@ -2315,6 +2674,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           shape: const Border(),
                           onExpansionChanged: null,
                           initiallyExpanded: true,
+                          expandedCrossAxisAlignment: CrossAxisAlignment.start,
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
@@ -2343,185 +2703,166 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.drinkingHabits,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.smokingHabits,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.smokingHabits,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.drinkingHabits,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (false)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 10.0),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.dietaryHabits,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
+                                Text(
+                                  StringConstants.dietaryHabits,
+                                  style: TextStyle(
+                                    color: ColorConstants.color3,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.color7,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.color7,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
                                   ),
-                                ),
                               ],
                             ),
-                            const SizedBox(height: 10.0),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        StringConstants.specialCase,
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Text(
-                                        ":",
-                                        style: TextStyle(
-                                          color: ColorConstants.color3,
-                                          fontFamily: "Poppins",
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(width: 10.0),
-                                Expanded(
-                                  flex: 3,
-                                  child: Text(
-                                    "Doesn't matter",
-                                    style: TextStyle(
-                                      color: ColorConstants.color3,
-                                      fontFamily: "Poppins",
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.w300,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Doesn't matter",
+                              style: TextStyle(
+                                color: ColorConstants.color3,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
                             ),
                             const SizedBox(height: 30.0),
                           ],
