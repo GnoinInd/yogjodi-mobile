@@ -453,7 +453,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             ),
                             decoration: BoxDecoration(
                               color: ColorConstants.color7,
-                              borderRadius: BorderRadius.circular(4.0),
+                              borderRadius: BorderRadius.circular(6.0),
                             ),
                             child: Text(
                               StringConstants.verified,
@@ -494,7 +494,6 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
               ),
             ),
             SliverFillRemaining(
-              fillOverscroll: true,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: TabBarView(

@@ -26,9 +26,9 @@ class StringConstants {
   static const String submit = "Submit";
   static const String didNotGetOTP = "Didn't get OTP";
   static const String resendNow = "Resend Now";
-  static const String contactPrivacySetting = "Contact Privacy Setting:";
-  static const String contactPrivacySettingError =
-      "Contact Privacy Setting is required.";
+  static const String privacySetting = "Privacy Settings";
+  static const String profilePicture = "Profile Picture:";
+  static const String contact1 = "Contact:";
   static const String showToAll = "Show to all";
   static const String hideFromAll = "Hide from all";
   static const String showToMyInterests =
