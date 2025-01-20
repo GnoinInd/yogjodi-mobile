@@ -22,7 +22,9 @@ class MatchItem extends StatelessWidget {
   final bool isShortlisted;
   final String membership;
   final String profileMatchPercent;
-  final void Function() onSendInterestPressed;
+  final void Function()? onSendInterestPressed;
+  final void Function()? onCancelInterestPressed;
+  final void Function()? onDeclinedInterestPressed;
   final void Function() onShortlistPressed;
   final void Function() onChatPressed;
   final void Function() onTap;
@@ -44,7 +46,9 @@ class MatchItem extends StatelessWidget {
     this.isShortlisted = false,
     this.membership = "",
     this.profileMatchPercent = "",
-    required this.onSendInterestPressed,
+    this.onSendInterestPressed,
+    this.onCancelInterestPressed,
+    this.onDeclinedInterestPressed,
     required this.onShortlistPressed,
     required this.onChatPressed,
     required this.onTap,
@@ -125,23 +129,43 @@ class MatchItem extends StatelessWidget {
                                       },
                                       child: Container(
                                         padding: const EdgeInsets.symmetric(
-                                          horizontal: 3.0,
+                                          horizontal: 0.0,
                                           vertical: 1.0,
                                         ),
                                         decoration: BoxDecoration(
                                           color: ColorConstants.color7,
                                           borderRadius:
                                               BorderRadius.circular(4.0),
-                                        ),
-                                        child: Text(
-                                          StringConstants.verified,
-                                          style: TextStyle(
-                                            fontFamily: "Inter",
-                                            fontSize: 10.0,
-                                            fontWeight: FontWeight.w600,
-                                            color: ColorConstants.textWhite,
+                                          border: Border.all(
+                                            color: ColorConstants.color7,
                                           ),
-                                          textAlign: TextAlign.center,
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const SizedBox(width: 4.0),
+                                            Text(
+                                              StringConstants.verified,
+                                              style: TextStyle(
+                                                fontFamily: "Inter",
+                                                fontSize: 10.0,
+                                                fontWeight: FontWeight.w600,
+                                                color: ColorConstants.textWhite,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            SizedBox(
+                                              height: 12.0,
+                                              child: SvgPicture.asset(
+                                                AssetConstants
+                                                    .acceptedInterests,
+                                                fit: BoxFit.scaleDown,
+                                                colorFilter: ColorFilter.mode(
+                                                  ColorConstants.textWhite,
+                                                  BlendMode.srcIn,
+                                                ),
+                                              ),
+                                            )
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -355,36 +379,96 @@ class MatchItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      IconButton(
-                        onPressed: onSendInterestPressed,
-                        icon: SizedBox(
-                          width: 90.0,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset(
-                                AssetConstants.messenger,
-                                fit: BoxFit.scaleDown,
-                                colorFilter: ColorFilter.mode(
-                                  ColorConstants.textBlack,
-                                  BlendMode.srcIn,
+                      if (onSendInterestPressed != null)
+                        IconButton(
+                          onPressed: onSendInterestPressed,
+                          icon: SizedBox(
+                            width: 90.0,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  AssetConstants.messenger,
+                                  fit: BoxFit.scaleDown,
+                                  colorFilter: ColorFilter.mode(
+                                    ColorConstants.textBlack,
+                                    BlendMode.srcIn,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 6.0),
-                              Text(
-                                StringConstants.sendInterest,
-                                style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.w400,
+                                const SizedBox(height: 6.0),
+                                Text(
+                                  StringConstants.sendInterest,
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.w400,
+                                    color: ColorConstants.textBlack,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      else if (onCancelInterestPressed != null)
+                        IconButton(
+                          onPressed: onCancelInterestPressed,
+                          icon: SizedBox(
+                            width: 90.0,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.close_sharp,
                                   color: ColorConstants.textBlack,
+                                  size: 25.0,
                                 ),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
+                                const SizedBox(height: 6.0),
+                                Text(
+                                  StringConstants.cancelInterest,
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w400,
+                                    color: ColorConstants.textBlack,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      else if (onDeclinedInterestPressed != null)
+                        IconButton(
+                          onPressed: onDeclinedInterestPressed,
+                          icon: SizedBox(
+                            width: 90.0,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  AssetConstants.declinedInterests,
+                                  fit: BoxFit.scaleDown,
+                                  colorFilter: ColorFilter.mode(
+                                    ColorConstants.textBlack,
+                                    BlendMode.srcIn,
+                                  ),
+                                ),
+                                const SizedBox(height: 6.0),
+                                Text(
+                                  StringConstants.declineInterests,
+                                  style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontSize: 10.0,
+                                    fontWeight: FontWeight.w400,
+                                    color: ColorConstants.textBlack,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
                       IconButton(
                         onPressed: onShortlistPressed,
                         icon: SizedBox(

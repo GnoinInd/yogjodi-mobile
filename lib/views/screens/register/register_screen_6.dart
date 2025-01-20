@@ -22,9 +22,17 @@ class _RegisterScreen6State extends State<RegisterScreen6> {
     return Scaffold(
       backgroundColor: ColorConstants.color4,
       appBar: AppBar(
-        title: const Text(StringConstants.register),
         backgroundColor: ColorConstants.color1,
         foregroundColor: ColorConstants.textWhite,
+        title: const Text(
+          StringConstants.register,
+          style: TextStyle(
+            fontFamily: "Inter",
+            fontSize: 18.0,
+            fontWeight: FontWeight.w600,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),

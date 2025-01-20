@@ -205,6 +205,12 @@ class StringConstants {
   static const String becomeAPaidMemberToViewAll =
       "Become a paid member to view all photos & find your ideal match,";
   static const String matched = "Matched";
+  static const String cancelInterest = "Cancel Interest";
+  static const String declineInterests = "Decline Interests";
+  static const String viewProfile = "View Profile";
+  static const String byMe = "By me";
+  static const String byThem = "By them";
+  static const String profileViewed = "Profile Viewed";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

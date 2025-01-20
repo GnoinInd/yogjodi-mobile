@@ -110,13 +110,14 @@ class _FilterScreenState extends State<FilterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        backgroundColor: ColorConstants.color1,
+        foregroundColor: ColorConstants.textWhite,
+        title: const Text(
           StringConstants.filter,
           style: TextStyle(
             fontFamily: "Inter",
             fontSize: 18.0,
             fontWeight: FontWeight.w600,
-            color: ColorConstants.color1,
           ),
           textAlign: TextAlign.center,
         ),

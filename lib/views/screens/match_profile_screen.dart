@@ -448,22 +448,41 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           },
                           child: Container(
                             padding: const EdgeInsets.symmetric(
-                              horizontal: 3.0,
+                              horizontal: 0.0,
                               vertical: 1.0,
                             ),
                             decoration: BoxDecoration(
                               color: ColorConstants.color7,
-                              borderRadius: BorderRadius.circular(6.0),
-                            ),
-                            child: Text(
-                              StringConstants.verified,
-                              style: TextStyle(
-                                fontFamily: "Inter",
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorConstants.textWhite,
+                              borderRadius: BorderRadius.circular(4.0),
+                              border: Border.all(
+                                color: ColorConstants.color7,
                               ),
-                              textAlign: TextAlign.center,
+                            ),
+                            child: Row(
+                              children: [
+                                const SizedBox(width: 4.0),
+                                Text(
+                                  StringConstants.verified,
+                                  style: TextStyle(
+                                    fontFamily: "Inter",
+                                    fontSize: 13.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: ColorConstants.textWhite,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                SizedBox(
+                                  height: 14.0,
+                                  child: SvgPicture.asset(
+                                    AssetConstants.acceptedInterests,
+                                    fit: BoxFit.scaleDown,
+                                    colorFilter: ColorFilter.mode(
+                                      ColorConstants.textWhite,
+                                      BlendMode.srcIn,
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),

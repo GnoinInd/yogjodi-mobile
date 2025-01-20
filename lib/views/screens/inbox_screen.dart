@@ -1,12 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
+import 'package:flutter/foundation.dart' as foundation;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
-import 'package:flutter/foundation.dart' as foundation;
+import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/string_constants.dart';
+import '../widgets/border_button.dart';
 import '../widgets/custom_appbar.dart';
 
 class InboxScreen extends StatefulWidget {
@@ -427,7 +430,30 @@ class InboxProfile extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(height: 5.0),
+              BorderButton(
+                width: 90,
+                padding: const EdgeInsets.symmetric(
+                  vertical: 5.0,
+                  horizontal: 0.0,
+                ),
+                bgColor: ColorConstants.textWhite,
+                borderColor: ColorConstants.color1,
+                onPressed: () async {
+                  Get.to(
+                    () => const ProfileScreen(),
+                  );
+                },
+                child: Text(
+                  StringConstants.viewProfile,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: ColorConstants.color1,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ],
           ),
         ],

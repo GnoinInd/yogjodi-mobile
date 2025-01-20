@@ -19,9 +19,17 @@ class _UpdateMyEduCareerScreenState extends State<UpdateMyEduCareerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(StringConstants.update),
         backgroundColor: ColorConstants.color1,
         foregroundColor: ColorConstants.textWhite,
+        title: const Text(
+          StringConstants.update,
+          style: TextStyle(
+            fontFamily: "Inter",
+            fontSize: 18.0,
+            fontWeight: FontWeight.w600,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),

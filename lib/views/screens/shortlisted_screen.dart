@@ -16,9 +16,17 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(StringConstants.shortlisted),
         backgroundColor: ColorConstants.color1,
         foregroundColor: ColorConstants.textWhite,
+        title: const Text(
+          StringConstants.shortlisted,
+          style: TextStyle(
+            fontFamily: "Inter",
+            fontSize: 18.0,
+            fontWeight: FontWeight.w600,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

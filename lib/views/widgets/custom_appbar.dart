@@ -64,7 +64,7 @@ class CustomAppbar extends StatelessWidget {
         IconButton(
           onPressed: onShortlistedPressed,
           icon: SvgPicture.asset(
-            AssetConstants.shortlisted,
+            AssetConstants.shortlist,
             fit: BoxFit.scaleDown,
           ),
         ),

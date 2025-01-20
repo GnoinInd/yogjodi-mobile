@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:yog_jodi/views/screens/accepted_interests_screen.dart';
+import 'package:yog_jodi/views/screens/declined_interests_screen.dart';
+import 'package:yog_jodi/views/screens/interests_received_screen.dart';
+import 'package:yog_jodi/views/screens/interests_sent_screen.dart';
+import 'package:yog_jodi/views/screens/profile_viewed_screen.dart';
+import 'package:yog_jodi/views/screens/shortlisted_screen.dart';
 import 'package:yog_jodi/views/widgets/circular_profile.dart';
 
 import '../../common/constants/asset_constants.dart';
@@ -56,7 +63,9 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.acceptedInterests,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const AcceptedInterestsScreen());
+                    },
                   ),
                   InterestItem(
                     value: "00",
@@ -65,7 +74,9 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.interestsReceived,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const InterestsReceivedScreen());
+                    },
                   ),
                   InterestItem(
                     value: "00",
@@ -74,7 +85,9 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.interestsSent,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const InterestsSentScreen());
+                    },
                   ),
                   InterestItem(
                     value: "00",
@@ -83,7 +96,9 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.shortlistedProfiles,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const ShortlistedScreen());
+                    },
                   ),
                   InterestItem(
                     value: "00",
@@ -92,16 +107,20 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.declinedInterests,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const DeclinedInterestsScreen());
+                    },
                   ),
                   InterestItem(
                     value: "00",
-                    title: StringConstants.filteredInterests,
+                    title: StringConstants.profileViewed,
                     icon: SvgPicture.asset(
                       AssetConstants.filteredInterests,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const ProfileViewedScreen());
+                    },
                   ),
                 ],
               ),
@@ -503,7 +522,7 @@ class InterestItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: 96.0,
         height: 106.0,
@@ -512,15 +531,16 @@ class InterestItem extends StatelessWidget {
           horizontal: 10.0,
         ),
         decoration: BoxDecoration(
-            color: ColorConstants.textWhite,
-            borderRadius: BorderRadius.circular(5.0),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade200,
-                spreadRadius: 1.0,
-                blurRadius: 2.0,
-              ),
-            ]),
+          color: ColorConstants.textWhite,
+          borderRadius: BorderRadius.circular(5.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade200,
+              spreadRadius: 1.0,
+              blurRadius: 2.0,
+            ),
+          ],
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
