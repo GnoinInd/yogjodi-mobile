@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:yog_jodi/views/screens/image_gallery_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_family_details_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_my_about_screen.dart';
 import 'package:yog_jodi/views/screens/profile/update_my_basic_details_screen.dart';
@@ -447,10 +448,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                     Positioned(
-                      right: 30,
-                      top: 80,
+                      right: 10,
+                      top: 100,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => const ImageGalleryScreen());
+                        },
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: CircleAvatar(

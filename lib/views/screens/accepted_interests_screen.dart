@@ -102,7 +102,10 @@ class _AcceptedInterestsScreenState extends State<AcceptedInterestsScreen> {
                           onShortlistPressed: () {},
                           onChatPressed: () {},
                           onTap: () {
-                            Get.to(() => const MatchProfileScreen());
+                            Get.to(() => const MatchProfileScreen(
+                                  firstButtonType:
+                                      FirstButtonType.cancelInterest,
+                                ));
                           },
                         );
                       },
@@ -136,7 +139,10 @@ class _AcceptedInterestsScreenState extends State<AcceptedInterestsScreen> {
                           onShortlistPressed: () {},
                           onChatPressed: () {},
                           onTap: () {
-                            Get.to(() => const MatchProfileScreen());
+                            Get.to(() => const MatchProfileScreen(
+                                  firstButtonType:
+                                      FirstButtonType.cancelInterest,
+                                ));
                           },
                         );
                       },

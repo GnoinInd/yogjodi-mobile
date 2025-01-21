@@ -456,10 +456,10 @@ class MatchItem extends StatelessWidget {
                                 ),
                                 const SizedBox(height: 6.0),
                                 Text(
-                                  StringConstants.declineInterests,
+                                  StringConstants.declineInterest,
                                   style: TextStyle(
                                     fontFamily: "Poppins",
-                                    fontSize: 10.0,
+                                    fontSize: 11.0,
                                     fontWeight: FontWeight.w400,
                                     color: ColorConstants.textBlack,
                                   ),

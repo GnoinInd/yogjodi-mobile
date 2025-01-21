@@ -62,6 +62,10 @@ class _ActivityScreenState extends State<ActivityScreen> {
                     icon: SvgPicture.asset(
                       AssetConstants.acceptedInterests,
                       fit: BoxFit.scaleDown,
+                      colorFilter: ColorFilter.mode(
+                        ColorConstants.color1,
+                        BlendMode.srcIn,
+                      ),
                     ),
                     onTap: () {
                       Get.to(() => const AcceptedInterestsScreen());

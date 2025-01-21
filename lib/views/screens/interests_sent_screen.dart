@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
 import '../widgets/match_item.dart';
+import 'match_profile_screen.dart';
 
 class InterestsSentScreen extends StatefulWidget {
   const InterestsSentScreen({super.key});
@@ -56,7 +58,9 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
             onShortlistPressed: () {},
             onChatPressed: () {},
             onTap: () {
-              // Get.to(() => const MatchProfileScreen());
+              Get.to(() => const MatchProfileScreen(
+                    firstButtonType: FirstButtonType.cancelInterest,
+                  ));
             },
           );
         },

@@ -9,7 +9,9 @@ import '../../common/constants/string_constants.dart';
 import '../widgets/colored_button.dart';
 
 class MatchProfileScreen extends StatefulWidget {
-  const MatchProfileScreen({super.key});
+  final FirstButtonType firstButtonType;
+  const MatchProfileScreen(
+      {super.key, this.firstButtonType = FirstButtonType.sendInterest});
 
   @override
   State<MatchProfileScreen> createState() => _MatchProfileScreenState();
@@ -36,7 +38,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
     super.initState();
   }
 
-  void _showFileSelectorBottomSheet() {
+  void _showUpgradeMembershipBottomSheet() {
     showModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {
@@ -151,6 +153,99 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
     );
   }
 
+  void _showMoreOptionsBottomSheet() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              padding: const EdgeInsets.only(
+                top: 10.0,
+                bottom: 20.0,
+                left: 10.0,
+                right: 10.0,
+              ),
+              width: double.infinity,
+              height: 300.0,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.close_rounded,
+                        color: ColorConstants.textRed,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10.0),
+                  ListTile(
+                    leading: Icon(
+                      Icons.block,
+                      color: ColorConstants.textBlack,
+                    ),
+                    title: Text(
+                      StringConstants.block,
+                      style: TextStyle(
+                        fontFamily: "Inter",
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorConstants.textBlack,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.report_outlined,
+                      color: ColorConstants.textBlack,
+                    ),
+                    title: Text(
+                      StringConstants.reportProfile,
+                      style: TextStyle(
+                        fontFamily: "Inter",
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorConstants.textBlack,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.chat_bubble_outline,
+                      color: ColorConstants.textBlack,
+                    ),
+                    title: Text(
+                      StringConstants.communicationHistory,
+                      style: TextStyle(
+                        fontFamily: "Inter",
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w600,
+                        color: ColorConstants.textBlack,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -176,93 +271,187 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(
-                onPressed: () {},
-                icon: SizedBox(
-                  width: 90.0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        AssetConstants.messenger,
-                        fit: BoxFit.scaleDown,
-                        colorFilter: ColorFilter.mode(
-                          ColorConstants.textBlack,
-                          BlendMode.srcIn,
+              if (widget.firstButtonType == FirstButtonType.sendInterest)
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          AssetConstants.messenger,
+                          fit: BoxFit.scaleDown,
+                          colorFilter: ColorFilter.mode(
+                            ColorConstants.textBlack,
+                            BlendMode.srcIn,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 6.0),
-                      Text(
-                        StringConstants.sendInterest,
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w400,
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.sendInterest,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              else if (widget.firstButtonType == FirstButtonType.cancelInterest)
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.close_sharp,
                           color: ColorConstants.textBlack,
+                          size: 25.0,
                         ),
-                        textAlign: TextAlign.center,
-                      )
-                    ],
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.cancelInterest,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              else if (widget.firstButtonType ==
+                  FirstButtonType.declineInterest) ...{
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          AssetConstants.declinedInterests,
+                          fit: BoxFit.scaleDown,
+                          colorFilter: ColorFilter.mode(
+                            ColorConstants.textRed,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.declineInterest,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SizedBox(
-                  width: 90.0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      false
-                          ? SvgPicture.asset(
-                              AssetConstants.shortlistFilled,
-                              fit: BoxFit.scaleDown,
-                            )
-                          : SvgPicture.asset(
-                              AssetConstants.shortlist,
-                              fit: BoxFit.scaleDown,
-                            ),
-                      const SizedBox(height: 6.0),
-                      Text(
-                        StringConstants.shortlist,
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w400,
-                          color: ColorConstants.textBlack,
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          AssetConstants.acceptedInterests,
+                          fit: BoxFit.scaleDown,
+                          colorFilter: ColorFilter.mode(
+                            ColorConstants.color7,
+                            BlendMode.srcIn,
+                          ),
                         ),
-                        textAlign: TextAlign.center,
-                      )
-                    ],
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.acceptInterest,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: SizedBox(
-                  width: 90.0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        AssetConstants.chat,
-                        fit: BoxFit.scaleDown,
-                      ),
-                      const SizedBox(height: 6.0),
-                      Text(
-                        StringConstants.chat,
-                        style: TextStyle(
-                          fontFamily: "Poppins",
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w400,
-                          color: ColorConstants.textBlack,
-                        ),
-                        textAlign: TextAlign.center,
-                      )
-                    ],
+              },
+              if (widget.firstButtonType != FirstButtonType.declineInterest)
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        false
+                            ? SvgPicture.asset(
+                                AssetConstants.shortlistFilled,
+                                fit: BoxFit.scaleDown,
+                              )
+                            : SvgPicture.asset(
+                                AssetConstants.shortlist,
+                                fit: BoxFit.scaleDown,
+                              ),
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.shortlist,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
+              if (widget.firstButtonType != FirstButtonType.declineInterest)
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(
+                          AssetConstants.chat,
+                          fit: BoxFit.scaleDown,
+                        ),
+                        const SizedBox(height: 6.0),
+                        Text(
+                          StringConstants.chat,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
             ],
           ),
         ),
@@ -300,6 +489,16 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                 ),
                 textAlign: TextAlign.center,
               ),
+              actions: [
+                IconButton(
+                  onPressed: () {
+                    _showMoreOptionsBottomSheet();
+                  },
+                  icon: const Icon(
+                    Icons.more_vert,
+                  ),
+                )
+              ],
               bottom: TabBar(
                 padding: const EdgeInsets.only(
                   top: 20.0,
@@ -363,11 +562,11 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       ),
                     ),
                     Positioned(
-                      right: 30,
-                      top: 80,
+                      right: 10,
+                      top: 100,
                       child: GestureDetector(
                         onTap: () {
-                          _showFileSelectorBottomSheet();
+                          _showUpgradeMembershipBottomSheet();
                         },
                         child: Stack(
                           children: [
@@ -2949,4 +3148,10 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
       ),
     );
   }
+}
+
+enum FirstButtonType {
+  sendInterest,
+  cancelInterest,
+  declineInterest,
 }

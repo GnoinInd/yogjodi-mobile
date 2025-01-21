@@ -211,6 +211,12 @@ class StringConstants {
   static const String byMe = "By me";
   static const String byThem = "By them";
   static const String profileViewed = "Profile Viewed";
+  static const String declineInterest = "Decline Interest";
+  static const String acceptInterest = "Accept Interest";
+  static const String block = "Block";
+  static const String reportProfile = "Report Profile";
+  static const String communicationHistory = "Communication History";
+  static const String imageGallery = "Image Gallery";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

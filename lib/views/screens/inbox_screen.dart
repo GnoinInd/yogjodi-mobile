@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:yog_jodi/common/constants/color_constants.dart';
-import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
+import 'package:yog_jodi/views/screens/match_profile_screen.dart';
 
 import '../../common/constants/asset_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -442,7 +442,7 @@ class InboxProfile extends StatelessWidget {
                 borderColor: ColorConstants.color1,
                 onPressed: () async {
                   Get.to(
-                    () => const ProfileScreen(),
+                    () => const MatchProfileScreen(),
                   );
                 },
                 child: Text(
