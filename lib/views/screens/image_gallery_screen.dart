@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:yog_jodi/views/screens/register/file_viewer.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -61,7 +63,9 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
           itemCount: imageUrls.length,
           itemBuilder: (context, index) {
             return GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => FileViewer(filePath: imageUrls[index]));
+              },
               onLongPress: () {},
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10), // Rounded corners

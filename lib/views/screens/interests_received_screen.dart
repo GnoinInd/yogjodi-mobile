@@ -56,11 +56,13 @@ class _InterestsReceivedScreenState extends State<InterestsReceivedScreen> {
             membership: "Pro Max",
             profileMatchPercent: "55",
             onDeclinedInterestPressed: () {},
-            onShortlistPressed: () {},
-            onChatPressed: () {},
+            onAcceptInterestPressed: () {},
             onTap: () {
               Get.to(() => const MatchProfileScreen(
-                    firstButtonType: FirstButtonType.declineInterest,
+                    buttonTypes: [
+                      ButtonType.declineInterest,
+                      ButtonType.acceptInterest,
+                    ],
                   ));
             },
           );

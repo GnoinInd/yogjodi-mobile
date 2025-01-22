@@ -350,6 +350,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
+      initialIndex: widget.tabIndex,
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
@@ -515,10 +516,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               vertical: 1.0,
                             ),
                             decoration: BoxDecoration(
-                              color: ColorConstants.color7,
+                              color: ColorConstants.textWhite,
                               borderRadius: BorderRadius.circular(4.0),
                               border: Border.all(
-                                color: ColorConstants.color7,
+                                color: ColorConstants.textWhite,
                               ),
                             ),
                             child: Row(
@@ -528,19 +529,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   StringConstants.verified,
                                   style: TextStyle(
                                     fontFamily: "Inter",
-                                    fontSize: 13.0,
+                                    fontSize: 10.0,
                                     fontWeight: FontWeight.w600,
-                                    color: ColorConstants.textWhite,
+                                    fontStyle: FontStyle.italic,
+                                    color: ColorConstants.color7,
+                                    shadows: const [
+                                      Shadow(
+                                        color: Colors.white38,
+                                        blurRadius: 2.0,
+                                      ),
+                                    ],
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
-                                  height: 14.0,
+                                  height: 12.0,
                                   child: SvgPicture.asset(
                                     AssetConstants.acceptedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.textWhite,
+                                      ColorConstants.color7,
                                       BlendMode.srcIn,
                                     ),
                                   ),

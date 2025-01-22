@@ -99,12 +99,13 @@ class _AcceptedInterestsScreenState extends State<AcceptedInterestsScreen> {
                           membership: "Pro Max",
                           profileMatchPercent: "55",
                           onCancelInterestPressed: () {},
-                          onShortlistPressed: () {},
                           onChatPressed: () {},
                           onTap: () {
                             Get.to(() => const MatchProfileScreen(
-                                  firstButtonType:
-                                      FirstButtonType.cancelInterest,
+                                  buttonTypes: [
+                                    ButtonType.cancelInterest,
+                                    ButtonType.chat,
+                                  ],
                                 ));
                           },
                         );
@@ -136,12 +137,13 @@ class _AcceptedInterestsScreenState extends State<AcceptedInterestsScreen> {
                           membership: "Pro Max",
                           profileMatchPercent: "55",
                           onCancelInterestPressed: () {},
-                          onShortlistPressed: () {},
                           onChatPressed: () {},
                           onTap: () {
                             Get.to(() => const MatchProfileScreen(
-                                  firstButtonType:
-                                      FirstButtonType.cancelInterest,
+                                  buttonTypes: [
+                                    ButtonType.cancelInterest,
+                                    ButtonType.chat,
+                                  ],
                                 ));
                           },
                         );

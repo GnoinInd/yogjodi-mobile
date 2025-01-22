@@ -100,9 +100,13 @@ class _DeclinedInterestsScreenState extends State<DeclinedInterestsScreen> {
                           profileMatchPercent: "55",
                           onSendInterestPressed: () {},
                           onShortlistPressed: () {},
-                          onChatPressed: () {},
                           onTap: () {
-                            Get.to(() => const MatchProfileScreen());
+                            Get.to(() => const MatchProfileScreen(
+                                  buttonTypes: [
+                                    ButtonType.sendInterest,
+                                    ButtonType.shortlist,
+                                  ],
+                                ));
                           },
                         );
                       },
@@ -134,9 +138,13 @@ class _DeclinedInterestsScreenState extends State<DeclinedInterestsScreen> {
                           profileMatchPercent: "55",
                           onSendInterestPressed: () {},
                           onShortlistPressed: () {},
-                          onChatPressed: () {},
                           onTap: () {
-                            Get.to(() => const MatchProfileScreen());
+                            Get.to(() => const MatchProfileScreen(
+                                  buttonTypes: [
+                                    ButtonType.sendInterest,
+                                    ButtonType.shortlist,
+                                  ],
+                                ));
                           },
                         );
                       },

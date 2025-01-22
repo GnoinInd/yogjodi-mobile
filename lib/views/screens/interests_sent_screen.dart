@@ -55,11 +55,15 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
             membership: "Pro Max",
             profileMatchPercent: "55",
             onCancelInterestPressed: () {},
-            onShortlistPressed: () {},
+            onRemindPressed: () {},
             onChatPressed: () {},
             onTap: () {
               Get.to(() => const MatchProfileScreen(
-                    firstButtonType: FirstButtonType.cancelInterest,
+                    buttonTypes: [
+                      ButtonType.cancelInterest,
+                      ButtonType.remind,
+                      ButtonType.chat,
+                    ],
                   ));
             },
           );

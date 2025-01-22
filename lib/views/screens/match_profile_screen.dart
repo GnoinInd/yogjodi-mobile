@@ -9,9 +9,15 @@ import '../../common/constants/string_constants.dart';
 import '../widgets/colored_button.dart';
 
 class MatchProfileScreen extends StatefulWidget {
-  final FirstButtonType firstButtonType;
-  const MatchProfileScreen(
-      {super.key, this.firstButtonType = FirstButtonType.sendInterest});
+  final List<ButtonType> buttonTypes;
+  const MatchProfileScreen({
+    super.key,
+    this.buttonTypes = const [
+      ButtonType.sendInterest,
+      ButtonType.shortlist,
+      ButtonType.chat,
+    ],
+  });
 
   @override
   State<MatchProfileScreen> createState() => _MatchProfileScreenState();
@@ -271,7 +277,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              if (widget.firstButtonType == FirstButtonType.sendInterest)
+              if (widget.buttonTypes.contains(ButtonType.sendInterest))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -301,8 +307,8 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       ],
                     ),
                   ),
-                )
-              else if (widget.firstButtonType == FirstButtonType.cancelInterest)
+                ),
+              if (widget.buttonTypes.contains(ButtonType.cancelInterest))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -315,7 +321,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           color: ColorConstants.textBlack,
                           size: 25.0,
                         ),
-                        const SizedBox(height: 6.0),
+                        const SizedBox(height: 2.0),
                         Text(
                           StringConstants.cancelInterest,
                           style: TextStyle(
@@ -329,9 +335,8 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       ],
                     ),
                   ),
-                )
-              else if (widget.firstButtonType ==
-                  FirstButtonType.declineInterest) ...{
+                ),
+              if (widget.buttonTypes.contains(ButtonType.declineInterest))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -343,7 +348,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           AssetConstants.declinedInterests,
                           fit: BoxFit.scaleDown,
                           colorFilter: ColorFilter.mode(
-                            ColorConstants.textRed,
+                            ColorConstants.textBlack,
                             BlendMode.srcIn,
                           ),
                         ),
@@ -362,6 +367,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                     ),
                   ),
                 ),
+              if (widget.buttonTypes.contains(ButtonType.acceptInterest))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -392,8 +398,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                     ),
                   ),
                 ),
-              },
-              if (widget.firstButtonType != FirstButtonType.declineInterest)
+              if (widget.buttonTypes.contains(ButtonType.remind))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -401,7 +406,35 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        false
+                        Icon(
+                          Icons.notifications_active_outlined,
+                          color: ColorConstants.textBlack,
+                          size: 25.0,
+                        ),
+                        const SizedBox(height: 2.0),
+                        Text(
+                          StringConstants.remind,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              if (widget.buttonTypes.contains(ButtonType.shortlist))
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        1 == 0
                             ? SvgPicture.asset(
                                 AssetConstants.shortlistFilled,
                                 fit: BoxFit.scaleDown,
@@ -425,7 +458,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                     ),
                   ),
                 ),
-              if (widget.firstButtonType != FirstButtonType.declineInterest)
+              if (widget.buttonTypes.contains(ButtonType.chat))
                 IconButton(
                   onPressed: () {},
                   icon: SizedBox(
@@ -651,10 +684,10 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                               vertical: 1.0,
                             ),
                             decoration: BoxDecoration(
-                              color: ColorConstants.color7,
+                              color: ColorConstants.textWhite,
                               borderRadius: BorderRadius.circular(4.0),
                               border: Border.all(
-                                color: ColorConstants.color7,
+                                color: ColorConstants.textWhite,
                               ),
                             ),
                             child: Row(
@@ -664,19 +697,26 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   StringConstants.verified,
                                   style: TextStyle(
                                     fontFamily: "Inter",
-                                    fontSize: 13.0,
+                                    fontSize: 10.0,
                                     fontWeight: FontWeight.w600,
-                                    color: ColorConstants.textWhite,
+                                    fontStyle: FontStyle.italic,
+                                    color: ColorConstants.color7,
+                                    shadows: const [
+                                      Shadow(
+                                        color: Colors.white,
+                                        blurRadius: 5.0,
+                                      ),
+                                    ],
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
-                                  height: 14.0,
+                                  height: 12.0,
                                   child: SvgPicture.asset(
                                     AssetConstants.acceptedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.textWhite,
+                                      ColorConstants.color7,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -3150,8 +3190,12 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
   }
 }
 
-enum FirstButtonType {
+enum ButtonType {
   sendInterest,
   cancelInterest,
   declineInterest,
+  acceptInterest,
+  shortlist,
+  remind,
+  chat,
 }
