@@ -3,13 +3,15 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
+// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+// import 'package:pdfrx/pdfrx.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
-// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:video_player/video_player.dart';
 import 'package:yog_jodi/common/utils/utility_methods.dart';
 
-import '../../widgets/my_audio_player.dart';
+import '../widgets/my_audio_player.dart';
 
 class FileViewer extends StatefulWidget {
   final String filePath;
@@ -98,6 +100,7 @@ class _FileViewerState extends State<FileViewer> {
   }
 
   Widget pdfView() {
+    /// syncfusion_flutter_pdfviewer
     // return Container(
     //   child: widget.filePath.toLowerCase().startsWith("http")
     //       ? SfPdfViewer.network(
@@ -107,7 +110,20 @@ class _FileViewerState extends State<FileViewer> {
     //           File(widget.filePath),
     //         ),
     // );
-    return const SizedBox.shrink();
+    /// pdfrx
+    // return Container(
+    //   child: widget.filePath.toLowerCase().startsWith("http")
+    //       ? PdfViewer.uri(
+    //           Uri.parse(widget.filePath),
+    //         )
+    //       : PdfViewer.file(
+    //           widget.filePath,
+    //         ),
+    // );
+    /// flutter_pdfview
+    return PDFView(
+      filePath: widget.filePath,
+    );
   }
 
   Widget audioView() {

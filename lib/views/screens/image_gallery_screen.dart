@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:yog_jodi/views/screens/register/file_viewer.dart';
+import 'package:yog_jodi/views/screens/file_viewer.dart';
 
 import '../../common/constants/color_constants.dart';
 import '../../common/constants/string_constants.dart';
@@ -65,6 +65,12 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
             return GestureDetector(
               onTap: () {
                 Get.to(() => FileViewer(filePath: imageUrls[index]));
+                // Get.to(
+                //   () => const FileViewer(
+                //     filePath:
+                //         'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+                //   ),
+                // );
               },
               onLongPress: () {},
               child: ClipRRect(

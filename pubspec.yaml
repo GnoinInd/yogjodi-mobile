@@ -62,7 +62,8 @@ dependencies:
   video_thumbnail: ^0.5.3
   audioplayers: ^5.2.1
 #  syncfusion_flutter_pdfviewer: any
-
+#  pdfrx: ^1.0.101
+  flutter_pdfview: ^1.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
