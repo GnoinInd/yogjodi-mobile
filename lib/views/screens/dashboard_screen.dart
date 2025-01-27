@@ -5,7 +5,9 @@ import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
 import 'package:yog_jodi/views/screens/activity_screen.dart';
+import 'package:yog_jodi/views/screens/blocked_profiles_screen.dart';
 import 'package:yog_jodi/views/screens/matches_screen.dart';
+import 'package:yog_jodi/views/screens/partner_pref_screen.dart';
 import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 import 'package:yog_jodi/views/screens/search_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
@@ -269,7 +271,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       AssetConstants.right,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(
+                        () => const PartnerPrefScreen(),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: SvgPicture.asset(
@@ -289,7 +295,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       AssetConstants.right,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(
+                        () => const BlockedProfilesScreen(),
+                      );
+                    },
                   ),
                   ListTile(
                     leading: SvgPicture.asset(

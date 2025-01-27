@@ -218,6 +218,7 @@ class StringConstants {
   static const String communicationHistory = "Communication History";
   static const String imageGallery = "Image Gallery";
   static const String remind = "Remind";
+  static const String unblock = "Unblock";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

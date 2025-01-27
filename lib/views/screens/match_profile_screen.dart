@@ -485,6 +485,34 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                     ),
                   ),
                 ),
+              if (widget.buttonTypes.contains(ButtonType.unblock))
+                IconButton(
+                  onPressed: () {},
+                  icon: SizedBox(
+                    width: 90.0,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.refresh,
+                          color: ColorConstants.textBlack,
+                          size: 25.0,
+                        ),
+                        const SizedBox(height: 2.0),
+                        Text(
+                          StringConstants.unblock,
+                          style: TextStyle(
+                            fontFamily: "Poppins",
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.w400,
+                            color: ColorConstants.textBlack,
+                          ),
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
             ],
           ),
         ),
@@ -3198,4 +3226,5 @@ enum ButtonType {
   shortlist,
   remind,
   chat,
+  unblock,
 }

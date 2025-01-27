@@ -2458,6 +2458,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           dense: true,
                           shape: const Border(),
                           onExpansionChanged: null,
+                          initiallyExpanded: widget.tabIndex == 2,
                           title: Text(
                             StringConstants.educationAndOccupation,
                             style: TextStyle(
@@ -2644,6 +2645,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           dense: true,
                           shape: const Border(),
                           onExpansionChanged: null,
+                          initiallyExpanded: widget.tabIndex == 2,
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
@@ -2830,6 +2832,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           dense: true,
                           shape: const Border(),
                           onExpansionChanged: null,
+                          initiallyExpanded: widget.tabIndex == 2,
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
@@ -3062,6 +3065,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           dense: true,
                           shape: const Border(),
                           onExpansionChanged: null,
+                          initiallyExpanded: widget.tabIndex == 2,
                           title: Text(
                             StringConstants.aboutPartner,
                             style: TextStyle(

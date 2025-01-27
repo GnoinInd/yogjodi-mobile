@@ -22,6 +22,7 @@ class MatchItem extends StatelessWidget {
   final bool isShortlisted;
   final String membership;
   final String profileMatchPercent;
+  final bool showOptions;
   final void Function()? onSendInterestPressed;
   final void Function()? onCancelInterestPressed;
   final void Function()? onDeclinedInterestPressed;
@@ -29,6 +30,7 @@ class MatchItem extends StatelessWidget {
   final void Function()? onShortlistPressed;
   final void Function()? onRemindPressed;
   final void Function()? onChatPressed;
+  final void Function()? onUnblockPressed;
   final void Function() onTap;
 
   const MatchItem({
@@ -48,6 +50,7 @@ class MatchItem extends StatelessWidget {
     this.isShortlisted = false,
     this.membership = "",
     this.profileMatchPercent = "",
+    this.showOptions = true,
     this.onSendInterestPressed,
     this.onCancelInterestPressed,
     this.onDeclinedInterestPressed,
@@ -55,6 +58,7 @@ class MatchItem extends StatelessWidget {
     this.onShortlistPressed,
     this.onRemindPressed,
     this.onChatPressed,
+    this.onUnblockPressed,
     required this.onTap,
   });
 
@@ -64,7 +68,7 @@ class MatchItem extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: double.infinity,
-        height: 270,
+        height: showOptions ? 270 : 200,
         margin: const EdgeInsets.only(bottom: 20.0),
         decoration: BoxDecoration(
           color: ColorConstants.textWhite,
@@ -370,237 +374,266 @@ class MatchItem extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 70.0,
-                  decoration: BoxDecoration(
-                    color: ColorConstants.textWhite,
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(5.0),
-                      bottomRight: Radius.circular(5.0),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.shade300,
-                        spreadRadius: 2.0,
-                        blurRadius: 3.0,
+                if (showOptions)
+                  Container(
+                    height: 70.0,
+                    decoration: BoxDecoration(
+                      color: ColorConstants.textWhite,
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(5.0),
+                        bottomRight: Radius.circular(5.0),
                       ),
-                    ],
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      if (onSendInterestPressed != null)
-                        IconButton(
-                          onPressed: onSendInterestPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  AssetConstants.messenger,
-                                  fit: BoxFit.scaleDown,
-                                  colorFilter: ColorFilter.mode(
-                                    ColorConstants.textBlack,
-                                    BlendMode.srcIn,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          spreadRadius: 2.0,
+                          blurRadius: 3.0,
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        if (onSendInterestPressed != null)
+                          IconButton(
+                            onPressed: onSendInterestPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    AssetConstants.messenger,
+                                    fit: BoxFit.scaleDown,
+                                    colorFilter: ColorFilter.mode(
+                                      ColorConstants.textBlack,
+                                      BlendMode.srcIn,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 6.0),
-                                Text(
-                                  StringConstants.sendInterest,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.textBlack,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 6.0),
+                                  Text(
+                                    StringConstants.sendInterest,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onCancelInterestPressed != null)
-                        IconButton(
-                          onPressed: onCancelInterestPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.close_sharp,
-                                  color: ColorConstants.textBlack,
-                                  size: 25.0,
-                                ),
-                                const SizedBox(height: 2.0),
-                                Text(
-                                  StringConstants.cancelInterest,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.w400,
+                        if (onCancelInterestPressed != null)
+                          IconButton(
+                            onPressed: onCancelInterestPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.close_sharp,
                                     color: ColorConstants.textBlack,
+                                    size: 25.0,
                                   ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 2.0),
+                                  Text(
+                                    StringConstants.cancelInterest,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 11.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onDeclinedInterestPressed != null)
-                        IconButton(
-                          onPressed: onDeclinedInterestPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  AssetConstants.declinedInterests,
-                                  fit: BoxFit.scaleDown,
-                                  colorFilter: ColorFilter.mode(
-                                    ColorConstants.textBlack,
-                                    BlendMode.srcIn,
+                        if (onDeclinedInterestPressed != null)
+                          IconButton(
+                            onPressed: onDeclinedInterestPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    AssetConstants.declinedInterests,
+                                    fit: BoxFit.scaleDown,
+                                    colorFilter: ColorFilter.mode(
+                                      ColorConstants.textBlack,
+                                      BlendMode.srcIn,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 6.0),
-                                Text(
-                                  StringConstants.declineInterest,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.textBlack,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 6.0),
+                                  Text(
+                                    StringConstants.declineInterest,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 11.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onAcceptInterestPressed != null)
-                        IconButton(
-                          onPressed: onAcceptInterestPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  AssetConstants.acceptedInterests,
-                                  fit: BoxFit.scaleDown,
-                                  colorFilter: ColorFilter.mode(
-                                    ColorConstants.color7,
-                                    BlendMode.srcIn,
+                        if (onAcceptInterestPressed != null)
+                          IconButton(
+                            onPressed: onAcceptInterestPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    AssetConstants.acceptedInterests,
+                                    fit: BoxFit.scaleDown,
+                                    colorFilter: ColorFilter.mode(
+                                      ColorConstants.color7,
+                                      BlendMode.srcIn,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 6.0),
-                                Text(
-                                  StringConstants.acceptInterest,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 11.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.textBlack,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 6.0),
+                                  Text(
+                                    StringConstants.acceptInterest,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 11.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onRemindPressed != null)
-                        IconButton(
-                          onPressed: onRemindPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.notifications_active_outlined,
-                                  color: ColorConstants.textBlack,
-                                  size: 25.0,
-                                ),
-                                const SizedBox(height: 2.0),
-                                Text(
-                                  StringConstants.remind,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w400,
+                        if (onRemindPressed != null)
+                          IconButton(
+                            onPressed: onRemindPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.notifications_active_outlined,
                                     color: ColorConstants.textBlack,
+                                    size: 25.0,
                                   ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 2.0),
+                                  Text(
+                                    StringConstants.remind,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onShortlistPressed != null)
-                        IconButton(
-                          onPressed: onShortlistPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                isShortlisted
-                                    ? SvgPicture.asset(
-                                        AssetConstants.shortlistFilled,
-                                        fit: BoxFit.scaleDown,
-                                      )
-                                    : SvgPicture.asset(
-                                        AssetConstants.shortlist,
-                                        fit: BoxFit.scaleDown,
-                                      ),
-                                const SizedBox(height: 6.0),
-                                Text(
-                                  StringConstants.shortlist,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.textBlack,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                        if (onShortlistPressed != null)
+                          IconButton(
+                            onPressed: onShortlistPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  isShortlisted
+                                      ? SvgPicture.asset(
+                                          AssetConstants.shortlistFilled,
+                                          fit: BoxFit.scaleDown,
+                                        )
+                                      : SvgPicture.asset(
+                                          AssetConstants.shortlist,
+                                          fit: BoxFit.scaleDown,
+                                        ),
+                                  const SizedBox(height: 6.0),
+                                  Text(
+                                    StringConstants.shortlist,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      if (onChatPressed != null)
-                        IconButton(
-                          onPressed: onChatPressed,
-                          icon: SizedBox(
-                            width: 90.0,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  AssetConstants.chat,
-                                  fit: BoxFit.scaleDown,
-                                ),
-                                const SizedBox(height: 6.0),
-                                Text(
-                                  StringConstants.chat,
-                                  style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w400,
-                                    color: ColorConstants.textBlack,
+                        if (onChatPressed != null)
+                          IconButton(
+                            onPressed: onChatPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  SvgPicture.asset(
+                                    AssetConstants.chat,
+                                    fit: BoxFit.scaleDown,
                                   ),
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                                  const SizedBox(height: 6.0),
+                                  Text(
+                                    StringConstants.chat,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                    ],
-                  ),
-                )
+                        if (onUnblockPressed != null)
+                          IconButton(
+                            onPressed: onUnblockPressed,
+                            icon: SizedBox(
+                              width: 90.0,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.refresh,
+                                    color: ColorConstants.textBlack,
+                                    size: 25.0,
+                                  ),
+                                  const SizedBox(height: 2.0),
+                                  Text(
+                                    StringConstants.unblock,
+                                    style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      fontSize: 11.0,
+                                      fontWeight: FontWeight.w400,
+                                      color: ColorConstants.textBlack,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                      ],
+                    ),
+                  )
               ],
             ),
             Positioned(
