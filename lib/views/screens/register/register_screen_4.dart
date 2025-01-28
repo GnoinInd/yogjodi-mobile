@@ -939,7 +939,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
             child: ColoredButton(
               color: ColorConstants.color6,
               onPressed: () async {
-                Get.to(() => const RegisterForm5());
+                Get.to(() => const RegisterScreen5());
 
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
