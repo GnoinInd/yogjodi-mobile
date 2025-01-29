@@ -19,8 +19,8 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.interestsSent,
           style: TextStyle(
@@ -34,7 +34,7 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: ColorConstants.color2,
+        color: ColorConstants.solitude,
         child: Column(
           children: [
             SizedBox(
@@ -66,7 +66,7 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -92,7 +92,7 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -118,7 +118,7 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -144,7 +144,7 @@ class _InterestsSentScreenState extends State<InterestsSentScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),

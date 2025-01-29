@@ -149,7 +149,7 @@ class _InboxScreenState extends State<InboxScreen> {
                       borderSide: BorderSide.none,
                     ),
                     filled: true,
-                    fillColor: ColorConstants.color2,
+                    fillColor: ColorConstants.solitude,
                     contentPadding: const EdgeInsets.all(15.0),
                   ),
                   onChanged: (val) {
@@ -188,7 +188,7 @@ class _InboxScreenState extends State<InboxScreen> {
                       bottomActionBarConfig: BottomActionBarConfig(
                         backgroundColor: Colors.transparent,
                         buttonColor: Colors.transparent,
-                        buttonIconColor: ColorConstants.color11,
+                        buttonIconColor: ColorConstants.boulder,
                       ),
                       searchViewConfig: const SearchViewConfig(),
                     ),
@@ -262,7 +262,7 @@ class InboxProfile extends StatelessWidget {
                           child: Text(
                             name,
                             style: TextStyle(
-                              color: ColorConstants.textBlack,
+                              color: ColorConstants.theBlack,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -276,7 +276,7 @@ class InboxProfile extends StatelessWidget {
                               ? StringConstants.online
                               : StringConstants.offline,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Inter",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -287,7 +287,7 @@ class InboxProfile extends StatelessWidget {
                     Text(
                       "${StringConstants.age}: $age",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Inter",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
@@ -306,7 +306,7 @@ class InboxProfile extends StatelessWidget {
             title: Text(
               StringConstants.about,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontFamily: "Inter",
                 fontSize: 12.0,
               ),
@@ -325,7 +325,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             "${StringConstants.location}:",
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
@@ -334,7 +334,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             location,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
@@ -344,7 +344,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             "${StringConstants.dateOfBirth}:",
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
@@ -353,7 +353,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             dateOfBirth,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
@@ -363,7 +363,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             "${StringConstants.religion}:",
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
@@ -372,7 +372,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             religion,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
@@ -390,7 +390,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             "${StringConstants.motherTongue}:",
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
@@ -399,7 +399,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             motherTongue,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
@@ -409,7 +409,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             StringConstants.maritalStatus,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,
@@ -418,7 +418,7 @@ class InboxProfile extends StatelessWidget {
                           Text(
                             maritalStatus,
                             style: TextStyle(
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w500,
@@ -438,8 +438,8 @@ class InboxProfile extends StatelessWidget {
                   vertical: 5.0,
                   horizontal: 0.0,
                 ),
-                bgColor: ColorConstants.textWhite,
-                borderColor: ColorConstants.color1,
+                bgColor: ColorConstants.theWhite,
+                borderColor: ColorConstants.jazzberryJam,
                 onPressed: () async {
                   Get.to(
                     () => const MatchProfileScreen(),
@@ -449,7 +449,7 @@ class InboxProfile extends StatelessWidget {
                   StringConstants.viewProfile,
                   style: TextStyle(
                     fontSize: 12,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -493,14 +493,14 @@ class MessageItem extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: Divider(
                   thickness: 1.0,
-                  color: ColorConstants.color12,
+                  color: ColorConstants.alto,
                 ),
               ),
               SvgPicture.asset(
                 AssetConstants.dot,
                 fit: BoxFit.scaleDown,
                 colorFilter: ColorFilter.mode(
-                  ColorConstants.color12,
+                  ColorConstants.alto,
                   BlendMode.srcIn,
                 ),
               ),
@@ -508,7 +508,7 @@ class MessageItem extends StatelessWidget {
               Text(
                 date,
                 style: TextStyle(
-                  color: ColorConstants.color12,
+                  color: ColorConstants.alto,
                   fontFamily: "Inter",
                   fontSize: 12.0,
                   fontWeight: FontWeight.w400,
@@ -542,7 +542,7 @@ class MessageItem extends StatelessWidget {
                         child: Text(
                           name,
                           style: TextStyle(
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                             fontFamily: "Inter",
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
@@ -554,7 +554,7 @@ class MessageItem extends StatelessWidget {
                       Text(
                         time,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                           fontFamily: "Inter",
                           fontSize: 12.0,
                           fontWeight: FontWeight.w500,
@@ -566,7 +566,7 @@ class MessageItem extends StatelessWidget {
                   Text(
                     message,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                       fontFamily: "Inter",
                       fontSize: 14.0,
                       fontWeight: FontWeight.w500,

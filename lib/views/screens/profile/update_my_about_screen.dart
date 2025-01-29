@@ -17,8 +17,8 @@ class _UpdateMyAboutScreenState extends State<UpdateMyAboutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -39,7 +39,7 @@ class _UpdateMyAboutScreenState extends State<UpdateMyAboutScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -91,7 +91,7 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
         children: [
           TextFormField(
             controller: hobbiesTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: hobbies.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -99,21 +99,21 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             decoration: InputDecoration(
               counterText: hobbies.isNotEmpty ? null : "",
               hintText: StringConstants.hobbies,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.hobbies,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -142,7 +142,7 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: interestsTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: interests.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -150,21 +150,21 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             decoration: InputDecoration(
               counterText: interests.isNotEmpty ? null : "",
               hintText: StringConstants.interests,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.interests,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -193,7 +193,7 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: sportsTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: sports.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -201,21 +201,21 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             decoration: InputDecoration(
               counterText: sports.isNotEmpty ? null : "",
               hintText: StringConstants.sports,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.sports,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -246,7 +246,7 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             controller: aboutMeTEC,
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutMe.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -254,21 +254,21 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             decoration: InputDecoration(
               counterText: aboutMe.isNotEmpty ? null : "",
               hintText: StringConstants.aboutMe,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.aboutMe,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -299,13 +299,13 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -316,7 +316,7 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

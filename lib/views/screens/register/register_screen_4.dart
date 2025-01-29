@@ -19,10 +19,10 @@ class _RegisterScreen4State extends State<RegisterScreen4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.color4,
+      backgroundColor: ColorConstants.desertStorm,
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.register,
           style: TextStyle(
@@ -41,7 +41,7 @@ class _RegisterScreen4State extends State<RegisterScreen4> {
               StringConstants.skip,
               style: TextStyle(
                 fontSize: 20,
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
               ),
               textAlign: TextAlign.center,
             ),
@@ -58,7 +58,7 @@ class _RegisterScreen4State extends State<RegisterScreen4> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -190,7 +190,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
       child: Column(
         children: [
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateFatherName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -219,21 +219,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: fatherName.isNotEmpty ? null : "",
               hintText: StringConstants.fatherName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.fatherName,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -261,7 +261,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             // validator: _validateMotherName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -290,21 +290,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: motherName.isNotEmpty ? null : "",
               hintText: StringConstants.motherName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.motherName,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -332,7 +332,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                 RegExp(r'[1-9]'), // Add characters to allow
@@ -345,21 +345,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: brothers.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfBrothers,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.numberOfBrothers,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -387,7 +387,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                 RegExp(r'[1-9]'), // Add characters to allow
@@ -400,21 +400,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: sisters.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfSisters,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.numberOfSisters,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -442,7 +442,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -470,21 +470,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: fatherOccupation.isNotEmpty ? null : "",
               hintText: StringConstants.fatherOccupation,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.fatherOccupation,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -512,7 +512,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -540,21 +540,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: motherOccupation.isNotEmpty ? null : "",
               hintText: StringConstants.motherOccupation,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.motherOccupation,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -631,7 +631,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
             child: Text(
               StringConstants.familyAnnualIncome,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -665,14 +665,14 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color5,
+                    color: ColorConstants.silver,
                     width: 1,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     width: 1,
                   ),
                 ),
@@ -745,7 +745,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
               Text(
                 StringConstants.familyStatus,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -777,14 +777,14 @@ class _RegisterForm4State extends State<RegisterForm4> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -814,7 +814,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
               Text(
                 StringConstants.familyType,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -845,14 +845,14 @@ class _RegisterForm4State extends State<RegisterForm4> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -879,7 +879,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
           TextFormField(
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutMyFamily.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -887,21 +887,21 @@ class _RegisterForm4State extends State<RegisterForm4> {
             decoration: InputDecoration(
               counterText: aboutMyFamily.isNotEmpty ? null : "",
               hintText: StringConstants.aboutMyFamily,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.aboutMyFamily,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -932,12 +932,12 @@ class _RegisterForm4State extends State<RegisterForm4> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
-              color: ColorConstants.color6,
+              color: ColorConstants.pickledBluewood,
               onPressed: () async {
                 Get.to(() => const RegisterScreen5());
 
@@ -950,7 +950,7 @@ class _RegisterForm4State extends State<RegisterForm4> {
                 StringConstants.next,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

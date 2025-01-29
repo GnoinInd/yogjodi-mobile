@@ -283,7 +283,7 @@ class _CountriesStatesPickerState extends State<CountriesStatesPicker> {
                                 child: Row(
                                   children: [
                                     Checkbox(
-                                      activeColor: ColorConstants.color1,
+                                      activeColor: ColorConstants.jazzberryJam,
                                       value: _title == 'Country'
                                           ? countries.contains(
                                               _countrySubList[index].name)

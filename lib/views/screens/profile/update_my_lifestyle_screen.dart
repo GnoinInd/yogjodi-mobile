@@ -17,8 +17,8 @@ class _UpdateMyLifestyleScreenState extends State<UpdateMyLifestyleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -39,7 +39,7 @@ class _UpdateMyLifestyleScreenState extends State<UpdateMyLifestyleScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -106,7 +106,7 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
               Text(
                 StringConstants.smoking,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -135,14 +135,14 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -172,7 +172,7 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
               Text(
                 StringConstants.drinking,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -201,14 +201,14 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -238,7 +238,7 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
               Text(
                 StringConstants.diet,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -268,14 +268,14 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -303,13 +303,13 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -320,7 +320,7 @@ class _UpdateMyLifestyleFormState extends State<UpdateMyLifestyleForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

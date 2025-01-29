@@ -39,7 +39,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.symmetric(horizontal: 0.0),
-        color: ColorConstants.color2,
+        color: ColorConstants.solitude,
         child: ListView(
           padding: const EdgeInsets.symmetric(
             horizontal: 0.0,
@@ -63,7 +63,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       AssetConstants.acceptedInterests,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -142,7 +142,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                 right: 10.0,
               ),
               decoration: BoxDecoration(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: Column(
@@ -155,7 +155,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                       fontFamily: "Inter",
                       fontSize: 16.0,
                       fontWeight: FontWeight.w600,
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                     ),
                   ),
                   Container(
@@ -167,7 +167,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         CircularProfileWithPercentIndicator(
                           size: 50.0,
                           completionPercentage: 100.0,
-                          percentIndicatorColor: ColorConstants.textWhite,
+                          percentIndicatorColor: ColorConstants.theWhite,
                           percentIndicatorStroke: 3.0,
                           imagePath:
                               'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -177,7 +177,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           child: CircularProfileWithPercentIndicator(
                             size: 50.0,
                             completionPercentage: 100.0,
-                            percentIndicatorColor: ColorConstants.textWhite,
+                            percentIndicatorColor: ColorConstants.theWhite,
                             percentIndicatorStroke: 1.0,
                             imagePath:
                                 'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -188,7 +188,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                           child: CircularProfileWithPercentIndicator(
                             size: 50.0,
                             completionPercentage: 100.0,
-                            percentIndicatorColor: ColorConstants.textWhite,
+                            percentIndicatorColor: ColorConstants.theWhite,
                             percentIndicatorStroke: 1.0,
                             imagePath:
                                 'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -212,7 +212,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             fontFamily: "Inter",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           textAlign: TextAlign.start,
                         ),
@@ -235,7 +235,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                 right: 10.0,
               ),
               decoration: BoxDecoration(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: Row(
@@ -255,7 +255,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                 fontFamily: "Inter",
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w600,
-                                color: ColorConstants.textBlack,
+                                color: ColorConstants.theBlack,
                               ),
                             ),
                             Text(
@@ -264,7 +264,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                 fontFamily: "Inter",
                                 fontSize: 10.0,
                                 fontWeight: FontWeight.w400,
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                               ),
                               textAlign: TextAlign.start,
                             )
@@ -279,7 +279,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                               CircularProfileWithPercentIndicator(
                                 size: 50.0,
                                 completionPercentage: 100.0,
-                                percentIndicatorColor: ColorConstants.textWhite,
+                                percentIndicatorColor: ColorConstants.theWhite,
                                 percentIndicatorStroke: 3.0,
                                 imagePath:
                                     'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -290,7 +290,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                   size: 50.0,
                                   completionPercentage: 100.0,
                                   percentIndicatorColor:
-                                      ColorConstants.textWhite,
+                                      ColorConstants.theWhite,
                                   percentIndicatorStroke: 1.0,
                                   imagePath:
                                       'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -302,7 +302,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                                   size: 50.0,
                                   completionPercentage: 100.0,
                                   percentIndicatorColor:
-                                      ColorConstants.textWhite,
+                                      ColorConstants.theWhite,
                                   percentIndicatorStroke: 1.0,
                                   imagePath:
                                       'https://images.unsplash.com/photo-1534339480783-6816b68be29c',
@@ -317,7 +317,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             horizontal: 15.0,
                           ),
                           decoration: BoxDecoration(
-                            color: ColorConstants.color10,
+                            color: ColorConstants.fuelYellow,
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                           child: Text(
@@ -326,7 +326,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                               fontFamily: "Inter",
                               fontSize: 12.0,
                               fontWeight: FontWeight.w600,
-                              color: ColorConstants.textBlack,
+                              color: ColorConstants.theBlack,
                             ),
                           ),
                         ),
@@ -336,7 +336,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             fontFamily: "Inter",
                             fontSize: 10.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           textAlign: TextAlign.start,
                         ),
@@ -360,7 +360,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                               fontFamily: "Inter",
                               fontSize: 12.0,
                               fontWeight: FontWeight.w400,
-                              color: ColorConstants.color3,
+                              color: ColorConstants.tundora,
                             ),
                             textAlign: TextAlign.start,
                           ),
@@ -387,7 +387,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             fontFamily: "Inter",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                         ),
                         TextButton(
@@ -398,7 +398,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w400,
-                              color: ColorConstants.textBlack,
+                              color: ColorConstants.theBlack,
                               decoration: TextDecoration.underline,
                             ),
                             textAlign: TextAlign.center,
@@ -453,7 +453,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                             fontFamily: "Inter",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                         ),
                         TextButton(
@@ -464,7 +464,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                               fontFamily: "Inter",
                               fontSize: 14.0,
                               fontWeight: FontWeight.w400,
-                              color: ColorConstants.textBlack,
+                              color: ColorConstants.theBlack,
                               decoration: TextDecoration.underline,
                             ),
                             textAlign: TextAlign.center,
@@ -535,7 +535,7 @@ class InterestItem extends StatelessWidget {
           horizontal: 10.0,
         ),
         decoration: BoxDecoration(
-          color: ColorConstants.textWhite,
+          color: ColorConstants.theWhite,
           borderRadius: BorderRadius.circular(5.0),
           boxShadow: [
             BoxShadow(
@@ -554,7 +554,7 @@ class InterestItem extends StatelessWidget {
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               textAlign: TextAlign.center,
             ),
@@ -564,7 +564,7 @@ class InterestItem extends StatelessWidget {
                 fontFamily: "Inter",
                 fontSize: 14.0,
                 fontWeight: FontWeight.w300,
-                color: ColorConstants.textBlack,
+                color: ColorConstants.theBlack,
               ),
               textAlign: TextAlign.center,
             ),
@@ -619,7 +619,7 @@ class _ProfileItemState extends State<ProfileItem> {
           height: 270,
           margin: const EdgeInsets.only(right: 10.0),
           decoration: BoxDecoration(
-            color: ColorConstants.textWhite,
+            color: ColorConstants.theWhite,
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Column(
@@ -653,7 +653,7 @@ class _ProfileItemState extends State<ProfileItem> {
                             fontFamily: "Inter",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -671,7 +671,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                   fontFamily: "Inter",
                                   fontSize: 10.0,
                                   fontWeight: FontWeight.w400,
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -688,7 +688,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                   fontFamily: "Inter",
                                   fontSize: 10.0,
                                   fontWeight: FontWeight.w400,
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -705,7 +705,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                   fontFamily: "Inter",
                                   fontSize: 10.0,
                                   fontWeight: FontWeight.w400,
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -733,7 +733,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                       fontFamily: "Inter",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -755,7 +755,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                       fontFamily: "Inter",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -777,7 +777,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                       fontFamily: "Inter",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -799,7 +799,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                       fontFamily: "Inter",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.start,
                                   ),
@@ -822,7 +822,7 @@ class _ProfileItemState extends State<ProfileItem> {
                                 AssetConstants.messenger,
                                 fit: BoxFit.scaleDown,
                                 colorFilter: ColorFilter.mode(
-                                  ColorConstants.textBlack,
+                                  ColorConstants.theBlack,
                                   BlendMode.srcIn,
                                 ),
                               ),

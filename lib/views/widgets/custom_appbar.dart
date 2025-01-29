@@ -23,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: ColorConstants.textWhite,
+      backgroundColor: ColorConstants.theWhite,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -43,7 +43,7 @@ class CustomAppbar extends StatelessWidget {
                     fontFamily: "Inter",
                     fontSize: 18.0,
                     fontWeight: FontWeight.w600,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                   ),
                   textAlign: TextAlign.center,
                 ),

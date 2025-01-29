@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:yog_jodi/common/constants/string_constants.dart';
+
 import '../../common/constants/color_constants.dart';
 import '../widgets/border_button.dart';
 import '../widgets/otp_field.dart';
@@ -58,10 +59,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.color4,
+      backgroundColor: ColorConstants.desertStorm,
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
       ),
       body: ListView(
         children: [
@@ -71,7 +72,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               StringConstants.verifyYourMobileNo,
               style: TextStyle(
                 fontSize: 22,
-                color: ColorConstants.textBlack,
+                color: ColorConstants.theBlack,
                 fontWeight: FontWeight.w600,
               ),
             ),
@@ -84,7 +85,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             child: Text(
               StringConstants.enterOTP,
               style: TextStyle(
-                color: ColorConstants.textBlack,
+                color: ColorConstants.theBlack,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -97,7 +98,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
               fieldWidth: 50,
               style: TextStyle(
                 fontSize: 18,
-                color: ColorConstants.textBlack,
+                color: ColorConstants.theBlack,
               ),
               onCompleted: (pin) {
                 verificationCode = pin;
@@ -118,8 +119,8 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                 vertical: 6.0,
                 horizontal: 0.0,
               ),
-              bgColor: ColorConstants.textRed,
-              borderColor: ColorConstants.textRed,
+              bgColor: ColorConstants.theRed,
+              borderColor: ColorConstants.theRed,
               onPressed: () {
                 if (_isLoading) {
                   return;
@@ -132,7 +133,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                       height: 24,
                       width: 24,
                       child: CircularProgressIndicator(
-                        color: ColorConstants.textWhite,
+                        color: ColorConstants.theWhite,
                         strokeWidth: 2,
                       ),
                     )
@@ -140,7 +141,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                       StringConstants.submit,
                       style: TextStyle(
                         fontSize: 16,
-                        color: ColorConstants.textWhite,
+                        color: ColorConstants.theWhite,
                       ),
                     ),
             ),
@@ -157,7 +158,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 14,
-                        color: ColorConstants.textBlack,
+                        color: ColorConstants.theBlack,
                       ),
                     ),
                   ),
@@ -167,7 +168,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                   children: [
                     Text(
                       StringConstants.didNotGetOTP,
-                      style: TextStyle(color: ColorConstants.textBlack),
+                      style: TextStyle(color: ColorConstants.theBlack),
                     ),
                     TextButton(
                       onPressed: () {
@@ -181,7 +182,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                               height: 22,
                               width: 22,
                               child: CircularProgressIndicator(
-                                color: ColorConstants.textBlue,
+                                color: ColorConstants.theBlue,
                                 strokeWidth: 2,
                               ),
                             )
@@ -189,9 +190,9 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                               StringConstants.resendNow,
                               style: TextStyle(
                                 fontSize: 14,
-                                color: ColorConstants.textBlue,
+                                color: ColorConstants.theBlue,
                                 decoration: TextDecoration.underline,
-                                decorationColor: ColorConstants.textBlue,
+                                decorationColor: ColorConstants.theBlue,
                               ),
                             ),
                     ),

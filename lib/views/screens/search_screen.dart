@@ -118,11 +118,11 @@ class _SearchScreenState extends State<SearchScreen> {
                 padding: const EdgeInsets.only(top: 20.0),
                 labelPadding: const EdgeInsets.all(0.0),
                 indicator: BoxDecoration(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                labelColor: ColorConstants.textWhite,
-                unselectedLabelColor: ColorConstants.color1,
+                labelColor: ColorConstants.theWhite,
+                unselectedLabelColor: ColorConstants.jazzberryJam,
                 labelStyle: const TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 14.0,
@@ -158,7 +158,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             Text(
                               StringConstants.minAge,
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontSize: 17.0,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -189,14 +189,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color5,
+                                      color: ColorConstants.silver,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color10,
+                                      color: ColorConstants.fuelYellow,
                                       width: 1,
                                     ),
                                   ),
@@ -226,7 +226,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             Text(
                               StringConstants.maxAge,
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontSize: 17.0,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -257,14 +257,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color5,
+                                      color: ColorConstants.silver,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color10,
+                                      color: ColorConstants.fuelYellow,
                                       width: 1,
                                     ),
                                   ),
@@ -294,7 +294,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             Text(
                               StringConstants.minHeight,
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontSize: 17.0,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -326,14 +326,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color5,
+                                      color: ColorConstants.silver,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color10,
+                                      color: ColorConstants.fuelYellow,
                                       width: 1,
                                     ),
                                   ),
@@ -363,7 +363,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             Text(
                               StringConstants.maxHeight,
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontSize: 17.0,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -395,14 +395,14 @@ class _SearchScreenState extends State<SearchScreen> {
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color5,
+                                      color: ColorConstants.silver,
                                       width: 1,
                                     ),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: ColorConstants.color10,
+                                      color: ColorConstants.fuelYellow,
                                       width: 1,
                                     ),
                                   ),
@@ -536,7 +536,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               Text(
                                 StringConstants.maritalStatus,
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontSize: 17.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -552,8 +552,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -574,7 +574,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.doesNotMatter,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -583,7 +583,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.doesNotMatter)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -594,8 +594,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -616,7 +616,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.neverMarried,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -625,7 +625,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.neverMarried)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -636,8 +636,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -658,7 +658,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.married,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -667,7 +667,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.married)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -678,8 +678,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -700,7 +700,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.divorced,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -709,7 +709,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.divorced)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -720,8 +720,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -742,7 +742,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.widowed,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -751,7 +751,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.widowed)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -762,8 +762,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -784,7 +784,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.awaitingMarried,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -794,7 +794,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       .awaitingMarried)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -805,8 +805,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!maritalStatusList.contains(
@@ -827,7 +827,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.awaitingDivorce,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -837,7 +837,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       .awaitingDivorce)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -856,7 +856,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               Text(
                                 StringConstants.religion,
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontSize: 17.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -872,8 +872,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList.contains(
@@ -894,7 +894,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.doesNotMatter,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -903,7 +903,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.doesNotMatter)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -914,8 +914,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -936,7 +936,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.hindu,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -945,7 +945,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.hindu)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -956,8 +956,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -978,7 +978,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.muslim,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -987,7 +987,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.muslim)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -998,8 +998,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -1020,7 +1020,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.sikh,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1029,7 +1029,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.sikh)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1040,8 +1040,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList.contains(
@@ -1062,7 +1062,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.christian,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1071,7 +1071,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.christian)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1082,8 +1082,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList.contains(
@@ -1104,7 +1104,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.buddhist,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1113,7 +1113,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.buddhist)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1124,8 +1124,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -1146,7 +1146,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.jain,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1155,7 +1155,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.jain)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1166,8 +1166,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -1188,7 +1188,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.parsi,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1197,7 +1197,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.parsi)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1208,8 +1208,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -1230,7 +1230,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.jewish,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1239,7 +1239,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.jewish)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1250,8 +1250,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!religionList
@@ -1272,7 +1272,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.bahai,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1281,7 +1281,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.bahai)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1294,20 +1294,20 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 15.0),
                         TextField(
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           decoration: InputDecoration(
                             // hintText: StringConstants.caste,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.caste,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1316,7 +1316,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1344,20 +1344,20 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 10.0),
                         TextField(
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           decoration: InputDecoration(
                             // hintText: StringConstants.motherTongue,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.motherTongue,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1366,7 +1366,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1400,13 +1400,13 @@ class _SearchScreenState extends State<SearchScreen> {
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.country,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1415,7 +1415,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1442,13 +1442,13 @@ class _SearchScreenState extends State<SearchScreen> {
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.state,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1457,7 +1457,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1478,8 +1478,8 @@ class _SearchScreenState extends State<SearchScreen> {
                             ),
                           ),
                           inputTextStyle:
-                              TextStyle(color: ColorConstants.color3),
-                          dialogBGColor: ColorConstants.color4,
+                              TextStyle(color: ColorConstants.tundora),
+                          dialogBGColor: ColorConstants.desertStorm,
                         ),
                         const SizedBox(height: 10.0),
                         // TextField(
@@ -1557,13 +1557,13 @@ class _SearchScreenState extends State<SearchScreen> {
                               labelText: StringConstants.annualIncome.substring(
                                   0, StringConstants.annualIncome.length - 1),
                               labelStyle:
-                                  TextStyle(color: ColorConstants.color11),
+                                  TextStyle(color: ColorConstants.boulder),
                               contentPadding: const EdgeInsets.all(15.0),
                               enabledBorder: UnderlineInputBorder(
                                 borderRadius:
                                     BorderRadius.circular(5), // Rounded corners
                                 borderSide: BorderSide(
-                                  color: ColorConstants.color5, // Border color
+                                  color: ColorConstants.silver, // Border color
                                   width: 1, // Border width
                                 ),
                               ),
@@ -1572,7 +1572,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                     BorderRadius.circular(5), // Same corners
                                 borderSide: BorderSide(
                                   color: ColorConstants
-                                      .color10, // Color when focused
+                                      .fuelYellow, // Color when focused
                                   width: 1, // Border width
                                 ),
                               ),
@@ -1603,7 +1603,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               Text(
                                 StringConstants.residentialStatus,
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontSize: 17.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -1619,8 +1619,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!residentialStatusList.contains(
@@ -1641,7 +1641,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.doesNotMatter,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1650,7 +1650,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.doesNotMatter)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1661,8 +1661,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!residentialStatusList.contains(
@@ -1683,7 +1683,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.citizen,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1692,7 +1692,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.citizen)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1703,8 +1703,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!residentialStatusList.contains(
@@ -1725,7 +1725,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.workPermit,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1734,7 +1734,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.workPermit)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1745,8 +1745,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!residentialStatusList.contains(
@@ -1767,7 +1767,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.studentVisa,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1776,7 +1776,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                   StringConstants.studentVisa)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1787,8 +1787,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       vertical: 5.0,
                                       horizontal: 0.0,
                                     ),
-                                    bgColor: ColorConstants.color8,
-                                    borderColor: ColorConstants.color1,
+                                    bgColor: ColorConstants.paleRose,
+                                    borderColor: ColorConstants.jazzberryJam,
                                     onPressed: () async {
                                       setState(() {
                                         if (!residentialStatusList.contains(
@@ -1812,7 +1812,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                           StringConstants.permanentResident,
                                           style: TextStyle(
                                             fontSize: 12,
-                                            color: ColorConstants.color3,
+                                            color: ColorConstants.tundora,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
@@ -1822,7 +1822,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                                       .permanentResident)
                                               ? Icons.remove
                                               : Icons.add,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         )
                                       ],
                                     ),
@@ -1835,20 +1835,20 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 15.0),
                         TextField(
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           decoration: InputDecoration(
                             // hintText: StringConstants.education,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.education,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1857,7 +1857,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1885,20 +1885,20 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 10.0),
                         TextField(
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           decoration: InputDecoration(
                             // hintText: StringConstants.occupation,
                             // hintStyle: TextStyle(color: ColorConstants.color11),
                             labelText: StringConstants.occupation,
                             labelStyle:
-                                TextStyle(color: ColorConstants.color11),
+                                TextStyle(color: ColorConstants.boulder),
                             contentPadding: const EdgeInsets.all(15.0),
                             enabledBorder: UnderlineInputBorder(
                               borderRadius:
                                   BorderRadius.circular(5), // Rounded corners
                               borderSide: BorderSide(
-                                color: ColorConstants.color5, // Border color
+                                color: ColorConstants.silver, // Border color
                                 width: 1, // Border width
                               ),
                             ),
@@ -1907,7 +1907,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   BorderRadius.circular(5), // Same corners
                               borderSide: BorderSide(
                                 color: ColorConstants
-                                    .color10, // Color when focused
+                                    .fuelYellow, // Color when focused
                                 width: 1, // Border width
                               ),
                             ),
@@ -1936,11 +1936,11 @@ class _SearchScreenState extends State<SearchScreen> {
                         ColoredButton(
                           width: 170,
                           padding: const EdgeInsets.symmetric(vertical: 8.0),
-                          color: ColorConstants.color1,
+                          color: ColorConstants.jazzberryJam,
                           child: Text(
                             StringConstants.showMeProfiles,
                             style: TextStyle(
-                              color: ColorConstants.textWhite,
+                              color: ColorConstants.theWhite,
                               fontSize: 16.0,
                               fontFamily: "Inter",
                             ),
@@ -1956,12 +1956,12 @@ class _SearchScreenState extends State<SearchScreen> {
                       child: TextField(
                         autofocus: true,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                         ),
                         decoration: InputDecoration(
                           hintText: StringConstants.searchByProfileId,
-                          hintStyle: TextStyle(color: ColorConstants.color11),
-                          labelStyle: TextStyle(color: ColorConstants.color11),
+                          hintStyle: TextStyle(color: ColorConstants.boulder),
+                          labelStyle: TextStyle(color: ColorConstants.boulder),
                           label: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -1980,7 +1980,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             borderRadius:
                                 BorderRadius.circular(5), // Rounded corners
                             borderSide: BorderSide(
-                              color: ColorConstants.color5, // Border color
+                              color: ColorConstants.silver, // Border color
                               width: 1, // Border width
                             ),
                           ),
@@ -1988,8 +1988,8 @@ class _SearchScreenState extends State<SearchScreen> {
                             borderRadius:
                                 BorderRadius.circular(5), // Same corners
                             borderSide: BorderSide(
-                              color:
-                                  ColorConstants.color10, // Color when focused
+                              color: ColorConstants
+                                  .fuelYellow, // Color when focused
                               width: 1, // Border width
                             ),
                           ),

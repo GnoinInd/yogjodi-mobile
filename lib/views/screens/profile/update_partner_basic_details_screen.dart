@@ -19,8 +19,8 @@ class _UpdatePartnerBasicDetailsScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -41,7 +41,7 @@ class _UpdatePartnerBasicDetailsScreenState
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -139,7 +139,7 @@ class _UpdatePartnerBasicDetailsFormState
               Text(
                 StringConstants.minAge,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -169,14 +169,14 @@ class _UpdatePartnerBasicDetailsFormState
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -206,7 +206,7 @@ class _UpdatePartnerBasicDetailsFormState
               Text(
                 StringConstants.maxAge,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -236,14 +236,14 @@ class _UpdatePartnerBasicDetailsFormState
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -273,7 +273,7 @@ class _UpdatePartnerBasicDetailsFormState
               Text(
                 StringConstants.minHeight,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -303,14 +303,14 @@ class _UpdatePartnerBasicDetailsFormState
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -340,7 +340,7 @@ class _UpdatePartnerBasicDetailsFormState
               Text(
                 StringConstants.maxHeight,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -370,14 +370,14 @@ class _UpdatePartnerBasicDetailsFormState
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -546,21 +546,21 @@ class _UpdatePartnerBasicDetailsFormState
             countries: countries,
             countriesInputDecoration: InputDecoration(
               hintText: StringConstants.country,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.country,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -583,21 +583,21 @@ class _UpdatePartnerBasicDetailsFormState
             states: states,
             statesInputDecoration: InputDecoration(
               hintText: StringConstants.state,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.state,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -616,8 +616,8 @@ class _UpdatePartnerBasicDetailsFormState
                 ),
               ),
             ),
-            inputTextStyle: TextStyle(color: ColorConstants.color3),
-            dialogBGColor: ColorConstants.color4,
+            inputTextStyle: TextStyle(color: ColorConstants.tundora),
+            dialogBGColor: ColorConstants.desertStorm,
           ),
           const SizedBox(height: 16.0),
           Row(
@@ -626,7 +626,7 @@ class _UpdatePartnerBasicDetailsFormState
               Text(
                 StringConstants.maritalStatus,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -657,14 +657,14 @@ class _UpdatePartnerBasicDetailsFormState
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -693,7 +693,7 @@ class _UpdatePartnerBasicDetailsFormState
             child: Text(
               StringConstants.residentialStatus,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -726,14 +726,14 @@ class _UpdatePartnerBasicDetailsFormState
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color5,
+                    color: ColorConstants.silver,
                     width: 1,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     width: 1,
                   ),
                 ),
@@ -759,13 +759,13 @@ class _UpdatePartnerBasicDetailsFormState
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -776,7 +776,7 @@ class _UpdatePartnerBasicDetailsFormState
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

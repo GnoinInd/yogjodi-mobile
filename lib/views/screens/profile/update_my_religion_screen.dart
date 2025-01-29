@@ -18,8 +18,8 @@ class _UpdateMyReligionScreenState extends State<UpdateMyReligionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -40,7 +40,7 @@ class _UpdateMyReligionScreenState extends State<UpdateMyReligionScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -118,7 +118,7 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
         children: [
           TextFormField(
             controller: religionTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateReligion,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -147,9 +147,9 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
             decoration: InputDecoration(
               counterText: religion.isNotEmpty ? null : "",
               hintText: StringConstants.religion,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.religion,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               // prefixIcon: Icon(
               //   Icons.person_outline,
               //   color: ColorConstants.color3,
@@ -158,14 +158,14 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -194,7 +194,7 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: casteTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateCaste,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -223,9 +223,9 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
             decoration: InputDecoration(
               counterText: caste.isNotEmpty ? null : "",
               hintText: StringConstants.caste,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.caste,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               // prefixIcon: Icon(
               //   Icons.person_outline,
               //   color: ColorConstants.color3,
@@ -234,14 +234,14 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -270,7 +270,7 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: goutraTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -298,21 +298,21 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
             decoration: InputDecoration(
               counterText: goutra.isNotEmpty ? null : "",
               hintText: StringConstants.goutra,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.goutra,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -343,13 +343,13 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -360,7 +360,7 @@ class _UpdateMyReligionFormState extends State<UpdateMyReligionForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

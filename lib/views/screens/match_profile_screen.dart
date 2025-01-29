@@ -36,7 +36,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
 
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-        statusBarColor: ColorConstants.color1,
+        statusBarColor: ColorConstants.jazzberryJam,
         statusBarIconBrightness: Brightness.light,
       ),
     );
@@ -75,17 +75,17 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       },
                       icon: Icon(
                         Icons.close_rounded,
-                        color: ColorConstants.textRed,
+                        color: ColorConstants.theRed,
                       ),
                     ),
                   ),
                   const SizedBox(height: 10.0),
                   CircleAvatar(
                     radius: 35.0,
-                    backgroundColor: ColorConstants.color8,
+                    backgroundColor: ColorConstants.paleRose,
                     child: Icon(
                       Icons.lock_open_rounded,
-                      color: ColorConstants.color13,
+                      color: ColorConstants.brickRed,
                       size: 35.0,
                     ),
                   ),
@@ -93,7 +93,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   Text(
                     StringConstants.unlockFullAlbumAccess,
                     style: TextStyle(
-                      color: ColorConstants.color6,
+                      color: ColorConstants.pickledBluewood,
                       fontFamily: "Inter",
                       fontSize: 25.0,
                       fontWeight: FontWeight.bold,
@@ -103,7 +103,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   Text(
                     StringConstants.becomeAPaidMemberToViewAll,
                     style: TextStyle(
-                      color: ColorConstants.color6,
+                      color: ColorConstants.pickledBluewood,
                       fontFamily: "Inter",
                       fontSize: 13.0,
                       fontWeight: FontWeight.w600,
@@ -113,7 +113,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   const SizedBox(height: 20.0),
                   ColoredButton(
                     width: 180,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     radius: 10.0,
                     padding: const EdgeInsets.symmetric(
                       vertical: 10.0,
@@ -133,7 +133,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Inter",
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textWhite,
+                            color: ColorConstants.theWhite,
                           ),
                         )
                       ],
@@ -144,7 +144,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   Text(
                     "Also get more features and more perfect matches",
                     style: TextStyle(
-                      color: ColorConstants.color6,
+                      color: ColorConstants.pickledBluewood,
                       fontFamily: "Poppins",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -190,7 +190,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       },
                       icon: Icon(
                         Icons.close_rounded,
-                        color: ColorConstants.textRed,
+                        color: ColorConstants.theRed,
                       ),
                     ),
                   ),
@@ -198,7 +198,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   ListTile(
                     leading: Icon(
                       Icons.block,
-                      color: ColorConstants.textBlack,
+                      color: ColorConstants.theBlack,
                     ),
                     title: Text(
                       StringConstants.block,
@@ -206,7 +206,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                         fontFamily: "Inter",
                         fontSize: 16.0,
                         fontWeight: FontWeight.w600,
-                        color: ColorConstants.textBlack,
+                        color: ColorConstants.theBlack,
                       ),
                     ),
                     onTap: () {},
@@ -214,7 +214,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   ListTile(
                     leading: Icon(
                       Icons.report_outlined,
-                      color: ColorConstants.textBlack,
+                      color: ColorConstants.theBlack,
                     ),
                     title: Text(
                       StringConstants.reportProfile,
@@ -222,7 +222,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                         fontFamily: "Inter",
                         fontSize: 16.0,
                         fontWeight: FontWeight.w600,
-                        color: ColorConstants.textBlack,
+                        color: ColorConstants.theBlack,
                       ),
                     ),
                     onTap: () {},
@@ -230,7 +230,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   ListTile(
                     leading: Icon(
                       Icons.chat_bubble_outline,
-                      color: ColorConstants.textBlack,
+                      color: ColorConstants.theBlack,
                     ),
                     title: Text(
                       StringConstants.communicationHistory,
@@ -238,7 +238,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                         fontFamily: "Inter",
                         fontSize: 16.0,
                         fontWeight: FontWeight.w600,
-                        color: ColorConstants.textBlack,
+                        color: ColorConstants.theBlack,
                       ),
                     ),
                     onTap: () {},
@@ -260,7 +260,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
         bottomSheet: Container(
           height: 70.0,
           decoration: BoxDecoration(
-            color: ColorConstants.textWhite,
+            color: ColorConstants.theWhite,
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(5.0),
               bottomRight: Radius.circular(5.0),
@@ -289,7 +289,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           AssetConstants.messenger,
                           fit: BoxFit.scaleDown,
                           colorFilter: ColorFilter.mode(
-                            ColorConstants.textBlack,
+                            ColorConstants.theBlack,
                             BlendMode.srcIn,
                           ),
                         ),
@@ -300,7 +300,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -318,7 +318,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       children: [
                         Icon(
                           Icons.close_sharp,
-                          color: ColorConstants.textBlack,
+                          color: ColorConstants.theBlack,
                           size: 25.0,
                         ),
                         const SizedBox(height: 2.0),
@@ -328,7 +328,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 11.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -348,7 +348,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           AssetConstants.declinedInterests,
                           fit: BoxFit.scaleDown,
                           colorFilter: ColorFilter.mode(
-                            ColorConstants.textBlack,
+                            ColorConstants.theBlack,
                             BlendMode.srcIn,
                           ),
                         ),
@@ -359,7 +359,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 11.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -379,7 +379,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           AssetConstants.acceptedInterests,
                           fit: BoxFit.scaleDown,
                           colorFilter: ColorFilter.mode(
-                            ColorConstants.color7,
+                            ColorConstants.salem,
                             BlendMode.srcIn,
                           ),
                         ),
@@ -390,7 +390,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 11.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -408,7 +408,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       children: [
                         Icon(
                           Icons.notifications_active_outlined,
-                          color: ColorConstants.textBlack,
+                          color: ColorConstants.theBlack,
                           size: 25.0,
                         ),
                         const SizedBox(height: 2.0),
@@ -418,7 +418,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -450,7 +450,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -477,7 +477,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -495,7 +495,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                       children: [
                         Icon(
                           Icons.refresh,
-                          color: ColorConstants.textBlack,
+                          color: ColorConstants.theBlack,
                           size: 25.0,
                         ),
                         const SizedBox(height: 2.0),
@@ -505,7 +505,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Poppins",
                             fontSize: 11.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textBlack,
+                            color: ColorConstants.theBlack,
                           ),
                           textAlign: TextAlign.center,
                         )
@@ -523,10 +523,10 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
               floating: false,
               snap: false,
               pinned: true,
-              backgroundColor: ColorConstants.color1,
-              foregroundColor: ColorConstants.textWhite,
+              backgroundColor: ColorConstants.jazzberryJam,
+              foregroundColor: ColorConstants.theWhite,
               iconTheme: IconThemeData(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 shadows: const [
                   Shadow(
                     color: Colors.black45,
@@ -540,7 +540,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   fontFamily: "Inter",
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   shadows: const [
                     Shadow(
                       color: Colors.black45,
@@ -568,7 +568,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                 ),
                 labelPadding: const EdgeInsets.all(0.0),
                 indicator: BoxDecoration(
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
                 // labelColor: ColorConstants.textWhite,
@@ -577,13 +577,13 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                   fontFamily: "Poppins",
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                 ),
                 unselectedLabelStyle: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   shadows: const [
                     Shadow(
                       color: Colors.black45,
@@ -638,7 +638,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 backgroundColor: Colors.black26,
                                 child: Icon(
                                   Icons.photo_library_outlined,
-                                  color: ColorConstants.textWhite,
+                                  color: ColorConstants.theWhite,
                                   size: 20.0,
                                 ),
                               ),
@@ -655,7 +655,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                     fontFamily: "Inter",
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w500,
-                                    color: ColorConstants.textWhite,
+                                    color: ColorConstants.theWhite,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -691,7 +691,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 fontFamily: "Inter",
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.w600,
-                                color: ColorConstants.textWhite,
+                                color: ColorConstants.theWhite,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -712,10 +712,10 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                               vertical: 1.0,
                             ),
                             decoration: BoxDecoration(
-                              color: ColorConstants.textWhite,
+                              color: ColorConstants.theWhite,
                               borderRadius: BorderRadius.circular(4.0),
                               border: Border.all(
-                                color: ColorConstants.textWhite,
+                                color: ColorConstants.theWhite,
                               ),
                             ),
                             child: Row(
@@ -728,7 +728,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w600,
                                     fontStyle: FontStyle.italic,
-                                    color: ColorConstants.color7,
+                                    color: ColorConstants.salem,
                                     shadows: const [
                                       Shadow(
                                         color: Colors.white,
@@ -744,7 +744,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                     AssetConstants.acceptedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color7,
+                                      ColorConstants.salem,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -764,7 +764,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             fontFamily: "Inter",
                             fontSize: 15.0,
                             fontWeight: FontWeight.w600,
-                            color: ColorConstants.textWhite,
+                            color: ColorConstants.theWhite,
                             shadows: const [
                               Shadow(
                                 color: Colors.black,
@@ -799,7 +799,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -812,7 +812,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.briefOutlineOfPersonalInfo,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -833,7 +833,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.name,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -842,7 +842,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -857,7 +857,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Abhinash Bhardwaj",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -879,7 +879,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.height1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -888,7 +888,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -903,7 +903,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "5 ft 8 in",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -925,7 +925,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -934,7 +934,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -949,7 +949,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Hindi (Bihar)",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -971,7 +971,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.location,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -980,7 +980,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -995,7 +995,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Patna (Bihar) - India ",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1017,7 +1017,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.annualIncome,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1026,7 +1026,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1041,7 +1041,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "8-10 Lakh p.a.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1063,7 +1063,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.dateOfBirth,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1072,7 +1072,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1087,7 +1087,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "13 Mar 1998",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1109,7 +1109,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.maritalStatus1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1118,7 +1118,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1133,7 +1133,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Never Married",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1156,7 +1156,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.about,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1169,7 +1169,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1188,7 +1188,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 "provide comfort when your partner needs it. Trust and Honesty: Build trust by "
                                 "being honest and open about your feelings.",
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontFamily: "Poppins",
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,
@@ -1209,7 +1209,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.educationAndCareer,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1222,7 +1222,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1243,7 +1243,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.highestDegree,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1252,7 +1252,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1267,7 +1267,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "MCA",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1289,7 +1289,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.annualIncome,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1298,7 +1298,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1313,7 +1313,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "8-10 Lakh p.a.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1335,7 +1335,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.occupation,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1344,7 +1344,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1359,7 +1359,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Software Developer",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1382,7 +1382,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1395,7 +1395,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1416,7 +1416,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.religion,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1425,7 +1425,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1440,7 +1440,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1462,7 +1462,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.caste,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1471,7 +1471,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1486,7 +1486,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1508,7 +1508,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1517,7 +1517,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1532,7 +1532,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1555,7 +1555,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.contact,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1568,7 +1568,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1589,7 +1589,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.mobileNumber,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1598,7 +1598,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1613,7 +1613,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "+91-9876543210",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1636,7 +1636,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1649,7 +1649,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1670,7 +1670,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.drinkingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1679,7 +1679,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1694,7 +1694,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1716,7 +1716,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.smokingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1725,7 +1725,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1740,7 +1740,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1762,7 +1762,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.dietaryHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1771,7 +1771,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1786,7 +1786,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1808,7 +1808,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.specialCase,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1817,7 +1817,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1832,7 +1832,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1861,7 +1861,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.family,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1874,7 +1874,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1895,7 +1895,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.familyType,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1904,7 +1904,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1919,7 +1919,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Nuclear",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1941,7 +1941,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.familyStatus,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1950,7 +1950,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1965,7 +1965,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Middle Class",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1987,7 +1987,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.numberOfBrothers,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1996,7 +1996,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2011,7 +2011,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "2",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2033,7 +2033,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.numberOfSisters,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2042,7 +2042,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2057,7 +2057,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "2",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2079,7 +2079,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.motherOccupation,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
@@ -2088,7 +2088,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2103,7 +2103,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Housewife",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2125,7 +2125,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         StringConstants.familyLivingIn,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2134,7 +2134,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2149,7 +2149,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   child: Text(
                                     "Patna (Bihar) - India",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2167,7 +2167,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                   Text(
                                     StringConstants.aboutMyFamily,
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
@@ -2180,7 +2180,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                     " Firstly, always assess yourself thoroughly. You must understand "
                                     "your area of interest to choose a career.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2210,7 +2210,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2223,7 +2223,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.briefOutlineOfPersonalInfo,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2238,7 +2238,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.height1,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2259,7 +2259,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2268,7 +2268,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2280,7 +2280,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "5' 2\" - 5'6\"",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2293,7 +2293,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.age,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2314,7 +2314,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2323,7 +2323,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2335,7 +2335,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "18 years - 28 years",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2348,7 +2348,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.country,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2369,7 +2369,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2378,7 +2378,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2390,7 +2390,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "India",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2403,7 +2403,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.location,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2424,7 +2424,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2433,7 +2433,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2445,7 +2445,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Patna (Bihar)",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2458,7 +2458,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.maritalStatus1,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2479,7 +2479,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2488,7 +2488,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2500,7 +2500,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Never Married",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2513,7 +2513,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.motherTongue,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2534,7 +2534,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2543,7 +2543,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2555,7 +2555,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Hindi (UP)",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2568,7 +2568,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.residentialStatus1,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2589,7 +2589,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2598,7 +2598,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2610,7 +2610,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2631,7 +2631,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.educationAndOccupation,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2644,7 +2644,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2659,7 +2659,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.highestDegree,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2680,7 +2680,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2689,7 +2689,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2701,7 +2701,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "MCA",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2714,7 +2714,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.annualIncome1,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2735,7 +2735,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2744,7 +2744,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2756,7 +2756,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "8-10 Lakh p.a.",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2769,7 +2769,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.occupation,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2790,7 +2790,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2799,7 +2799,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2811,7 +2811,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Software Developer",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2832,7 +2832,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2845,7 +2845,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.religion,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2866,7 +2866,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2875,7 +2875,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2887,7 +2887,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2900,7 +2900,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.caste,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -2921,7 +2921,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -2930,7 +2930,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -2942,7 +2942,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -2963,7 +2963,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2976,7 +2976,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2991,7 +2991,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.smokingHabits,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -3012,7 +3012,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -3021,7 +3021,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -3033,7 +3033,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -3046,7 +3046,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.drinkingHabits,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -3067,7 +3067,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -3076,7 +3076,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -3088,7 +3088,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -3101,7 +3101,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.dietaryHabits,
                                   style: TextStyle(
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                     fontFamily: "Poppins",
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
@@ -3122,7 +3122,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                         borderRadius:
                                             BorderRadius.circular(4.0),
                                         border: Border.all(
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                       ),
                                       child: Text(
@@ -3131,7 +3131,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w600,
-                                          color: ColorConstants.color7,
+                                          color: ColorConstants.salem,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -3143,7 +3143,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             Text(
                               "Doesn't matter",
                               style: TextStyle(
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                                 fontFamily: "Poppins",
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w300,
@@ -3163,7 +3163,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                           title: Text(
                             StringConstants.aboutPartner,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -3176,7 +3176,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -3195,7 +3195,7 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 "provide comfort when your partner needs it. Trust and Honesty: Build trust by "
                                 "being honest and open about your feelings.",
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontFamily: "Poppins",
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,

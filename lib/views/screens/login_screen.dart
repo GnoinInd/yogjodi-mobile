@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-        statusBarColor: ColorConstants.color1,
+        statusBarColor: ColorConstants.jazzberryJam,
         statusBarIconBrightness: Brightness.light,
       ),
     );
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
         await _onBackPressed();
       },
       child: Scaffold(
-        backgroundColor: ColorConstants.color4,
+        backgroundColor: ColorConstants.desertStorm,
         body: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Center(
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontFamily: "Ikaros",
                     fontSize: 45,
                     fontWeight: FontWeight.w700,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(
                       StringConstants.doNotHaveAnAccount,
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontSize: 15.0,
                         fontWeight: FontWeight.w400,
                       ),
@@ -87,8 +87,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         vertical: 5.0,
                         horizontal: 0.0,
                       ),
-                      bgColor: ColorConstants.color1,
-                      borderColor: ColorConstants.color1,
+                      bgColor: ColorConstants.jazzberryJam,
+                      borderColor: ColorConstants.jazzberryJam,
                       onPressed: () async {
                         Get.to(
                           () => const RegisterScreen1(),
@@ -98,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         StringConstants.register,
                         style: TextStyle(
                           fontSize: 12,
-                          color: ColorConstants.textWhite,
+                          color: ColorConstants.theWhite,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -199,7 +199,7 @@ class _LoginFormState extends State<LoginForm> {
         children: [
           TextFormField(
             style: TextStyle(
-              color: ColorConstants.color3,
+              color: ColorConstants.tundora,
             ),
             validator: _validateEmail,
             inputFormatters: [
@@ -209,10 +209,10 @@ class _LoginFormState extends State<LoginForm> {
             ],
             decoration: InputDecoration(
               hintText: StringConstants.email,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.mail_outlined,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               // filled: true, // Enables the background fill
               // fillColor: ColorConstants.color5, // Sets the background color
@@ -220,14 +220,14 @@ class _LoginFormState extends State<LoginForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5), // Rounded corners
                 borderSide: BorderSide(
-                  color: ColorConstants.color5, // Border color
+                  color: ColorConstants.silver, // Border color
                   width: 1, // Border width
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5), // Same corners
                 borderSide: BorderSide(
-                  color: ColorConstants.color1, // Color when focused
+                  color: ColorConstants.jazzberryJam, // Color when focused
                   width: 1, // Border width
                 ),
               ),
@@ -253,22 +253,22 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 16),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             obscureText: !_showPassword,
             validator: _validatePassword,
             decoration: InputDecoration(
               hintText: StringConstants.password,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.lock_outline_rounded,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               suffixIcon: IconButton(
                 icon: Icon(
                   _showPassword
                       ? Icons.visibility_outlined
                       : Icons.visibility_off_outlined,
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                 ),
                 onPressed: () {
                   setState(() {
@@ -280,14 +280,14 @@ class _LoginFormState extends State<LoginForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -321,11 +321,11 @@ class _LoginFormState extends State<LoginForm> {
                 child: Text(
                   StringConstants.forgotPassword,
                   style: TextStyle(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     fontSize: 16.0,
                     fontWeight: FontWeight.w400,
                     decoration: TextDecoration.underline,
-                    decorationColor: ColorConstants.color1,
+                    decorationColor: ColorConstants.jazzberryJam,
                   ),
                 ),
               ),
@@ -337,12 +337,12 @@ class _LoginFormState extends State<LoginForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
-              color: ColorConstants.color6,
+              color: ColorConstants.pickledBluewood,
               onPressed: () async {
                 Get.offAll(() => const DashboardScreen());
                 if (_formKey.currentState!.validate()) {
@@ -354,7 +354,7 @@ class _LoginFormState extends State<LoginForm> {
                 StringConstants.login,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

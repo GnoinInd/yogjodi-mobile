@@ -18,8 +18,8 @@ class _UpdatePartnerAboutScreenState extends State<UpdatePartnerAboutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -40,7 +40,7 @@ class _UpdatePartnerAboutScreenState extends State<UpdatePartnerAboutScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -89,7 +89,7 @@ class _UpdatePartnerLifestyleFormState
             controller: aboutPartnerTEC,
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutPartner.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -97,21 +97,21 @@ class _UpdatePartnerLifestyleFormState
             decoration: InputDecoration(
               counterText: aboutPartner.isNotEmpty ? null : "",
               hintText: StringConstants.aboutPartner,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.aboutPartner,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -142,13 +142,13 @@ class _UpdatePartnerLifestyleFormState
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -159,7 +159,7 @@ class _UpdatePartnerLifestyleFormState
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

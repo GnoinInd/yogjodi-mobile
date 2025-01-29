@@ -42,12 +42,12 @@ class _MessengerScreenState extends State<MessengerScreen> {
                 border: Border(
                   bottom: BorderSide(
                     width: 3.0,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                   ),
                 ),
               ),
-              labelColor: ColorConstants.color3,
-              unselectedLabelColor: ColorConstants.color3,
+              labelColor: ColorConstants.tundora,
+              unselectedLabelColor: ColorConstants.tundora,
               labelStyle: const TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 14.0,
@@ -178,7 +178,7 @@ class _MessengerItemState extends State<MessengerItem> {
       onTap: widget.onTap,
       child: Container(
         margin: const EdgeInsets.only(bottom: 5.0),
-        color: widget.selected ? ColorConstants.color8 : Colors.transparent,
+        color: widget.selected ? ColorConstants.paleRose : Colors.transparent,
         child: Column(
           children: [
             Row(
@@ -188,7 +188,7 @@ class _MessengerItemState extends State<MessengerItem> {
                   width: 6.0,
                   height: 80.0,
                   color: widget.selected
-                      ? ColorConstants.color1
+                      ? ColorConstants.jazzberryJam
                       : Colors.transparent,
                 ),
                 const SizedBox(width: 15.0),
@@ -212,7 +212,7 @@ class _MessengerItemState extends State<MessengerItem> {
                           fontFamily: "Inter",
                           fontSize: 14.0,
                           fontWeight: FontWeight.w600,
-                          color: ColorConstants.textBlack,
+                          color: ColorConstants.theBlack,
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -224,7 +224,7 @@ class _MessengerItemState extends State<MessengerItem> {
                           fontFamily: "Inter",
                           fontSize: 12.0,
                           fontWeight: FontWeight.w400,
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                         ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -243,7 +243,7 @@ class _MessengerItemState extends State<MessengerItem> {
                             fontFamily: "Inter",
                             fontSize: 12.0,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -252,13 +252,13 @@ class _MessengerItemState extends State<MessengerItem> {
                           CircleAvatar(
                             radius:
                                 widget.totalUnreadMessage.length > 2 ? 13 : 9,
-                            backgroundColor: ColorConstants.color1,
+                            backgroundColor: ColorConstants.jazzberryJam,
                             child: Text(
                               widget.totalUnreadMessage,
                               style: TextStyle(
                                 fontFamily: "Inter",
                                 fontSize: 12.0,
-                                color: ColorConstants.textWhite,
+                                color: ColorConstants.theWhite,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -271,7 +271,7 @@ class _MessengerItemState extends State<MessengerItem> {
             ),
             Container(
               height: 2.0,
-              color: ColorConstants.color9,
+              color: ColorConstants.wispPink,
             ),
           ],
         ),

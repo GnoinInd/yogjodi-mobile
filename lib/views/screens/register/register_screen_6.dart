@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/constants/asset_constants.dart';
 import '../../../common/constants/color_constants.dart';
@@ -20,10 +22,10 @@ class _RegisterScreen6State extends State<RegisterScreen6> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstants.color4,
+      backgroundColor: ColorConstants.desertStorm,
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.register,
           style: TextStyle(
@@ -44,14 +46,71 @@ class _RegisterScreen6State extends State<RegisterScreen6> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40.0),
             const RegisterForm6(),
+            const SizedBox(height: 20.0),
+            termsAndConditionPrivacyPolicy(),
             const SizedBox(height: 50.0),
           ],
+        ),
+      ),
+    );
+  }
+
+  void _launchURL(String url) async {
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
+    } else {
+      throw 'Could not launch \$url';
+    }
+  }
+
+  Widget termsAndConditionPrivacyPolicy() {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(
+            text: "By clicking on 'Register,' you confirm that you accept the ",
+            style: TextStyle(
+              fontFamily: "Inter",
+              color: ColorConstants.theBlack,
+              fontSize: 14,
+            ),
+            children: [
+              TextSpan(
+                text: "Terms of Use",
+                style: TextStyle(
+                  color: ColorConstants.theRed,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
+                ),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    _launchURL('https://example.com/terms');
+                  },
+              ),
+              const TextSpan(text: " and "),
+              TextSpan(
+                text: "Privacy Policy",
+                style: TextStyle(
+                  color: ColorConstants.theRed,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
+                ),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    _launchURL('https://example.com/privacy');
+                  },
+              ),
+              const TextSpan(text: '.'),
+            ],
+          ),
         ),
       ),
     );
@@ -206,7 +265,7 @@ class _RegisterForm6State extends State<RegisterForm6> {
                   _showImageSourceDialog();
                 },
                 child: CircleAvatar(
-                  backgroundColor: ColorConstants.color6,
+                  backgroundColor: ColorConstants.pickledBluewood,
                   radius: 25,
                   child: const Icon(
                     Icons.edit,
@@ -223,12 +282,12 @@ class _RegisterForm6State extends State<RegisterForm6> {
           visible: true,
           replacement: Center(
             child: CircularProgressIndicator(
-              color: ColorConstants.textWhite,
+              color: ColorConstants.theWhite,
               strokeWidth: 3.0,
             ),
           ),
           child: ColoredButton(
-            color: ColorConstants.color1,
+            color: ColorConstants.jazzberryJam,
             onPressed: () async {
               if (false) {
                 FocusScope.of(context).unfocus();
@@ -238,7 +297,7 @@ class _RegisterForm6State extends State<RegisterForm6> {
               StringConstants.register,
               style: TextStyle(
                 fontSize: 18,
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 fontWeight: FontWeight.w500,
               ),
               textAlign: TextAlign.center,

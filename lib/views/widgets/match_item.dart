@@ -71,7 +71,7 @@ class MatchItem extends StatelessWidget {
         height: showOptions ? 270 : 200,
         margin: const EdgeInsets.only(bottom: 20.0),
         decoration: BoxDecoration(
-          color: ColorConstants.textWhite,
+          color: ColorConstants.theWhite,
           borderRadius: BorderRadius.circular(6.0),
           boxShadow: [
             BoxShadow(
@@ -141,11 +141,11 @@ class MatchItem extends StatelessWidget {
                                           vertical: 1.0,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: ColorConstants.textWhite,
+                                          color: ColorConstants.theWhite,
                                           borderRadius:
                                               BorderRadius.circular(4.0),
                                           border: Border.all(
-                                            color: ColorConstants.textWhite,
+                                            color: ColorConstants.theWhite,
                                           ),
                                         ),
                                         child: Row(
@@ -158,7 +158,7 @@ class MatchItem extends StatelessWidget {
                                                 fontSize: 10.0,
                                                 fontWeight: FontWeight.w600,
                                                 fontStyle: FontStyle.italic,
-                                                color: ColorConstants.color7,
+                                                color: ColorConstants.salem,
                                                 shadows: const [
                                                   Shadow(
                                                     color: Colors.white38,
@@ -175,7 +175,7 @@ class MatchItem extends StatelessWidget {
                                                     .acceptedInterests,
                                                 fit: BoxFit.scaleDown,
                                                 colorFilter: ColorFilter.mode(
-                                                  ColorConstants.color7,
+                                                  ColorConstants.salem,
                                                   BlendMode.srcIn,
                                                 ),
                                               ),
@@ -191,7 +191,7 @@ class MatchItem extends StatelessWidget {
                                         fontFamily: "Inter",
                                         fontSize: 10.0,
                                         fontWeight: FontWeight.w400,
-                                        color: ColorConstants.color3,
+                                        color: ColorConstants.tundora,
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
@@ -205,7 +205,7 @@ class MatchItem extends StatelessWidget {
                                     fontFamily: "Inter",
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
-                                    color: ColorConstants.textBlack,
+                                    color: ColorConstants.theBlack,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -224,7 +224,7 @@ class MatchItem extends StatelessWidget {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w400,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -241,7 +241,7 @@ class MatchItem extends StatelessWidget {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w400,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -258,7 +258,7 @@ class MatchItem extends StatelessWidget {
                                           fontFamily: "Inter",
                                           fontSize: 10.0,
                                           fontWeight: FontWeight.w400,
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                         ),
                                         textAlign: TextAlign.center,
                                       ),
@@ -288,7 +288,7 @@ class MatchItem extends StatelessWidget {
                                               fontFamily: "Inter",
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w400,
-                                              color: ColorConstants.color3,
+                                              color: ColorConstants.tundora,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -311,7 +311,7 @@ class MatchItem extends StatelessWidget {
                                               fontFamily: "Inter",
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w400,
-                                              color: ColorConstants.color3,
+                                              color: ColorConstants.tundora,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -334,7 +334,7 @@ class MatchItem extends StatelessWidget {
                                               fontFamily: "Inter",
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w400,
-                                              color: ColorConstants.color3,
+                                              color: ColorConstants.tundora,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -357,7 +357,7 @@ class MatchItem extends StatelessWidget {
                                               fontFamily: "Inter",
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w400,
-                                              color: ColorConstants.color3,
+                                              color: ColorConstants.tundora,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -378,7 +378,7 @@ class MatchItem extends StatelessWidget {
                   Container(
                     height: 70.0,
                     decoration: BoxDecoration(
-                      color: ColorConstants.textWhite,
+                      color: ColorConstants.theWhite,
                       borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(5.0),
                         bottomRight: Radius.circular(5.0),
@@ -407,7 +407,7 @@ class MatchItem extends StatelessWidget {
                                     AssetConstants.messenger,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.textBlack,
+                                      ColorConstants.theBlack,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -418,7 +418,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -436,7 +436,7 @@ class MatchItem extends StatelessWidget {
                                 children: [
                                   Icon(
                                     Icons.close_sharp,
-                                    color: ColorConstants.textBlack,
+                                    color: ColorConstants.theBlack,
                                     size: 25.0,
                                   ),
                                   const SizedBox(height: 2.0),
@@ -446,7 +446,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -466,7 +466,7 @@ class MatchItem extends StatelessWidget {
                                     AssetConstants.declinedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.textBlack,
+                                      ColorConstants.theBlack,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -477,7 +477,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -497,7 +497,7 @@ class MatchItem extends StatelessWidget {
                                     AssetConstants.acceptedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color7,
+                                      ColorConstants.salem,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -508,7 +508,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -526,7 +526,7 @@ class MatchItem extends StatelessWidget {
                                 children: [
                                   Icon(
                                     Icons.notifications_active_outlined,
-                                    color: ColorConstants.textBlack,
+                                    color: ColorConstants.theBlack,
                                     size: 25.0,
                                   ),
                                   const SizedBox(height: 2.0),
@@ -536,7 +536,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -568,7 +568,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -595,7 +595,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -613,7 +613,7 @@ class MatchItem extends StatelessWidget {
                                 children: [
                                   Icon(
                                     Icons.refresh,
-                                    color: ColorConstants.textBlack,
+                                    color: ColorConstants.theBlack,
                                     size: 25.0,
                                   ),
                                   const SizedBox(height: 2.0),
@@ -623,7 +623,7 @@ class MatchItem extends StatelessWidget {
                                       fontFamily: "Poppins",
                                       fontSize: 11.0,
                                       fontWeight: FontWeight.w400,
-                                      color: ColorConstants.textBlack,
+                                      color: ColorConstants.theBlack,
                                     ),
                                     textAlign: TextAlign.center,
                                   )
@@ -678,7 +678,7 @@ class MatchItem extends StatelessWidget {
                         fontFamily: "Inter",
                         fontSize: 10.0,
                         fontWeight: FontWeight.w600,
-                        color: ColorConstants.textWhite,
+                        color: ColorConstants.theWhite,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -695,7 +695,7 @@ class MatchItem extends StatelessWidget {
                     fontFamily: "Inter",
                     fontSize: 12.0,
                     fontWeight: FontWeight.w600,
-                    color: ColorConstants.textWhite,
+                    color: ColorConstants.theWhite,
                     shadows: const [
                       Shadow(
                         color: Colors.black,

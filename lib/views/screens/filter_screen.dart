@@ -110,8 +110,8 @@ class _FilterScreenState extends State<FilterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.filter,
           style: TextStyle(
@@ -128,7 +128,7 @@ class _FilterScreenState extends State<FilterScreen> {
             width: 105,
             height: MediaQuery.of(context).size.height,
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            color: ColorConstants.color8,
+            color: ColorConstants.paleRose,
             child: ListView(
               children: pages
                   .map(
@@ -144,13 +144,13 @@ class _FilterScreenState extends State<FilterScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
                         decoration: BoxDecoration(
                           color: pages[selectedIndex] == page
-                              ? ColorConstants.color14
-                              : ColorConstants.color8,
+                              ? ColorConstants.whitePointer
+                              : ColorConstants.paleRose,
                           border: Border(
                             bottom: BorderSide(
                               color: pages.last == page
-                                  ? ColorConstants.color8
-                                  : ColorConstants.color1,
+                                  ? ColorConstants.paleRose
+                                  : ColorConstants.jazzberryJam,
                             ),
                           ),
                         ),
@@ -161,7 +161,7 @@ class _FilterScreenState extends State<FilterScreen> {
                               fontFamily: "Poppins",
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
-                              color: ColorConstants.textBlack,
+                              color: ColorConstants.theBlack,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -184,7 +184,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       Text(
                         StringConstants.minAge,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                           fontSize: 17.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -214,14 +214,14 @@ class _FilterScreenState extends State<FilterScreen> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color5,
+                                color: ColorConstants.silver,
                                 width: 1,
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color10,
+                                color: ColorConstants.fuelYellow,
                                 width: 1,
                               ),
                             ),
@@ -251,7 +251,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       Text(
                         StringConstants.maxAge,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                           fontSize: 17.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -281,14 +281,14 @@ class _FilterScreenState extends State<FilterScreen> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color5,
+                                color: ColorConstants.silver,
                                 width: 1,
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color10,
+                                color: ColorConstants.fuelYellow,
                                 width: 1,
                               ),
                             ),
@@ -319,7 +319,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       Text(
                         StringConstants.minHeight,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                           fontSize: 17.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -351,14 +351,14 @@ class _FilterScreenState extends State<FilterScreen> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color5,
+                                color: ColorConstants.silver,
                                 width: 1,
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color10,
+                                color: ColorConstants.fuelYellow,
                                 width: 1,
                               ),
                             ),
@@ -388,7 +388,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       Text(
                         StringConstants.maxHeight,
                         style: TextStyle(
-                          color: ColorConstants.color3,
+                          color: ColorConstants.tundora,
                           fontSize: 17.0,
                           fontWeight: FontWeight.w600,
                         ),
@@ -420,14 +420,14 @@ class _FilterScreenState extends State<FilterScreen> {
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color5,
+                                color: ColorConstants.silver,
                                 width: 1,
                               ),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5),
                               borderSide: BorderSide(
-                                color: ColorConstants.color10,
+                                color: ColorConstants.fuelYellow,
                                 width: 1,
                               ),
                             ),
@@ -460,7 +460,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         Text(
                           StringConstants.maritalStatus,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -476,8 +476,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList.contains(
@@ -498,7 +498,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.doesNotMatter,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -507,7 +507,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.doesNotMatter)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -518,8 +518,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList
@@ -540,7 +540,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.neverMarried,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -549,7 +549,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.neverMarried)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -560,8 +560,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList
@@ -582,7 +582,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.married,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -591,7 +591,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.married)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -602,8 +602,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList
@@ -624,7 +624,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.divorced,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -633,7 +633,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.divorced)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -644,8 +644,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList
@@ -666,7 +666,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.widowed,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -675,7 +675,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.widowed)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -686,8 +686,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList.contains(
@@ -708,7 +708,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.awaitingMarried,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -717,7 +717,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.awaitingMarried)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -728,8 +728,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!maritalStatusList.contains(
@@ -750,7 +750,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.awaitingDivorce,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -759,7 +759,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.awaitingDivorce)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -779,7 +779,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         Text(
                           StringConstants.religion,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -795,8 +795,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList.contains(
@@ -817,7 +817,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.doesNotMatter,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -826,7 +826,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.doesNotMatter)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -837,8 +837,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -857,7 +857,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.hindu,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -865,7 +865,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     religionList.contains(StringConstants.hindu)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -876,8 +876,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -896,7 +896,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.muslim,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -905,7 +905,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.muslim)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -916,8 +916,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -936,7 +936,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.sikh,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -944,7 +944,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     religionList.contains(StringConstants.sikh)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -955,8 +955,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -976,7 +976,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.christian,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -985,7 +985,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.christian)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -996,8 +996,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -1017,7 +1017,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.buddhist,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1026,7 +1026,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.buddhist)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1037,8 +1037,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -1057,7 +1057,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.jain,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1065,7 +1065,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     religionList.contains(StringConstants.jain)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1076,8 +1076,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -1096,7 +1096,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.parsi,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1104,7 +1104,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     religionList.contains(StringConstants.parsi)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1115,8 +1115,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -1135,7 +1135,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.jewish,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1144,7 +1144,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.jewish)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1155,8 +1155,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!religionList
@@ -1175,7 +1175,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.bahai,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1183,7 +1183,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     religionList.contains(StringConstants.bahai)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1197,26 +1197,27 @@ class _FilterScreenState extends State<FilterScreen> {
                   TextField(
                     controller: casteTEC,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                     ),
                     decoration: InputDecoration(
                       // hintText: StringConstants.caste,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.caste,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),
@@ -1245,26 +1246,27 @@ class _FilterScreenState extends State<FilterScreen> {
                   TextField(
                     controller: motherTongueTEC,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                     ),
                     decoration: InputDecoration(
                       // hintText: StringConstants.motherTongue,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.motherTongue,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),
@@ -1297,20 +1299,21 @@ class _FilterScreenState extends State<FilterScreen> {
                       // hintText: StringConstants.country,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.country,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),
@@ -1335,20 +1338,21 @@ class _FilterScreenState extends State<FilterScreen> {
                       // hintText: StringConstants.state,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.state,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),
@@ -1367,8 +1371,8 @@ class _FilterScreenState extends State<FilterScreen> {
                         ),
                       ),
                     ),
-                    inputTextStyle: TextStyle(color: ColorConstants.color3),
-                    dialogBGColor: ColorConstants.color4,
+                    inputTextStyle: TextStyle(color: ColorConstants.tundora),
+                    dialogBGColor: ColorConstants.desertStorm,
                   ),
                 },
                 if (selectedIndex == 6) ...{
@@ -1397,13 +1401,13 @@ class _FilterScreenState extends State<FilterScreen> {
                       decoration: InputDecoration(
                         labelText: StringConstants.annualIncome.substring(
                             0, StringConstants.annualIncome.length - 1),
-                        labelStyle: TextStyle(color: ColorConstants.color11),
+                        labelStyle: TextStyle(color: ColorConstants.boulder),
                         contentPadding: const EdgeInsets.all(15.0),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius:
                               BorderRadius.circular(5), // Rounded corners
                           borderSide: BorderSide(
-                            color: ColorConstants.color5, // Border color
+                            color: ColorConstants.silver, // Border color
                             width: 1, // Border width
                           ),
                         ),
@@ -1411,7 +1415,8 @@ class _FilterScreenState extends State<FilterScreen> {
                           borderRadius: BorderRadius.circular(5),
                           // Same corners
                           borderSide: BorderSide(
-                            color: ColorConstants.color10, // Color when focused
+                            color:
+                                ColorConstants.fuelYellow, // Color when focused
                             width: 1, // Border width
                           ),
                         ),
@@ -1443,7 +1448,7 @@ class _FilterScreenState extends State<FilterScreen> {
                         Text(
                           StringConstants.residentialStatus,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -1459,8 +1464,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!residentialStatusList.contains(
@@ -1481,7 +1486,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.doesNotMatter,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1490,7 +1495,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.doesNotMatter)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1501,8 +1506,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!residentialStatusList
@@ -1523,7 +1528,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.citizen,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1532,7 +1537,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             .contains(StringConstants.citizen)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1543,8 +1548,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!residentialStatusList
@@ -1565,7 +1570,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.workPermit,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1574,7 +1579,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.workPermit)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1585,8 +1590,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!residentialStatusList
@@ -1607,7 +1612,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.studentVisa,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1616,7 +1621,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.studentVisa)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1627,8 +1632,8 @@ class _FilterScreenState extends State<FilterScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.color8,
-                              borderColor: ColorConstants.color1,
+                              bgColor: ColorConstants.paleRose,
+                              borderColor: ColorConstants.jazzberryJam,
                               onPressed: () async {
                                 setState(() {
                                   if (!residentialStatusList.contains(
@@ -1649,7 +1654,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     StringConstants.permanentResident,
                                     style: TextStyle(
                                       fontSize: 12,
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1658,7 +1663,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             StringConstants.permanentResident)
                                         ? Icons.remove
                                         : Icons.add,
-                                    color: ColorConstants.color3,
+                                    color: ColorConstants.tundora,
                                   )
                                 ],
                               ),
@@ -1673,26 +1678,27 @@ class _FilterScreenState extends State<FilterScreen> {
                   TextField(
                     controller: educationTEC,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                     ),
                     decoration: InputDecoration(
                       // hintText: StringConstants.education,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.education,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),
@@ -1720,26 +1726,27 @@ class _FilterScreenState extends State<FilterScreen> {
                   TextField(
                     controller: occupationTEC,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                     ),
                     decoration: InputDecoration(
                       // hintText: StringConstants.occupation,
                       // hintStyle: TextStyle(color: ColorConstants.color11),
                       labelText: StringConstants.occupation,
-                      labelStyle: TextStyle(color: ColorConstants.color11),
+                      labelStyle: TextStyle(color: ColorConstants.boulder),
                       contentPadding: const EdgeInsets.all(15.0),
                       enabledBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
                         // Rounded corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color5, // Border color
+                          color: ColorConstants.silver, // Border color
                           width: 1, // Border width
                         ),
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderRadius: BorderRadius.circular(5), // Same corners
                         borderSide: BorderSide(
-                          color: ColorConstants.color10, // Color when focused
+                          color:
+                              ColorConstants.fuelYellow, // Color when focused
                           width: 1, // Border width
                         ),
                       ),

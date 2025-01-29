@@ -84,7 +84,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       },
                       icon: Icon(
                         Icons.close_rounded,
-                        color: ColorConstants.textRed,
+                        color: ColorConstants.theRed,
                       ),
                     ),
                   ),
@@ -92,7 +92,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Text(
                     StringConstants.privacySetting,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontSize: 20.0,
                       fontWeight: FontWeight.w600,
                     ),
@@ -106,7 +106,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Text(
                           StringConstants.profilePicture,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -122,11 +122,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: profilePicturePrivacySetting ==
                                       StringConstants.showToAll
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   profilePicturePrivacySetting =
@@ -139,8 +139,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: profilePicturePrivacySetting ==
                                           StringConstants.showToAll
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -151,11 +151,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: profilePicturePrivacySetting ==
                                       StringConstants.hideFromAll
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   profilePicturePrivacySetting =
@@ -168,8 +168,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: profilePicturePrivacySetting ==
                                           StringConstants.hideFromAll
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -180,11 +180,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: profilePicturePrivacySetting ==
                                       StringConstants.showToMyInterests
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   profilePicturePrivacySetting =
@@ -197,8 +197,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: profilePicturePrivacySetting ==
                                           StringConstants.showToMyInterests
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -210,7 +210,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Text(
                             profilePicturePrivacySettingError,
                             style: TextStyle(
-                              color: ColorConstants.textRed,
+                              color: ColorConstants.theRed,
                               fontSize: 12.0,
                             ),
                           ),
@@ -226,7 +226,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Text(
                           StringConstants.contact1,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -242,11 +242,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: contactPrivacySetting ==
                                       StringConstants.showToAll
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   contactPrivacySetting =
@@ -259,8 +259,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: contactPrivacySetting ==
                                           StringConstants.showToAll
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -271,11 +271,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: contactPrivacySetting ==
                                       StringConstants.hideFromAll
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   contactPrivacySetting =
@@ -288,8 +288,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: contactPrivacySetting ==
                                           StringConstants.hideFromAll
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -300,11 +300,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 vertical: 5.0,
                                 horizontal: 0.0,
                               ),
-                              bgColor: ColorConstants.textWhite,
+                              bgColor: ColorConstants.theWhite,
                               borderColor: contactPrivacySetting ==
                                       StringConstants.showToMyInterests
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color5,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.silver,
                               onPressed: () async {
                                 setState(() {
                                   contactPrivacySetting =
@@ -317,8 +317,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   fontSize: 12,
                                   color: contactPrivacySetting ==
                                           StringConstants.showToMyInterests
-                                      ? ColorConstants.color1
-                                      : ColorConstants.color3,
+                                      ? ColorConstants.jazzberryJam
+                                      : ColorConstants.tundora,
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -330,7 +330,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Text(
                             contactPrivacySettingError,
                             style: TextStyle(
-                              color: ColorConstants.textRed,
+                              color: ColorConstants.theRed,
                               fontSize: 12.0,
                             ),
                           ),
@@ -359,10 +359,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               floating: false,
               snap: false,
               pinned: true,
-              backgroundColor: ColorConstants.color1,
-              foregroundColor: ColorConstants.textWhite,
+              backgroundColor: ColorConstants.jazzberryJam,
+              foregroundColor: ColorConstants.theWhite,
               iconTheme: IconThemeData(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 shadows: const [
                   Shadow(
                     color: Colors.black45,
@@ -376,7 +376,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   fontFamily: "Inter",
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   shadows: const [
                     Shadow(
                       color: Colors.black45,
@@ -394,7 +394,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 labelPadding: const EdgeInsets.all(0.0),
                 indicator: BoxDecoration(
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
                 // labelColor: ColorConstants.textWhite,
@@ -403,13 +403,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   fontFamily: "Poppins",
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                 ),
                 unselectedLabelStyle: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 14.0,
                   fontWeight: FontWeight.w500,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   shadows: const [
                     Shadow(
                       color: Colors.black45,
@@ -462,7 +462,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             backgroundColor: Colors.black26,
                             child: Icon(
                               Icons.my_library_add_outlined,
-                              color: ColorConstants.textWhite,
+                              color: ColorConstants.theWhite,
                               size: 20.0,
                             ),
                           ),
@@ -495,7 +495,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 fontFamily: "Inter",
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.w600,
-                                color: ColorConstants.textWhite,
+                                color: ColorConstants.theWhite,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -516,10 +516,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               vertical: 1.0,
                             ),
                             decoration: BoxDecoration(
-                              color: ColorConstants.textWhite,
+                              color: ColorConstants.theWhite,
                               borderRadius: BorderRadius.circular(4.0),
                               border: Border.all(
-                                color: ColorConstants.textWhite,
+                                color: ColorConstants.theWhite,
                               ),
                             ),
                             child: Row(
@@ -532,7 +532,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w600,
                                     fontStyle: FontStyle.italic,
-                                    color: ColorConstants.color7,
+                                    color: ColorConstants.salem,
                                     shadows: const [
                                       Shadow(
                                         color: Colors.white38,
@@ -548,7 +548,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.acceptedInterests,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color7,
+                                      ColorConstants.salem,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -567,7 +567,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         },
                         icon: Icon(
                           Icons.settings_outlined,
-                          color: ColorConstants.textWhite,
+                          color: ColorConstants.theWhite,
                           size: 25.0,
                         ),
                       ),
@@ -593,7 +593,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -606,7 +606,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.briefOutlineOfPersonalInfo,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -621,7 +621,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -641,7 +641,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.name,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -650,7 +650,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -665,7 +665,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Abhinash Bhardwaj",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -687,7 +687,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.height1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -696,7 +696,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -711,7 +711,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "5 ft 8 in",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -733,7 +733,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -742,7 +742,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -757,7 +757,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Hindi (Bihar)",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -779,7 +779,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.location,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -788,7 +788,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -803,7 +803,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Patna (Bihar) - India ",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -825,7 +825,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.annualIncome,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -834,7 +834,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -849,7 +849,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "8-10 Lakh p.a.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -871,7 +871,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.dateOfBirth,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -880,7 +880,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -895,7 +895,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "13 Mar 1998",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -917,7 +917,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.maritalStatus1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -926,7 +926,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -941,7 +941,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Never Married",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -963,7 +963,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.about,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -976,7 +976,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -990,7 +990,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1008,7 +1008,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 "provide comfort when your partner needs it. Trust and Honesty: Build trust by "
                                 "being honest and open about your feelings.",
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontFamily: "Poppins",
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,
@@ -1028,7 +1028,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.educationAndCareer,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1041,7 +1041,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1056,7 +1056,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1076,7 +1076,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.highestDegree,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1085,7 +1085,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1100,7 +1100,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "MCA",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1122,7 +1122,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.annualIncome,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1131,7 +1131,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1146,7 +1146,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "8-10 Lakh p.a.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1168,7 +1168,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.occupation,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1177,7 +1177,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1192,7 +1192,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Software Developer",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1214,7 +1214,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1227,7 +1227,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1242,7 +1242,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1262,7 +1262,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.religion,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1271,7 +1271,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1286,7 +1286,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1308,7 +1308,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.caste,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1317,7 +1317,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1332,7 +1332,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1354,7 +1354,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1363,7 +1363,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1378,7 +1378,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1400,7 +1400,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.contact,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1413,7 +1413,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1427,7 +1427,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1447,7 +1447,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.mobileNumber,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1456,7 +1456,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1471,7 +1471,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "+91-9876543210",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1493,7 +1493,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1506,7 +1506,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1521,7 +1521,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1541,7 +1541,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.drinkingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1550,7 +1550,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1565,7 +1565,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1587,7 +1587,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.smokingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1596,7 +1596,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1611,7 +1611,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1633,7 +1633,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.dietaryHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1642,7 +1642,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1657,7 +1657,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1679,7 +1679,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.specialCase,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1688,7 +1688,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1703,7 +1703,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1730,7 +1730,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.family,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -1743,7 +1743,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -1758,7 +1758,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -1778,7 +1778,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.familyType,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1787,7 +1787,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1802,7 +1802,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Nuclear",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1824,7 +1824,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.familyStatus,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1833,7 +1833,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1848,7 +1848,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Middle Class",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1870,7 +1870,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.numberOfBrothers,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1879,7 +1879,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1894,7 +1894,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "2",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1916,7 +1916,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.numberOfSisters,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1925,7 +1925,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1940,7 +1940,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "2",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -1962,7 +1962,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.motherOccupation,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.w500,
@@ -1971,7 +1971,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -1986,7 +1986,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Housewife",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2008,7 +2008,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.familyLivingIn,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2017,7 +2017,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2032,7 +2032,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Patna (Bihar) - India",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2050,7 +2050,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   Text(
                                     StringConstants.aboutMyFamily,
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
@@ -2063,7 +2063,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     " Firstly, always assess yourself thoroughly. You must understand "
                                     "your area of interest to choose a career.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2091,7 +2091,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.basicDetails,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2104,7 +2104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.briefOutlineOfPersonalInfo,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2119,7 +2119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -2139,7 +2139,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.height1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2148,7 +2148,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2163,7 +2163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "5' 2\" - 5'6\"",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2185,7 +2185,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.age,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2194,7 +2194,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2209,7 +2209,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "18 years - 28 years",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2231,7 +2231,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.country,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2240,7 +2240,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2255,7 +2255,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "India",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2277,7 +2277,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.location,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2286,7 +2286,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2301,7 +2301,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Patna (Bihar) - India ",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2323,7 +2323,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.maritalStatus1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2332,7 +2332,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2347,7 +2347,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Never Married",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2369,7 +2369,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2378,7 +2378,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2393,7 +2393,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Hindi (UP)",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2415,7 +2415,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.residentialStatus1,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 13.0,
                                           fontWeight: FontWeight.w500,
@@ -2424,7 +2424,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2439,7 +2439,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2462,7 +2462,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.educationAndOccupation,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2475,7 +2475,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2490,7 +2490,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -2510,7 +2510,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.highestDegree,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2519,7 +2519,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2534,7 +2534,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "MCA",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2556,7 +2556,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.annualIncome,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2565,7 +2565,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2580,7 +2580,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "8-10 Lakh p.a.",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2602,7 +2602,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.occupation,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2611,7 +2611,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2626,7 +2626,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Software Developer",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2649,7 +2649,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.religion,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2662,7 +2662,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2677,7 +2677,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -2697,7 +2697,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.religion,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2706,7 +2706,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2721,7 +2721,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2743,7 +2743,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.caste,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2752,7 +2752,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2767,7 +2767,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2789,7 +2789,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.motherTongue,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2798,7 +2798,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2813,7 +2813,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2836,7 +2836,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.lifeStyle,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -2849,7 +2849,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateTheseDetails,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -2864,7 +2864,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -2884,7 +2884,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.drinkingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2893,7 +2893,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2908,7 +2908,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2930,7 +2930,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.smokingHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2939,7 +2939,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2954,7 +2954,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -2976,7 +2976,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.dietaryHabits,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -2985,7 +2985,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -3000,7 +3000,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -3022,7 +3022,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         StringConstants.specialCase,
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -3031,7 +3031,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Text(
                                         ":",
                                         style: TextStyle(
-                                          color: ColorConstants.color3,
+                                          color: ColorConstants.tundora,
                                           fontFamily: "Poppins",
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
@@ -3046,7 +3046,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   child: Text(
                                     "Doesn't matter",
                                     style: TextStyle(
-                                      color: ColorConstants.color3,
+                                      color: ColorConstants.tundora,
                                       fontFamily: "Poppins",
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w300,
@@ -3069,7 +3069,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           title: Text(
                             StringConstants.aboutPartner,
                             style: TextStyle(
-                              color: ColorConstants.color1,
+                              color: ColorConstants.jazzberryJam,
                               fontFamily: "Inter",
                               fontSize: 16.0,
                               fontWeight: FontWeight.w600,
@@ -3082,7 +3082,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 Text(
                                   StringConstants.updateThisDetail,
                                   style: TextStyle(
-                                    color: ColorConstants.color1,
+                                    color: ColorConstants.jazzberryJam,
                                     fontFamily: "Inter",
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
@@ -3097,7 +3097,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     AssetConstants.edit,
                                     fit: BoxFit.scaleDown,
                                     colorFilter: ColorFilter.mode(
-                                      ColorConstants.color1,
+                                      ColorConstants.jazzberryJam,
                                       BlendMode.srcIn,
                                     ),
                                   ),
@@ -3115,7 +3115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 "provide comfort when your partner needs it. Trust and Honesty: Build trust by "
                                 "being honest and open about your feelings.",
                                 style: TextStyle(
-                                  color: ColorConstants.color3,
+                                  color: ColorConstants.tundora,
                                   fontFamily: "Poppins",
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w300,

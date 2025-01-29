@@ -21,8 +21,8 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: ColorConstants.color1,
-          foregroundColor: ColorConstants.textWhite,
+          backgroundColor: ColorConstants.jazzberryJam,
+          foregroundColor: ColorConstants.theWhite,
           title: const Text(
             StringConstants.profileViewed,
             style: TextStyle(
@@ -36,7 +36,7 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          color: ColorConstants.color2,
+          color: ColorConstants.solitude,
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             children: [
@@ -69,7 +69,7 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
                           fontFamily: "Poppins",
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500,
-                          color: ColorConstants.textGrey,
+                          color: ColorConstants.theGrey,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -95,7 +95,7 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
                           fontFamily: "Poppins",
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500,
-                          color: ColorConstants.textGrey,
+                          color: ColorConstants.theGrey,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -121,7 +121,7 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
                           fontFamily: "Poppins",
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500,
-                          color: ColorConstants.textGrey,
+                          color: ColorConstants.theGrey,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -147,7 +147,7 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
                           fontFamily: "Poppins",
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500,
-                          color: ColorConstants.textGrey,
+                          color: ColorConstants.theGrey,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -161,11 +161,11 @@ class _ProfileViewedScreenState extends State<ProfileViewedScreen> {
                 padding: const EdgeInsets.only(top: 10.0),
                 labelPadding: const EdgeInsets.all(0.0),
                 indicator: BoxDecoration(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                labelColor: ColorConstants.textWhite,
-                unselectedLabelColor: ColorConstants.color1,
+                labelColor: ColorConstants.theWhite,
+                unselectedLabelColor: ColorConstants.jazzberryJam,
                 labelStyle: const TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 16.0,

@@ -19,8 +19,8 @@ class _UpdatePartnerEduOccupationScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -41,7 +41,7 @@ class _UpdatePartnerEduOccupationScreenState
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -134,7 +134,7 @@ class _UpdatePartnerEduOccupationFormState
         children: [
           TextFormField(
             controller: highestDegreeTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -162,21 +162,21 @@ class _UpdatePartnerEduOccupationFormState
             decoration: InputDecoration(
               counterText: highestDegree.isNotEmpty ? null : "",
               hintText: StringConstants.highestDegree,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.highestDegree,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -205,7 +205,7 @@ class _UpdatePartnerEduOccupationFormState
           const SizedBox(height: 16.0),
           TextFormField(
             controller: occupationTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -233,21 +233,21 @@ class _UpdatePartnerEduOccupationFormState
             decoration: InputDecoration(
               counterText: occupation.isNotEmpty ? null : "",
               hintText: StringConstants.occupation,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.occupation,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -324,7 +324,7 @@ class _UpdatePartnerEduOccupationFormState
             child: Text(
               StringConstants.minAnnualIncome,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -358,14 +358,14 @@ class _UpdatePartnerEduOccupationFormState
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color5,
+                    color: ColorConstants.silver,
                     width: 1,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     width: 1,
                   ),
                 ),
@@ -437,7 +437,7 @@ class _UpdatePartnerEduOccupationFormState
             child: Text(
               StringConstants.maxAnnualIncome,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -471,14 +471,14 @@ class _UpdatePartnerEduOccupationFormState
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color5,
+                    color: ColorConstants.silver,
                     width: 1,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     width: 1,
                   ),
                 ),
@@ -504,13 +504,13 @@ class _UpdatePartnerEduOccupationFormState
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -521,7 +521,7 @@ class _UpdatePartnerEduOccupationFormState
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

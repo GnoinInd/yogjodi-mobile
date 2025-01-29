@@ -23,8 +23,8 @@ class _UpdateMyBasicDetailsScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -45,7 +45,7 @@ class _UpdateMyBasicDetailsScreenState
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -302,7 +302,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
         children: [
           TextFormField(
             controller: firstNameTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateFirstName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -331,23 +331,23 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: firstName.isNotEmpty ? null : "",
               hintText: StringConstants.firstName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.person_outline,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -376,7 +376,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
           const SizedBox(height: 16),
           TextFormField(
             controller: middleNameTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -404,23 +404,23 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: middleName.isNotEmpty ? null : "",
               hintText: StringConstants.middleName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.person_outline,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -449,7 +449,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
           const SizedBox(height: 16),
           TextFormField(
             controller: lastNameTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateLastName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -478,23 +478,23 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: lastName.isNotEmpty ? null : "",
               hintText: StringConstants.lastName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.person_outline,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -529,7 +529,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                   Text(
                     StringConstants.gender,
                     style: TextStyle(
-                      color: ColorConstants.color3,
+                      color: ColorConstants.tundora,
                       fontSize: 17.0,
                       fontWeight: FontWeight.w600,
                     ),
@@ -541,10 +541,10 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                       vertical: 5.0,
                       horizontal: 0.0,
                     ),
-                    bgColor: ColorConstants.textWhite,
+                    bgColor: ColorConstants.theWhite,
                     borderColor: gender == StringConstants.male
-                        ? ColorConstants.color1
-                        : ColorConstants.color5,
+                        ? ColorConstants.jazzberryJam
+                        : ColorConstants.silver,
                     onPressed: () async {
                       setState(() {
                         gender = StringConstants.male;
@@ -555,8 +555,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                       style: TextStyle(
                         fontSize: 12,
                         color: gender == StringConstants.male
-                            ? ColorConstants.color1
-                            : ColorConstants.color3,
+                            ? ColorConstants.jazzberryJam
+                            : ColorConstants.tundora,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -568,10 +568,10 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                       vertical: 5.0,
                       horizontal: 0.0,
                     ),
-                    bgColor: ColorConstants.textWhite,
+                    bgColor: ColorConstants.theWhite,
                     borderColor: gender == StringConstants.female
-                        ? ColorConstants.color1
-                        : ColorConstants.color5,
+                        ? ColorConstants.jazzberryJam
+                        : ColorConstants.silver,
                     onPressed: () async {
                       setState(() {
                         gender = StringConstants.female;
@@ -582,8 +582,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                       style: TextStyle(
                         fontSize: 12,
                         color: gender == StringConstants.female
-                            ? ColorConstants.color1
-                            : ColorConstants.color3,
+                            ? ColorConstants.jazzberryJam
+                            : ColorConstants.tundora,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -595,7 +595,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                 Text(
                   genderError,
                   style: TextStyle(
-                    color: ColorConstants.textRed,
+                    color: ColorConstants.theRed,
                     fontSize: 12.0,
                   ),
                 ),
@@ -608,7 +608,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               Text(
                 StringConstants.creatingProfileFor,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -635,14 +635,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -672,7 +672,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               Text(
                 StringConstants.profileManagedBy,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -703,14 +703,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -735,7 +735,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
           ),
           const SizedBox(height: 16.0),
           TextFormField(
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             controller: dobTEC,
             readOnly: false, // Allow manual input
             onTap: () => selectDOB(context), // Open the date picker
@@ -743,25 +743,25 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             validator: _validateDOB,
             decoration: InputDecoration(
               hintText: "DD/MM/YYYY",
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.dateOfBirth,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               prefixIcon: Icon(
                 Icons.calendar_today,
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
               ),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -789,7 +789,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: motherTongueTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             // validator: _validateMotherTongue,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -818,9 +818,9 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: motherTongue.isNotEmpty ? null : "",
               hintText: StringConstants.motherTongue,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.motherTongue,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               // prefixIcon: Icon(
               //   Icons.person_outline,
               //   color: ColorConstants.color3,
@@ -829,14 +829,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -869,7 +869,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               Text(
                 StringConstants.maritalStatus,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -900,14 +900,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -942,7 +942,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                     Text(
                       StringConstants.haveChildren,
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontSize: 17.0,
                         fontWeight: FontWeight.w600,
                       ),
@@ -955,10 +955,10 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                             vertical: 5.0,
                             horizontal: 0.0,
                           ),
-                          bgColor: ColorConstants.textWhite,
+                          bgColor: ColorConstants.theWhite,
                           borderColor: haveChildren == true
-                              ? ColorConstants.color1
-                              : ColorConstants.color5,
+                              ? ColorConstants.jazzberryJam
+                              : ColorConstants.silver,
                           onPressed: () async {
                             setState(() {
                               haveChildren = true;
@@ -969,8 +969,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                             style: TextStyle(
                               fontSize: 12,
                               color: haveChildren == true
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color3,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.tundora,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -982,10 +982,10 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                             vertical: 5.0,
                             horizontal: 0.0,
                           ),
-                          bgColor: ColorConstants.textWhite,
+                          bgColor: ColorConstants.theWhite,
                           borderColor: haveChildren == false
-                              ? ColorConstants.color1
-                              : ColorConstants.color5,
+                              ? ColorConstants.jazzberryJam
+                              : ColorConstants.silver,
                           onPressed: () async {
                             setState(() {
                               haveChildren = false;
@@ -996,8 +996,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                             style: TextStyle(
                               fontSize: 12,
                               color: haveChildren == false
-                                  ? ColorConstants.color1
-                                  : ColorConstants.color3,
+                                  ? ColorConstants.jazzberryJam
+                                  : ColorConstants.tundora,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -1011,7 +1011,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                   Text(
                     haveChildrenError,
                     style: TextStyle(
-                      color: ColorConstants.textRed,
+                      color: ColorConstants.theRed,
                       fontSize: 12.0,
                     ),
                   ),
@@ -1023,7 +1023,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             controller: currentAddressTEC,
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: currentAddress.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -1031,21 +1031,21 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: currentAddress.isNotEmpty ? null : "",
               hintText: StringConstants.currentAddress,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.currentAddress,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -1077,21 +1077,21 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             countryValidator: _validateCountry,
             countryInputDecoration: InputDecoration(
               hintText: StringConstants.country,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.country,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -1114,21 +1114,21 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             stateValidator: _validateState,
             stateInputDecoration: InputDecoration(
               hintText: StringConstants.state,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.state,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -1151,21 +1151,21 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             cityValidator: _validateCity,
             cityInputDecoration: InputDecoration(
               hintText: StringConstants.city,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.city,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -1184,8 +1184,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                 ),
               ),
             ),
-            inputTextStyle: TextStyle(color: ColorConstants.color3),
-            dialogBGColor: ColorConstants.color4,
+            inputTextStyle: TextStyle(color: ColorConstants.tundora),
+            dialogBGColor: ColorConstants.desertStorm,
           ),
           const SizedBox(height: 16.0),
           Row(
@@ -1194,7 +1194,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               Text(
                 StringConstants.height,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -1222,14 +1222,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -1257,7 +1257,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             controller: expressYourselfTEC,
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: expressYourself.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -1265,21 +1265,21 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             decoration: InputDecoration(
               counterText: expressYourself.isNotEmpty ? null : "",
               hintText: StringConstants.expressYourself,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.expressYourself,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -1310,13 +1310,13 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (!validateGender()) {
                   return;
@@ -1330,7 +1330,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

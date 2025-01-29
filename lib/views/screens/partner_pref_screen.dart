@@ -23,8 +23,8 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.partnerPreferences,
           style: TextStyle(
@@ -48,7 +48,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
             title: Text(
               StringConstants.basicDetails,
               style: TextStyle(
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
@@ -61,7 +61,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   Text(
                     StringConstants.briefOutlineOfPersonalInfo,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontFamily: "Inter",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -75,7 +75,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       AssetConstants.edit,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -94,7 +94,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.height1,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -103,7 +103,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -118,7 +118,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "5' 2\" - 5'6\"",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -139,7 +139,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.age,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -148,7 +148,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -163,7 +163,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "18 years - 28 years",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -184,7 +184,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.country,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -193,7 +193,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -208,7 +208,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "India",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -229,7 +229,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.location,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -238,7 +238,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -253,7 +253,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Patna (Bihar) - India ",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -274,7 +274,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.maritalStatus1,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -283,7 +283,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -298,7 +298,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Never Married",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -319,7 +319,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.motherTongue,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -328,7 +328,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -343,7 +343,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Hindi (UP)",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -364,7 +364,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.residentialStatus1,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 13.0,
                             fontWeight: FontWeight.w500,
@@ -373,7 +373,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -388,7 +388,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -411,7 +411,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
             title: Text(
               StringConstants.educationAndOccupation,
               style: TextStyle(
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
@@ -424,7 +424,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   Text(
                     StringConstants.updateTheseDetails,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontFamily: "Inter",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -438,7 +438,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       AssetConstants.edit,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -457,7 +457,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.highestDegree,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -466,7 +466,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -481,7 +481,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "MCA",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -502,7 +502,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.annualIncome,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -511,7 +511,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -526,7 +526,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "8-10 Lakh p.a.",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -547,7 +547,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.occupation,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -556,7 +556,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -571,7 +571,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Software Developer",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -594,7 +594,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
             title: Text(
               StringConstants.religion,
               style: TextStyle(
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
@@ -607,7 +607,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   Text(
                     StringConstants.updateTheseDetails,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontFamily: "Inter",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -621,7 +621,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       AssetConstants.edit,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -640,7 +640,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.religion,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -649,7 +649,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -664,7 +664,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -685,7 +685,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.caste,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -694,7 +694,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -709,7 +709,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -730,7 +730,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.motherTongue,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -739,7 +739,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -754,7 +754,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -777,7 +777,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
             title: Text(
               StringConstants.lifeStyle,
               style: TextStyle(
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
@@ -790,7 +790,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   Text(
                     StringConstants.updateTheseDetails,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontFamily: "Inter",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -804,7 +804,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       AssetConstants.edit,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -823,7 +823,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.drinkingHabits,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -832,7 +832,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -847,7 +847,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -868,7 +868,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.smokingHabits,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -877,7 +877,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -892,7 +892,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -913,7 +913,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.dietaryHabits,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -922,7 +922,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -937,7 +937,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -958,7 +958,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           StringConstants.specialCase,
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -967,7 +967,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                         Text(
                           ":",
                           style: TextStyle(
-                            color: ColorConstants.color3,
+                            color: ColorConstants.tundora,
                             fontFamily: "Poppins",
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
@@ -982,7 +982,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                     child: Text(
                       "Doesn't matter",
                       style: TextStyle(
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w300,
@@ -1005,7 +1005,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
             title: Text(
               StringConstants.aboutPartner,
               style: TextStyle(
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
                 fontFamily: "Inter",
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
@@ -1018,7 +1018,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   Text(
                     StringConstants.updateThisDetail,
                     style: TextStyle(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                       fontFamily: "Inter",
                       fontSize: 12.0,
                       fontWeight: FontWeight.w500,
@@ -1034,7 +1034,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       AssetConstants.edit,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.color1,
+                        ColorConstants.jazzberryJam,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -1052,7 +1052,7 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                   "provide comfort when your partner needs it. Trust and Honesty: Build trust by "
                   "being honest and open about your feelings.",
                   style: TextStyle(
-                    color: ColorConstants.color3,
+                    color: ColorConstants.tundora,
                     fontFamily: "Poppins",
                     fontSize: 14.0,
                     fontWeight: FontWeight.w300,

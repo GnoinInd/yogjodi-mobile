@@ -19,8 +19,8 @@ class _UpdatePartnerReligionScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -41,7 +41,7 @@ class _UpdatePartnerReligionScreenState
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -105,7 +105,7 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
         children: [
           TextFormField(
             controller: religionTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -133,9 +133,9 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
             decoration: InputDecoration(
               counterText: religion.isNotEmpty ? null : "",
               hintText: StringConstants.religion,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.religion,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               // prefixIcon: Icon(
               //   Icons.person_outline,
               //   color: ColorConstants.color3,
@@ -144,14 +144,14 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -180,7 +180,7 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: casteTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -208,9 +208,9 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
             decoration: InputDecoration(
               counterText: caste.isNotEmpty ? null : "",
               hintText: StringConstants.caste,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.caste,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               // prefixIcon: Icon(
               //   Icons.person_outline,
               //   color: ColorConstants.color3,
@@ -219,14 +219,14 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -255,7 +255,7 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: goutraToExcludeTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -283,21 +283,21 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
             decoration: InputDecoration(
               counterText: goutraToExclude.isNotEmpty ? null : "",
               hintText: StringConstants.goutraToExclude,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.goutraToExclude,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -328,13 +328,13 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -345,7 +345,7 @@ class _UpdatePartnerReligionFormState extends State<UpdatePartnerReligionForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

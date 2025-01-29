@@ -19,7 +19,7 @@ class _AboutScreenState extends State<AboutScreen> {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 24.0,
-            color: ColorConstants.color1,
+            color: ColorConstants.jazzberryJam,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -43,7 +43,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     fontFamily: "Ikaros",
                     fontWeight: FontWeight.w400,
                     fontSize: 24.0,
-                    color: ColorConstants.textWhite,
+                    color: ColorConstants.theWhite,
                   ),
                 ),
                 Text(
@@ -52,7 +52,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     fontFamily: "Ikaros",
                     fontWeight: FontWeight.w400,
                     fontSize: 14.0,
-                    color: ColorConstants.textWhite,
+                    color: ColorConstants.theWhite,
                   ),
                 ),
               ],

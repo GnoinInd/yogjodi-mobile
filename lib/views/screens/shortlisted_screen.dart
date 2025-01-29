@@ -17,8 +17,8 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.shortlisted,
           style: TextStyle(
@@ -32,7 +32,7 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: ColorConstants.color2,
+        color: ColorConstants.solitude,
         child: Column(
           children: [
             SizedBox(
@@ -64,7 +64,7 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -90,7 +90,7 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -116,7 +116,7 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -142,7 +142,7 @@ class _ShortlistedScreenState extends State<ShortlistedScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14.0,
                         fontWeight: FontWeight.w500,
-                        color: ColorConstants.textGrey,
+                        color: ColorConstants.theGrey,
                       ),
                       textAlign: TextAlign.center,
                     ),

@@ -219,6 +219,10 @@ class StringConstants {
   static const String imageGallery = "Image Gallery";
   static const String remind = "Remind";
   static const String unblock = "Unblock";
+  static const String rateTheApp = "Rate the app";
+  static const String howDoYouRate = "How do you rate your experience?";
+  static const String iLoveIt = "I LOVE IT";
+  static const String needsImprovement = "NEEDS IMPROVEMENT";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";

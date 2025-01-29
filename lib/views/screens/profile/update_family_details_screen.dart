@@ -19,8 +19,8 @@ class _UpdateFamilyDetailsScreenState extends State<UpdateFamilyDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.update,
           style: TextStyle(
@@ -41,7 +41,7 @@ class _UpdateFamilyDetailsScreenState extends State<UpdateFamilyDetailsScreen> {
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
-                color: ColorConstants.color1,
+                color: ColorConstants.jazzberryJam,
               ),
               textAlign: TextAlign.center,
             ),
@@ -182,7 +182,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
         children: [
           TextFormField(
             controller: fatherNameTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             validator: _validateFatherName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -211,21 +211,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: fatherName.isNotEmpty ? null : "",
               hintText: StringConstants.fatherName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.fatherName,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -254,7 +254,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: motherNameTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             // validator: _validateMotherName,
             inputFormatters: [
               FilteringTextInputFormatter.allow(
@@ -283,21 +283,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: motherName.isNotEmpty ? null : "",
               hintText: StringConstants.motherName,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.motherName,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -326,7 +326,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
           const SizedBox(height: 16),
           TextFormField(
             controller: brothersTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                 RegExp(r'[1-9]'), // Add characters to allow
@@ -339,21 +339,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: brothers.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfBrothers,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.numberOfBrothers,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -382,7 +382,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
           const SizedBox(height: 16),
           TextFormField(
             controller: sistersTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                 RegExp(r'[1-9]'), // Add characters to allow
@@ -395,21 +395,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: sisters.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfSisters,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.numberOfSisters,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -438,7 +438,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: fatherOccupationTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -466,21 +466,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: fatherOccupation.isNotEmpty ? null : "",
               hintText: StringConstants.fatherOccupation,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.fatherOccupation,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -509,7 +509,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
           const SizedBox(height: 16.0),
           TextFormField(
             controller: motherOccupationTEC,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             inputFormatters: [
               FilteringTextInputFormatter.allow(
                   RegExp(r'[a-zA-Z ]') // Allow alphabets and space
@@ -537,21 +537,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: motherOccupation.isNotEmpty ? null : "",
               hintText: StringConstants.motherOccupation,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.motherOccupation,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -628,7 +628,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             child: Text(
               StringConstants.familyAnnualIncome,
               style: TextStyle(
-                color: ColorConstants.color3,
+                color: ColorConstants.tundora,
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
               ),
@@ -662,14 +662,14 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color5,
+                    color: ColorConstants.silver,
                     width: 1,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     width: 1,
                   ),
                 ),
@@ -742,7 +742,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
               Text(
                 StringConstants.familyStatus,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -774,14 +774,14 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -811,7 +811,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
               Text(
                 StringConstants.familyType,
                 style: TextStyle(
-                  color: ColorConstants.color3,
+                  color: ColorConstants.tundora,
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -842,14 +842,14 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color5,
+                        color: ColorConstants.silver,
                         width: 1,
                       ),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide(
-                        color: ColorConstants.color1,
+                        color: ColorConstants.jazzberryJam,
                         width: 1,
                       ),
                     ),
@@ -877,7 +877,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             controller: aboutFamilyTEC,
             minLines: 2,
             maxLines: 5,
-            style: TextStyle(color: ColorConstants.color3),
+            style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutMyFamily.isNotEmpty
                 ? MaxLengthEnforcement.none
@@ -885,21 +885,21 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             decoration: InputDecoration(
               counterText: aboutMyFamily.isNotEmpty ? null : "",
               hintText: StringConstants.aboutMyFamily,
-              hintStyle: TextStyle(color: ColorConstants.color3),
+              hintStyle: TextStyle(color: ColorConstants.tundora),
               labelText: StringConstants.aboutMyFamily,
-              labelStyle: TextStyle(color: ColorConstants.color3),
+              labelStyle: TextStyle(color: ColorConstants.tundora),
               contentPadding: const EdgeInsets.all(15.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color5,
+                  color: ColorConstants.silver,
                   width: 1,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(
-                  color: ColorConstants.color1,
+                  color: ColorConstants.jazzberryJam,
                   width: 1,
                 ),
               ),
@@ -930,13 +930,13 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             visible: true,
             replacement: Center(
               child: CircularProgressIndicator(
-                color: ColorConstants.textWhite,
+                color: ColorConstants.theWhite,
                 strokeWidth: 3.0,
               ),
             ),
             child: ColoredButton(
               radius: 50.0,
-              color: ColorConstants.color13,
+              color: ColorConstants.brickRed,
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
@@ -947,7 +947,7 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
                 StringConstants.save,
                 style: TextStyle(
                   fontSize: 18,
-                  color: ColorConstants.textWhite,
+                  color: ColorConstants.theWhite,
                   fontWeight: FontWeight.w500,
                 ),
                 textAlign: TextAlign.center,

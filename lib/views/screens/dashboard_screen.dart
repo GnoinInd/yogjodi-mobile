@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
 import 'package:yog_jodi/views/screens/activity_screen.dart';
+import 'package:yog_jodi/views/screens/app_rating_screen.dart';
 import 'package:yog_jodi/views/screens/blocked_profiles_screen.dart';
 import 'package:yog_jodi/views/screens/matches_screen.dart';
 import 'package:yog_jodi/views/screens/partner_pref_screen.dart';
@@ -56,7 +57,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-        statusBarColor: ColorConstants.color1,
+        statusBarColor: ColorConstants.jazzberryJam,
         statusBarIconBrightness: Brightness.light,
       ),
     );
@@ -82,12 +83,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
               fontFamily: "Ikaros",
               fontSize: 22.0,
               fontWeight: FontWeight.w500,
-              color: ColorConstants.textWhite,
+              color: ColorConstants.theWhite,
             ),
             textAlign: TextAlign.center,
           ),
-          backgroundColor: ColorConstants.color1,
-          foregroundColor: ColorConstants.textWhite,
+          backgroundColor: ColorConstants.jazzberryJam,
+          foregroundColor: ColorConstants.theWhite,
         ),
         drawer: customDrawer(),
         bottomNavigationBar: customBottomNavigation(),
@@ -161,7 +162,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       CircularProfileWithPercentIndicator(
                         size: 60,
                         completionPercentage: 80,
-                        percentIndicatorColor: ColorConstants.color7,
+                        percentIndicatorColor: ColorConstants.salem,
                         imageSizeFactor: 2.1,
                         imagePath:
                             'https://plus.unsplash.com/premium_photo-1691030254390-aa56b22e6a45', // Replace with actual image URL
@@ -178,7 +179,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 fontFamily: "Inter",
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
-                                color: ColorConstants.color3,
+                                color: ColorConstants.tundora,
                               ),
                               textAlign: TextAlign.left,
                               // overflow: TextOverflow.ellipsis,
@@ -193,7 +194,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                   fontFamily: "Inter",
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
-                                  color: ColorConstants.color7,
+                                  color: ColorConstants.salem,
                                 ),
                               ),
                               const SizedBox(width: 10.0),
@@ -207,7 +208,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     fontFamily: "Inter",
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: ColorConstants.textRed,
+                                    color: ColorConstants.theRed,
                                   ),
                                 ),
                               ),
@@ -220,7 +221,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   const SizedBox(height: 20.0),
                   ColoredButton(
                     width: 180,
-                    color: ColorConstants.color1,
+                    color: ColorConstants.jazzberryJam,
                     radius: 10.0,
                     padding: const EdgeInsets.symmetric(
                       vertical: 10.0,
@@ -240,7 +241,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             fontFamily: "Inter",
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: ColorConstants.textWhite,
+                            color: ColorConstants.theWhite,
                           ),
                         )
                       ],
@@ -264,7 +265,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -288,7 +289,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -312,7 +313,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -332,7 +333,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -352,7 +353,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -372,7 +373,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -392,7 +393,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -412,7 +413,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.color3,
+                        color: ColorConstants.tundora,
                       ),
                     ),
                     trailing: SvgPicture.asset(
@@ -421,12 +422,36 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                     onTap: () {},
                   ),
+                  ListTile(
+                    leading: Icon(
+                      Icons.star_border,
+                      color: ColorConstants.tundora,
+                    ),
+                    title: Text(
+                      StringConstants.rateTheApp,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        color: ColorConstants.tundora,
+                      ),
+                    ),
+                    trailing: SvgPicture.asset(
+                      AssetConstants.right,
+                      fit: BoxFit.scaleDown,
+                    ),
+                    onTap: () {
+                      Get.to(
+                        () => const AppRatingScreen(),
+                      );
+                    },
+                  ),
 
                   ///Logout
                   ListTile(
                     leading: Icon(
                       Icons.logout_sharp,
-                      color: ColorConstants.textRed,
+                      color: ColorConstants.theRed,
                     ),
                     title: Text(
                       StringConstants.logout,
@@ -434,14 +459,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         fontFamily: "Poppins",
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
-                        color: ColorConstants.textRed,
+                        color: ColorConstants.theRed,
                       ),
                     ),
                     trailing: SvgPicture.asset(
                       AssetConstants.right,
                       fit: BoxFit.scaleDown,
                       colorFilter: ColorFilter.mode(
-                        ColorConstants.textRed,
+                        ColorConstants.theRed,
                         BlendMode.srcIn,
                       ),
                     ),
@@ -515,8 +540,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
       currentIndex: _currentIndex, // Set the current selected tab
       onTap: _onTabTapped, // Handle tab changes
       type: BottomNavigationBarType.fixed, // Ensures icons stay fixed
-      selectedItemColor: ColorConstants.color1, // Selected item color
-      unselectedItemColor: ColorConstants.color3, // Unselected item color
+      selectedItemColor: ColorConstants.jazzberryJam, // Selected item color
+      unselectedItemColor: ColorConstants.tundora, // Unselected item color
       selectedLabelStyle: const TextStyle(
         fontFamily: "Poppins",
         fontSize: 13,
@@ -537,7 +562,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             AssetConstants.matches,
             fit: BoxFit.scaleDown,
             colorFilter: ColorFilter.mode(
-              ColorConstants.color1,
+              ColorConstants.jazzberryJam,
               BlendMode.srcIn,
             ),
           ),
@@ -552,7 +577,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             AssetConstants.activity,
             fit: BoxFit.scaleDown,
             colorFilter: ColorFilter.mode(
-              ColorConstants.color1,
+              ColorConstants.jazzberryJam,
               BlendMode.srcIn,
             ),
           ),
@@ -567,7 +592,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             AssetConstants.search,
             fit: BoxFit.scaleDown,
             colorFilter: ColorFilter.mode(
-              ColorConstants.color1,
+              ColorConstants.jazzberryJam,
               BlendMode.srcIn,
             ),
           ),
@@ -582,7 +607,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             AssetConstants.messenger,
             fit: BoxFit.scaleDown,
             colorFilter: ColorFilter.mode(
-              ColorConstants.color1,
+              ColorConstants.jazzberryJam,
               BlendMode.srcIn,
             ),
           ),

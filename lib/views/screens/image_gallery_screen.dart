@@ -32,8 +32,8 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorConstants.color1,
-        foregroundColor: ColorConstants.textWhite,
+        backgroundColor: ColorConstants.jazzberryJam,
+        foregroundColor: ColorConstants.theWhite,
         title: const Text(
           StringConstants.imageGallery,
           style: TextStyle(
@@ -45,11 +45,11 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: ColorConstants.color8,
+        backgroundColor: ColorConstants.paleRose,
         onPressed: () {},
         child: Icon(
           Icons.add_a_photo_outlined,
-          color: ColorConstants.color1,
+          color: ColorConstants.jazzberryJam,
         ),
       ),
       body: Padding(
@@ -80,12 +80,12 @@ class _ImageGalleryScreenState extends State<ImageGalleryScreen> {
                   fit: BoxFit.cover,
                   placeholder: (context, url) => Center(
                     child: CircularProgressIndicator(
-                      color: ColorConstants.color1,
+                      color: ColorConstants.jazzberryJam,
                     ),
                   ),
                   errorWidget: (context, url, error) => Icon(
                     Icons.error,
-                    color: ColorConstants.textRed,
+                    color: ColorConstants.theRed,
                   ),
                 ),
               ),
