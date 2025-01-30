@@ -223,6 +223,10 @@ class StringConstants {
   static const String howDoYouRate = "How do you rate your experience?";
   static const String iLoveIt = "I LOVE IT";
   static const String needsImprovement = "NEEDS IMPROVEMENT";
+  static const String noDataAvailable = "No Data Available";
+  static const String thereIsNoDataToBeShown =
+      "There is no data available to be shown here.";
+  static const String notifications = "Notifications";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
