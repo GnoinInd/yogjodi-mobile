@@ -227,6 +227,11 @@ class StringConstants {
   static const String thereIsNoDataToBeShown =
       "There is no data available to be shown here.";
   static const String notifications = "Notifications";
+  static const String addStory = "Add Story";
+  static const String groomName = "Groom Name";
+  static const String brideName = "Bride Name";
+  static const String story = "Story";
+  static const String add = "Add";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -262,6 +267,9 @@ class StringConstants {
   static const String countryIsRequired = "Country is required.";
   static const String stateIsRequired = "State Type is required.";
   static const String cityIsRequired = "City Type is required.";
+  static const String groomNameIsRequired = "Groom name is required.";
+  static const String brideNameIsRequired = "Bride name is required.";
+  static const String storyIsRequired = "Story is required.";
 
   ///
 

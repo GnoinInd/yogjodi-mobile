@@ -92,8 +92,8 @@ class _UpdatePartnerLifestyleFormState
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutPartner.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutPartner.isNotEmpty ? null : "",
               hintText: StringConstants.aboutPartner,

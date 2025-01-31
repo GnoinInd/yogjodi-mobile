@@ -326,8 +326,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             ],
             maxLength: 30,
             maxLengthEnforcement: firstName.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: firstName.isNotEmpty ? null : "",
               hintText: StringConstants.firstName,
@@ -399,8 +399,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             ],
             maxLength: 30,
             maxLengthEnforcement: middleName.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: middleName.isNotEmpty ? null : "",
               hintText: StringConstants.middleName,
@@ -473,8 +473,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             ],
             maxLength: 30,
             maxLengthEnforcement: lastName.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: lastName.isNotEmpty ? null : "",
               hintText: StringConstants.lastName,
@@ -1026,8 +1026,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: currentAddress.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: currentAddress.isNotEmpty ? null : "",
               hintText: StringConstants.currentAddress,
@@ -1260,8 +1260,8 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: expressYourself.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: expressYourself.isNotEmpty ? null : "",
               hintText: StringConstants.expressYourself,

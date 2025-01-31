@@ -11,6 +11,7 @@ import 'package:yog_jodi/views/screens/matches_screen.dart';
 import 'package:yog_jodi/views/screens/partner_pref_screen.dart';
 import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 import 'package:yog_jodi/views/screens/search_screen.dart';
+import 'package:yog_jodi/views/screens/story/success_stories_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
 import '../../common/constants/color_constants.dart';
@@ -400,7 +401,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       AssetConstants.right,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const SuccessStoriesScreen());
+                    },
                   ),
                   ListTile(
                     leading: SvgPicture.asset(

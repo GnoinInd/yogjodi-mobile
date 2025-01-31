@@ -776,8 +776,8 @@ class _RegisterForm3State extends State<RegisterForm3> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutJob.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutJob.isNotEmpty ? null : "",
               hintText: StringConstants.aboutJob,
@@ -828,8 +828,8 @@ class _RegisterForm3State extends State<RegisterForm3> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutJobLocation.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutJobLocation.isNotEmpty ? null : "",
               hintText: StringConstants.aboutJobLocation,

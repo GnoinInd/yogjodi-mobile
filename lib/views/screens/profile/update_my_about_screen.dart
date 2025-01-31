@@ -94,8 +94,8 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: hobbies.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: hobbies.isNotEmpty ? null : "",
               hintText: StringConstants.hobbies,
@@ -145,8 +145,8 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: interests.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: interests.isNotEmpty ? null : "",
               hintText: StringConstants.interests,
@@ -196,8 +196,8 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: sports.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: sports.isNotEmpty ? null : "",
               hintText: StringConstants.sports,
@@ -249,8 +249,8 @@ class _UpdateMyAboutFormState extends State<UpdateMyAboutForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutMe.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutMe.isNotEmpty ? null : "",
               hintText: StringConstants.aboutMe,

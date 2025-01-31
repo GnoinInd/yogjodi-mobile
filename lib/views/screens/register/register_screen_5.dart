@@ -1557,8 +1557,8 @@ class _RegisterForm5State extends State<RegisterForm5> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutPartner.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutPartner.isNotEmpty ? null : "",
               hintText: StringConstants.aboutPartner,

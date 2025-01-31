@@ -334,8 +334,8 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             ],
             maxLength: 1,
             maxLengthEnforcement: brothers.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: brothers.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfBrothers,
@@ -390,8 +390,8 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             ],
             maxLength: 1,
             maxLengthEnforcement: sisters.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: sisters.isNotEmpty ? null : "",
               hintText: StringConstants.numberOfSisters,
@@ -880,8 +880,8 @@ class _UpdateFamilyDetailsFormState extends State<UpdateFamilyDetailsForm> {
             style: TextStyle(color: ColorConstants.tundora),
             maxLength: 100,
             maxLengthEnforcement: aboutMyFamily.isNotEmpty
-                ? MaxLengthEnforcement.none
-                : MaxLengthEnforcement.enforced,
+                ? MaxLengthEnforcement.enforced
+                : MaxLengthEnforcement.none,
             decoration: InputDecoration(
               counterText: aboutMyFamily.isNotEmpty ? null : "",
               hintText: StringConstants.aboutMyFamily,
