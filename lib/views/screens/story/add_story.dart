@@ -164,6 +164,21 @@ class _AddStoryFormState extends State<AddStoryForm> {
     );
   }
 
+  String imageError = '';
+  bool validateImage() {
+    if (imageUrl.isEmpty && _imageFile == null) {
+      setState(() {
+        imageError = StringConstants.imageIsRequired;
+      });
+      return false;
+    } else {
+      setState(() {
+        imageError = '';
+      });
+      return true;
+    }
+  }
+
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -254,6 +269,15 @@ class _AddStoryFormState extends State<AddStoryForm> {
               ),
             ],
           ),
+          const SizedBox(height: 5),
+          if (imageError.isNotEmpty)
+            Text(
+              imageError,
+              style: TextStyle(
+                color: ColorConstants.theRed,
+                fontSize: 12.0,
+              ),
+            ),
           const SizedBox(height: 20.0),
           TextFormField(
             controller: groomNameTEC,
@@ -465,6 +489,9 @@ class _AddStoryFormState extends State<AddStoryForm> {
               radius: 50.0,
               color: ColorConstants.brickRed,
               onPressed: () async {
+                if (!validateImage()) {
+                  return;
+                }
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   FocusScope.of(context).unfocus();

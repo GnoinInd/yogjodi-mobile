@@ -12,6 +12,7 @@ import 'package:yog_jodi/views/screens/partner_pref_screen.dart';
 import 'package:yog_jodi/views/screens/profile/profile_screen.dart';
 import 'package:yog_jodi/views/screens/search_screen.dart';
 import 'package:yog_jodi/views/screens/story/success_stories_screen.dart';
+import 'package:yog_jodi/views/screens/verify_profile_screen.dart';
 import 'package:yog_jodi/views/widgets/colored_button.dart';
 
 import '../../common/constants/color_constants.dart';
@@ -301,6 +302,32 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       Get.to(
                         () => const BlockedProfilesScreen(),
                       );
+                    },
+                  ),
+                  ListTile(
+                    leading: SvgPicture.asset(
+                      AssetConstants.acceptedInterests,
+                      fit: BoxFit.scaleDown,
+                      colorFilter: ColorFilter.mode(
+                        ColorConstants.tundora,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    title: Text(
+                      StringConstants.verifyProfile,
+                      style: TextStyle(
+                        fontFamily: "Poppins",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        color: ColorConstants.tundora,
+                      ),
+                    ),
+                    trailing: SvgPicture.asset(
+                      AssetConstants.right,
+                      fit: BoxFit.scaleDown,
+                    ),
+                    onTap: () {
+                      Get.to(() => const VerifyProfileScreen());
                     },
                   ),
                   ListTile(

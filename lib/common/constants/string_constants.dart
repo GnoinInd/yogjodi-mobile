@@ -232,6 +232,11 @@ class StringConstants {
   static const String brideName = "Bride Name";
   static const String story = "Story";
   static const String add = "Add";
+  static const String verifyProfile = "Verify Profile";
+  static const String documentType = "Document Type :";
+  static const String documentNumber = "Document Number";
+  static const String addDocumentFrontImage = "Add Document Front Image";
+  static const String addDocumentBackImage = "Add Document Back Image";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -270,6 +275,14 @@ class StringConstants {
   static const String groomNameIsRequired = "Groom name is required.";
   static const String brideNameIsRequired = "Bride name is required.";
   static const String storyIsRequired = "Story is required.";
+  static const String selfieIsRequired = "Selfie is required.";
+  static const String documentTypeIsRequired = "Document Type is required.";
+  static const String documentNumberIsRequired = "Document Number is required.";
+  static const String documentFrontImageIsRequired =
+      "Document Front Image is required.";
+  static const String documentBackImageIsRequired =
+      "Document Back Image is required.";
+  static const String imageIsRequired = "Image is required.";
 
   ///
 

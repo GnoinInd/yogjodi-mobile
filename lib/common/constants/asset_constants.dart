@@ -10,6 +10,7 @@ class AssetConstants {
   static const String searchImage = "assets/images/search.png";
   static const String loadingImage = "assets/images/loading.png";
   static const String userImage = "assets/images/user.png";
+  static const String blankImage = "assets/images/blank.png";
   //Icon Assets
   static const String aeroTopRight = "assets/icons/aero-top-right.svg";
   static const String matches = "assets/icons/matches.svg";
