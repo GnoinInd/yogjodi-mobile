@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:yog_jodi/common/constants/asset_constants.dart';
+import 'package:yog_jodi/views/screens/account_and_settings_screen.dart';
 import 'package:yog_jodi/views/screens/activity_screen.dart';
 import 'package:yog_jodi/views/screens/app_rating_screen.dart';
 import 'package:yog_jodi/views/screens/blocked_profiles_screen.dart';
@@ -388,7 +389,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       AssetConstants.right,
                       fit: BoxFit.scaleDown,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(() => const AccountAndSettingsScreen());
+                    },
                   ),
                   ListTile(
                     leading: SvgPicture.asset(

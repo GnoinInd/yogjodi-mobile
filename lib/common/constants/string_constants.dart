@@ -26,13 +26,6 @@ class StringConstants {
   static const String submit = "Submit";
   static const String didNotGetOTP = "Didn't get OTP";
   static const String resendNow = "Resend Now";
-  static const String privacySetting = "Privacy Settings";
-  static const String profilePicture = "Profile Picture:";
-  static const String contact1 = "Contact:";
-  static const String showToAll = "Show to all";
-  static const String hideFromAll = "Hide from all";
-  static const String showToMyInterests =
-      "Show to members I express interest in";
   static const String creatingProfileFor = "Creating Profile For:";
   static const String confirmPassword = "Confirm Password";
   static const String alreadyHaveAnAccount = "Already have an account?";
@@ -237,6 +230,26 @@ class StringConstants {
   static const String documentNumber = "Document Number";
   static const String addDocumentFrontImage = "Add Document Front Image";
   static const String addDocumentBackImage = "Add Document Back Image";
+  static const String profile = "Profile";
+
+  static const String privacySetting = "Privacy Settings";
+  static const String mobileNo = "Mobile No.:";
+  static const String showToAll = "Show to All";
+  static const String hideFromAll = "Hide From All";
+  static const String onlyToInterestSentAccepted =
+      "Only to Interest Sent/Accepted";
+  static const String photoAlbum = "Photo Album:";
+  static const String profile1 = "Profile:";
+  static const String recommended = "(Recommended)";
+  static const String onlyToPaidMatches = "Only to Paid Matches";
+  static const String contactNo = "Contact No.:";
+  static const String onlyToMatchesThatFitMyCriteria =
+      "Only to Members That Fit My Criteria";
+  static const String profileImage = "Profile Image:";
+  static const String lastSeen = "Last Seen:";
+  static const String onlyToAcceptedMatches = "Only to Accepted Matches";
+  static const String account = "Account";
+  static const String deleteAccount = "Delete Account";
 
   /// Validation
   static const String emailIsRequired = "Email is required.";
@@ -287,7 +300,6 @@ class StringConstants {
   ///
 
   ///
-  static const String profile = "Profile";
   static const String logout = "Logout";
   static const String noSearchResultTitle = "Sorry, no results found";
   static const String noSearchResultSubtitle =
