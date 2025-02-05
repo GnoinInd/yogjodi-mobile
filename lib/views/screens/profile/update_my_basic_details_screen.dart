@@ -116,6 +116,12 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
     'Widower',
     'Widow',
   ];
+  String manglikStatus = '';
+  final List<String> manglikStatusList = [
+    'Select',
+    'Non Manglik',
+    'Manglik',
+  ];
   bool? haveChildren;
   String currentAddress = '';
   TextEditingController currentAddressTEC = TextEditingController();
@@ -248,6 +254,14 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
     return null;
   }
 
+  String? _validateManglikStatus(String? value) {
+    if (value == manglikStatusList.first) {
+      return StringConstants.manglikStatusIsRequired;
+    }
+
+    return null;
+  }
+
   String haveChildrenError = '';
   bool validateHaveChildren() {
     if (haveChildren == null) {
@@ -282,6 +296,7 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
     profilePerson = profilePersons.first;
     profileManagedBy = profileManagedByList.first;
     maritalStatus = maritalStatusList.first;
+    manglikStatus = manglikStatusList.first;
     height = heightList.first;
 
     ///Add height to list
@@ -1018,6 +1033,70 @@ class _UpdateMyBasicDetailsFormState extends State<UpdateMyBasicDetailsForm> {
               ],
             ),
           },
+          const SizedBox(height: 16.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.manglikStatus,
+                style: TextStyle(
+                  color: ColorConstants.tundora,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.50,
+                child: DropdownButtonFormField<String>(
+                  validator: _validateManglikStatus,
+                  value: manglikStatus,
+                  hint: Text(manglikStatusList.first),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      manglikStatus = newValue!;
+                    });
+                  },
+                  items: manglikStatusList.map((String manglikStatus_) {
+                    return DropdownMenuItem<String>(
+                      value: manglikStatus_,
+                      child: Text(manglikStatus_),
+                    );
+                  }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.silver,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.jazzberryJam,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           const SizedBox(height: 16.0),
           TextFormField(
             controller: currentAddressTEC,

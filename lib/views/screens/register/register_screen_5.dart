@@ -134,6 +134,13 @@ class _RegisterForm5State extends State<RegisterForm5> {
     'Widow',
     "Doesn't matter",
   ];
+  String manglikStatus = '';
+  final List<String> manglikStatusList = [
+    'Select',
+    'Non Manglik',
+    'Manglik',
+    "Doesn't matter",
+  ];
   String smoking = '';
   String drinking = '';
   final List<String> badHabitsList = [
@@ -1295,6 +1302,74 @@ class _RegisterForm5State extends State<RegisterForm5> {
                     return DropdownMenuItem<String>(
                       value: maritalStatus_,
                       child: Text(maritalStatus_),
+                    );
+                  }).toList(),
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.all(15.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.silver,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: BorderSide(
+                        color: ColorConstants.jazzberryJam,
+                        width: 1,
+                      ),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      borderSide: const BorderSide(
+                        color: Colors.red,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                StringConstants.manglikStatus,
+                style: TextStyle(
+                  color: ColorConstants.tundora,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.50,
+                child: DropdownButtonFormField<String>(
+                  value: manglikStatus.isNotEmpty
+                      ? manglikStatus
+                      : manglikStatusList.first,
+                  hint: Text(manglikStatusList.first),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      manglikStatus = newValue!;
+                      if (manglikStatus == manglikStatusList.first) {
+                        manglikStatus = '';
+                      }
+                    });
+                  },
+                  items: manglikStatusList.map((String manglikStatus_) {
+                    return DropdownMenuItem<String>(
+                      value: manglikStatus_,
+                      child: Text(manglikStatus_),
                     );
                   }).toList(),
                   decoration: InputDecoration(

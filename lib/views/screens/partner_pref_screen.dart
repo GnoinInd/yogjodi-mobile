@@ -317,6 +317,51 @@ class _PartnerPrefScreenState extends State<PartnerPrefScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
+                          StringConstants.manglikStatus1,
+                          style: TextStyle(
+                            color: ColorConstants.tundora,
+                            fontFamily: "Poppins",
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Text(
+                          ":",
+                          style: TextStyle(
+                            color: ColorConstants.tundora,
+                            fontFamily: "Poppins",
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 10.0),
+                  Expanded(
+                    flex: 3,
+                    child: Text(
+                      "Non Manglik",
+                      style: TextStyle(
+                        color: ColorConstants.tundora,
+                        fontFamily: "Poppins",
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10.0),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
                           StringConstants.motherTongue,
                           style: TextStyle(
                             color: ColorConstants.tundora,

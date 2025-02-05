@@ -1142,6 +1142,52 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 10.0),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        StringConstants.manglikStatus1,
+                                        style: TextStyle(
+                                          color: ColorConstants.tundora,
+                                          fontFamily: "Poppins",
+                                          fontSize: 14.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      Text(
+                                        ":",
+                                        style: TextStyle(
+                                          color: ColorConstants.tundora,
+                                          fontFamily: "Poppins",
+                                          fontSize: 14.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(width: 10.0),
+                                Expanded(
+                                  flex: 3,
+                                  child: Text(
+                                    "Non Manglik",
+                                    style: TextStyle(
+                                      color: ColorConstants.tundora,
+                                      fontFamily: "Poppins",
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                             const SizedBox(height: 30.0),
                           ],
                         ),
@@ -2499,6 +2545,61 @@ class _MatchProfileScreenState extends State<MatchProfileScreen> {
                             const SizedBox(height: 5.0),
                             Text(
                               "Never Married",
+                              style: TextStyle(
+                                color: ColorConstants.tundora,
+                                fontFamily: "Poppins",
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+                            const SizedBox(height: 10.0),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  StringConstants.manglikStatus1,
+                                  style: TextStyle(
+                                    color: ColorConstants.tundora,
+                                    fontFamily: "Poppins",
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                const SizedBox(width: 20.0),
+                                if (true)
+                                  GestureDetector(
+                                    onTap: () {
+                                      if (true) {}
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 3.0,
+                                        vertical: 0.5,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                        border: Border.all(
+                                          color: ColorConstants.salem,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        StringConstants.matched,
+                                        style: TextStyle(
+                                          fontFamily: "Inter",
+                                          fontSize: 10.0,
+                                          fontWeight: FontWeight.w600,
+                                          color: ColorConstants.salem,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                            const SizedBox(height: 5.0),
+                            Text(
+                              "Non Manglik",
                               style: TextStyle(
                                 color: ColorConstants.tundora,
                                 fontFamily: "Poppins",

@@ -42,6 +42,8 @@ class StringConstants {
   static const String caste = "Caste";
   static const String maritalStatus = "Marital Status:";
   static const String maritalStatus1 = "Marital Status";
+  static const String manglikStatus = "Manglik Status:";
+  static const String manglikStatus1 = "Manglik Status";
   static const String haveChildren = "Do you have children?";
   static const String currentAddress = "Current Address";
   static const String height = "Height:";
@@ -274,6 +276,7 @@ class StringConstants {
   static const String religionIsRequired = "Religion is required.";
   static const String casteIsRequired = "Caste is required.";
   static const String maritalStatusIsRequired = "Marital Status is required.";
+  static const String manglikStatusIsRequired = "Manglik Status is required.";
   static const String heightIsRequired = "Height is required.";
   static const String dietIsRequired = "Diet is required.";
   static const String highestDegreeIsRequired = "Highest Degree is required.";
